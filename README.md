@@ -7,7 +7,7 @@
 </head>
 <body>
     <header>
-        <h1>Sreeja Bethu - Data Analyst</h1>
+        <h1>Data Analyst</h1>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
