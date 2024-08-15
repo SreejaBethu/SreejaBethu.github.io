@@ -39,7 +39,7 @@ significant reduction in customer complaints, showcasing expertise in data analy
             <img src="http://localhost:8501" alt="Project Image">
             <p>This project aims to develop a facial recognition system using artificial intelligence and machine learning techniques. The system is designed to identify and verify individuals based on their facial features, with potential applications in security, law enforcement, and identity verification.
 
-**Key Features**
+<b>Key Features</b>
     
 **Face Detection**: The system can detect faces in images and videos using OpenCV and Haar cascades.
 **Face Recognition**: The system uses a machine learning model (e.g., Convolutional Neural Networks (CNNs) or Support Vector Machines (SVMs)) to recognize and identify faces based on their unique features.
