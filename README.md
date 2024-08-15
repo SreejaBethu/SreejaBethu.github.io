@@ -40,7 +40,6 @@ significant reduction in customer complaints, showcasing expertise in data analy
             <p>This project aims to develop a facial recognition system using artificial intelligence and machine learning techniques. The system is designed to identify and verify individuals based on their facial features, with potential applications in security, law enforcement, and identity verification.
 
 **Key Features**
-
     **Face Detection**: The system can detect faces in images and videos using OpenCV and Haar cascades.
     **Face Recognition**: The system uses a machine learning model (e.g., Convolutional Neural Networks (CNNs) or Support Vector Machines (SVMs)) to recognize and identify faces based on their unique features.
    **Database Management**: The system stores and manages a database of known faces, allowing for efficient face recognition and verification.
@@ -53,15 +52,15 @@ significant reduction in customer complaints, showcasing expertise in data analy
             <img src="https://github.com/SreejaBethu/Forecasting-Weather/blob/main/Figure_1.png" alt="Project Image">
             <p>This project leverages the OpenWeatherMap API and machine learning techniques to forecast weather temperatures. The project uses historical weather data to train a Random Forest Regressor model, which predicts future temperatures. The forecasted temperatures are converted to Fahrenheit for ease of understanding. The project also provides visualizations to compare actual vs predicted temperatures, allowing for model evaluation and improvement. 
                 
-Features
+**Features**
 
-Weather Data Retrieval: Retrieves historical weather data from the OpenWeatherMap API.
+**Weather Data Retrieval:** Retrieves historical weather data from the OpenWeatherMap API.
 
-Temperature Conversion: Converts temperature data from Celsius to Fahrenheit for ease of understanding.
+**Temperature Conversion:** Converts temperature data from Celsius to Fahrenheit for ease of understanding.
 
-Random Forest Regressor: Trains a Random Forest Regressor model on historical weather data to predict future temperatures.
+**Random Forest Regressor:** Trains a Random Forest Regressor model on historical weather data to predict future temperatures.
 
-Visualization: Provides visualizations to compare actual vs predicted temperatures, allowing for model evaluation and improvement</p>
+**Visualization:** Provides visualizations to compare actual vs predicted temperatures, allowing for model evaluation and improvement</p>
             <a href="https://github.com/SreejaBethu/Forecasting-Weather">View on GitHub</a>
         </div>
         <div class="project">
