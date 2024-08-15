@@ -37,26 +37,45 @@ significant reduction in customer complaints, showcasing expertise in data analy
         <div class="project">
             <h3>Project 2: Paris Olympics Medal List</h3>
             <img src="http://localhost:8501" alt="Project Image">
-            <p>Description of the project, technologies used, etc.</p>
+            <p>This project aims to develop a facial recognition system using artificial intelligence and machine learning techniques. The system is designed to identify and verify individuals based on their facial features, with potential applications in security, law enforcement, and identity verification.
+
+**Key Features**
+
+    **Face Detection**: The system can detect faces in images and videos using OpenCV and Haar cascades.
+    **Face Recognition**: The system uses a machine learning model (e.g., Convolutional Neural Networks (CNNs) or Support Vector Machines (SVMs)) to recognize and identify faces based on their unique features.
+   **Database Management**: The system stores and manages a database of known faces, allowing for efficient face recognition and verification.
+    **Real-time Processing**: The system can process and recognize faces in real-time, making it suitable for applications that require rapid identification.
+</p>
             <a href="https://github.com/SreejaBethu/Paris-Olympics-2024-Medals-List">View on GitHub</a>
         </div>
         <div class="project">
             <h3>Project 3: Forecasting Weather</h3>
             <img src="https://github.com/SreejaBethu/Forecasting-Weather/blob/main/Figure_1.png" alt="Project Image">
-            <p>Description of the project, technologies used, etc.</p>
+            <p>This project leverages the OpenWeatherMap API and machine learning techniques to forecast weather temperatures. The project uses historical weather data to train a Random Forest Regressor model, which predicts future temperatures. The forecasted temperatures are converted to Fahrenheit for ease of understanding. The project also provides visualizations to compare actual vs predicted temperatures, allowing for model evaluation and improvement. 
+                
+Features
+
+Weather Data Retrieval: Retrieves historical weather data from the OpenWeatherMap API.
+
+Temperature Conversion: Converts temperature data from Celsius to Fahrenheit for ease of understanding.
+
+Random Forest Regressor: Trains a Random Forest Regressor model on historical weather data to predict future temperatures.
+
+Visualization: Provides visualizations to compare actual vs predicted temperatures, allowing for model evaluation and improvement</p>
             <a href="https://github.com/SreejaBethu/Forecasting-Weather">View on GitHub</a>
         </div>
         <div class="project">
             <h3>Project 4: Realtime Stock Market Analysis Visualization</h3>
             <img src="https://github.com/SreejaBethu/Realtime-Stock-Market-Analysis-Visualization/blob/main/Streamlit.pdf" alt="Project Image">
-            <p>Description of the project, technologies used, etc.</p>
+            <p>Streamlit-Stock-Market-Analysis-App
+           A simple financial analysis web application using Streamlit and Yahoo Finance. This app allows users to input a stock ticker and retrieve real-time financial data, including stock information, price information, and business metrics. The app uses the Yahoo Finance API to fetch and display the data in a user-friendly format</p>
             <a href="https://github.com/SreejaBethu/Realtime-Stock-Market-Analysis-Visualization">View on GitHub</a>
         </div>
     </section>
 
     <section id="resume">
         <h2>Resume</h2>
-        <a href="path/to/DA-Sreeja.pdf" download>Download Resume</a>
+        <a href="file:///C:/Users/Sreeja/Downloads/Resume/DA-%20Sreeja.pdf" download>Download Resume</a>
         <iframe src="path/to/DA-Sreeja.pdf" width="600" height="500"></iframe>
     </section>
 
