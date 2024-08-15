@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,11 +25,12 @@ into actionable project plans. Dedicated and hard-working with a passion for Big
 significant reduction in customer complaints, showcasing expertise in data analysis and a commitment to excellence.</p>
     </section>
 
+    
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
             <h3>Project 1: Facial Recognition Using AI</h3>
-            <img src="![2023-11-17](https://github.com/user-attachments/assets/e3fff609-4e08-43b2-84fe-6bf91459249a)" alt="Project Image">
+            <img src="https://github.com/user-attachments/assets/e3fff609-4e08-43b2-84fe-6bf91459249a" alt="Project Image">
             <p>Description of the project, technologies used, etc.</p>
             <a href="https://github.com/SreejaBethu/Facial-Recognizition-Using-Artifical-Intelligence">View on GitHub</a>
         </div>
