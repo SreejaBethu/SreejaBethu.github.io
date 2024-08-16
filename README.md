@@ -24,11 +24,15 @@ I am a detail-focused and CISCO-certified Data Analyst with experience in data a
 
 **Project 1: Facial Recognition Using AI**
  This project aims to develop a facial recognition system using **artificial intelligence** **machine learning techniques** using **python**. The system is designed to identify and verify individuals based on their facial features, with potential security, law enforcement, and identity verification applications.           
+
 **Features**
 
 **Face Detection**: The system can detect faces in images and videos using OpenCV and Haar cascades.
+
 **Face Recognition**: The system uses a machine learning model (e.g., Convolutional Neural Networks (CNNs) or Support Vector Machines (SVMs)) to recognize and identify faces based on their unique features.
+
 **Database Management**: The system stores and manages a database of known faces, allowing for efficient face recognition and verification.
+
 **Real-time Processing**: The system can process and recognize faces in real time, making it suitable for applications that require rapid identification.
 
 **Project 2: Paris Olympics Medal List**
