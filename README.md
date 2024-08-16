@@ -41,7 +41,9 @@ This project visualizes the medal counts for countries participating in the Pari
 **Features**
 
 **Total Medals by Country:** Bar plot showcasing the total medals won by each country.
+
 **Medal Distribution by Country:** Stacked bar plot of gold, silver, and bronze medals.
+
 **Interactive Medal Visualization:** Dynamic Plotly chart for exploring medal distribution.
 
 **Project 3: Real-time Weather Forecasting**
@@ -50,8 +52,11 @@ This project visualizes the medal counts for countries participating in the Pari
 **Features**
 
 **Weather Data Retrieval:** Retrieves historical weather data from the OpenWeatherMap API.
+
 **Temperature Conversion:** Converts temperature data from Celsius to Fahrenheit for ease of understanding.
+
 **Random Forest Regressor:** Trains a Random Forest Regressor model on historical weather data to predict future temperatures.
+
 **Visualization:** Provides visualizations to compare actual vs predicted temperatures, allowing for model evaluation and improvement</p>
         
 **Project 4: Realtime Stock Market Analysis Visualization**
@@ -69,8 +74,8 @@ This project visualizes the medal counts for countries participating in the Pari
 
     <footer>
         <p>&copy; 2024 Sreeja Bethu</p>
-    </footer>
 </body>
+</footer>
 </html>
 
 
