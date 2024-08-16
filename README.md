@@ -17,13 +17,13 @@ I am a detail-focused and CISCO-certified Data Analyst with experience in data a
 **Senior Business Analyst, @ Vitech Systems Asia (_May 2021 - July 2022_)**
 
 - **Strategic Insights:** Conducted market analysis and competitive benchmarking to inform business strategy, resulting in a 20% increase in sales revenue.
-- **Process Optimization:** Led cross-functional teams to streamline business processes, reducing operational costs by 15% and improving customer satisfaction 
-    ratings by 25%.
-- **Data-Driven Decision Making:** Developed and implemented a data analytics framework to support business decisions, enabling executives to make informed, data- 
-   driven choices and drive business growth.
+
+- **Process Optimization:** Led cross-functional teams to streamline business processes, reducing operational costs by 15% and improving customer satisfaction ratings by 25%.
+
+- **Data-Driven Decision Making:** Developed and implemented a data analytics framework to support business decisions, enabling executives to make informed, data-driven choices and drive business growth.
 
 **Project 1: Facial Recognition Using AI**
- This project aims to develop a facial recognition system using **artificial intelligence** **machine learning techniques** using **python**. The system is designed to identify and verify individuals based on their facial features, with potential security, law enforcement, and identity verification applications.           
+ This project aims to develop a facial recognition system using **artificial intelligence** **machine learning techniques** using **Python**. The system is designed to identify and verify individuals based on their facial features, with potential security, law enforcement, and identity verification applications.           
 
 **Features**
 
@@ -73,7 +73,7 @@ This project visualizes the medal counts for countries participating in the Pari
     </section>
 </body>
     <footer>
-        <p>&copy; 2024 Sreeja Bethu</p>
+        <p> 2024 Sreeja Bethu</p>
 </footer>
 </html>
 
