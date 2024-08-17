@@ -23,57 +23,40 @@ I am a detail-focused and CISCO-certified Data Analyst with experience in data a
 - **Data-Driven Decision Making:** Developed and implemented a data analytics framework to support business decisions, enabling executives to make informed, data-driven choices and drive business growth.
 
 **Project 1: Facial Recognition Using AI**
- This project aims to develop a facial recognition system using **artificial intelligence** **machine learning techniques** using **Python**. The system is designed to identify and verify individuals based on their facial features, with potential security, law enforcement, and identity verification applications.           
+ This project aims to develop a facial recognition system using **artificial intelligence** **machine learning techniques** using **Python**. The system is designed to identify and verify individuals based on their facial features, with potential security, law enforcement, and identity verification applications.         
 
-**Features**
+ **Image:** https://github.com/SreejaBethu/Facial-Recognizition-Using-Artifical-Intelligence-/blob/main/project%20AI%20facial%20recognization.PNG
 
-**Face Detection**: The system can detect faces in images and videos using OpenCV and Haar cascades.
-
-**Face Recognition**: The system uses a machine learning model (e.g., Convolutional Neural Networks (CNNs) or Support Vector Machines (SVMs)) to recognize and identify faces based on their unique features.
-
-**Database Management**: The system stores and manages a database of known faces, allowing for efficient face recognition and verification.
-
-**Real-time Processing**: The system can process and recognize faces in real time, making it suitable for applications that require rapid identification.
-
+ 
 **Project 2: Paris Olympics Medal List**
 This project visualizes the medal counts for countries participating in the Paris Olympics 2024 using Streamlit, Seaborn, Matplotlib, and Plotly.
 
-**Features**
+  **Image:** https://github.com/SreejaBethu/Paris-Olympics-2024-Medals-List/blob/main/Screenshot%20(15).png
+  **Image:** https://github.com/SreejaBethu/Paris-Olympics-2024-Medals-List/blob/main/Screenshot%20(16).png
 
-**Total Medals by Country:** Bar plot showcasing the total medals won by each country.
-
-**Medal Distribution by Country:** Stacked bar plot of gold, silver, and bronze medals.
-
-**Interactive Medal Visualization:** Dynamic Plotly chart for exploring medal distribution.
 
 **Project 3: Real-time Weather Forecasting**
-            This project leverages the OpenWeatherMap API and machine-learning techniques to forecast weather temperatures using **python**. The project uses historical weather data to train a **Random Forest Regressor model**, which predicts future temperatures. The forecasted **temperatures are converted to Fahrenheit** for ease of understanding. The project also provides **visualizations** to compare **actual vs predicted temperatures**, allowing for model evaluation and improvement. 
-                
-**Features**
+       A machine learning project that **predicted temperature forecasts with 90%** accuracy. This project leverages the OpenWeatherMap API and machine-learning techniques to forecast weather temperatures using **python**. Uses historical weather data to train a **Random Forest Regressor model**, which predicts future temperatures. The forecasted **temperatures are converted to Fahrenheit** for ease of understanding. The project also provides **visualizations** to compare **actual vs predicted temperatures**, allowing for model evaluation and improvement. 
 
-**Weather Data Retrieval:** Retrieves historical weather data from the OpenWeatherMap API.
-
-**Temperature Conversion:** Converts temperature data from Celsius to Fahrenheit for ease of understanding.
-
-**Random Forest Regressor:** Trains a Random Forest Regressor model on historical weather data to predict future temperatures.
-
-**Visualization:** Provides visualizations to compare actual vs predicted temperatures, allowing for model evaluation and improvement</p>
+ **Image:** https://github.com/SreejaBethu/Forecasting-Weather/blob/main/Figure_1.png
         
 **Project 4: Realtime Stock Market Analysis Visualization**
   A simple financial analysis web application using Streamlit and Yahoo Finance. This app allows users to input a stock ticker and retrieve **real-time financial data, including stock information, price information, and business metrics**. The app uses the **Yahoo Finance API** to fetch and display the data in a user-friendly format.
+
+ **Image:** https://github.com/SreejaBethu/Realtime-Stock-Market-Analysis-Visualization/blob/main/stock%20market%20graph.PNG
 
 <html>
     <body>
         <section>
             <section id="contact">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:bethusreeja@gmail.com">bethusreeja@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/sreejabethu">LinkedIn Profile</a></p>
-        <p>GitHub: <a href="https://github.com/SreejaBethu">GitHub Profile</a></p>
+         <p>Email: <a href="mailto:bethusreeja@gmail.com">bethusreeja@gmail.com</a></p>
+         <p>LinkedIn: <a href="https://www.linkedin.com/in/sreejabethu">LinkedIn Profile</a></p>
+         <p>GitHub: <a href="https://github.com/SreejaBethu">GitHub Profile</a></p>
     </section>
 </body>
     <footer>
-        <p> 2024 Sreeja Bethu</p>
+        <p> 2024 Sreeja Bethu </p>
 </footer>
 </html>
 
