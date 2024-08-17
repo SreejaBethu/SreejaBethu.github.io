@@ -54,10 +54,10 @@ This project visualizes the medal counts for countries participating in the Pari
          <p>LinkedIn: <a href="https://www.linkedin.com/in/sreejabethu">LinkedIn Profile</a></p>
          <p>GitHub: <a href="https://github.com/SreejaBethu">GitHub Profile</a></p>
     </section>
-</body>
     <footer>
         <p> 2024 Sreeja Bethu </p>
-</footer>
+    </footer>
+    </body>
 </html>
 
 
