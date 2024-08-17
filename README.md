@@ -26,12 +26,12 @@ I am a detail-focused and CISCO-certified Data Analyst with experience in data a
  This project aims to develop a facial recognition system using **artificial intelligence** **machine learning techniques** using **Python**. The system is designed to identify and verify individuals based on their facial features, with potential security, law enforcement, and identity verification applications.         
 
  **Image:** https://github.com/SreejaBethu/Facial-Recognizition-Using-Artifical-Intelligence-/blob/main/project%20AI%20facial%20recognization.PNG
-
  
 **Project 2: Paris Olympics Medal List**
 This project visualizes the medal counts for countries participating in the Paris Olympics 2024 using Streamlit, Seaborn, Matplotlib, and Plotly.
 
   **Image:** https://github.com/SreejaBethu/Paris-Olympics-2024-Medals-List/blob/main/Screenshot%20(15).png
+  
   **Image:** https://github.com/SreejaBethu/Paris-Olympics-2024-Medals-List/blob/main/Screenshot%20(16).png
 
 
