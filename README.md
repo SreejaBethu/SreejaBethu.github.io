@@ -23,11 +23,13 @@ I am a detail-focused and CISCO-certified Data Analyst with experience in data a
 - **Data-Driven Decision Making:** Developed and implemented a data analytics framework to support business decisions, enabling executives to make informed, data-driven choices and drive business growth.
 
 **Project 1: Facial Recognition Using AI**
+ 
  This project aims to develop a facial recognition system using **artificial intelligence** **machine learning techniques** using **Python**. The system is designed to identify and verify individuals based on their facial features, with potential security, law enforcement, and identity verification applications.         
 
  **Image:** https://github.com/SreejaBethu/Facial-Recognizition-Using-Artifical-Intelligence-/blob/main/project%20AI%20facial%20recognization.PNG
  
 **Project 2: Paris Olympics Medal List**
+
 This project visualizes the medal counts for countries participating in the Paris Olympics 2024 using Streamlit, Seaborn, Matplotlib, and Plotly.
 
   **Image:** https://github.com/SreejaBethu/Paris-Olympics-2024-Medals-List/blob/main/Screenshot%20(15).png
@@ -36,11 +38,13 @@ This project visualizes the medal counts for countries participating in the Pari
 
 
 **Project 3: Real-time Weather Forecasting**
+       
        A machine learning project that **predicted temperature forecasts with 90%** accuracy. This project leverages the OpenWeatherMap API and machine-learning techniques to forecast weather temperatures using **python**. Uses historical weather data to train a **Random Forest Regressor model**, which predicts future temperatures. The forecasted **temperatures are converted to Fahrenheit** for ease of understanding. The project also provides **visualizations** to compare **actual vs predicted temperatures**, allowing for model evaluation and improvement. 
 
  **Image:** https://github.com/SreejaBethu/Forecasting-Weather/blob/main/Figure_1.png
         
 **Project 4: Realtime Stock Market Analysis Visualization**
+  
   A simple financial analysis web application using Streamlit and Yahoo Finance. This app allows users to input a stock ticker and retrieve **real-time financial data, including stock information, price information, and business metrics**. The app uses the **Yahoo Finance API** to fetch and display the data in a user-friendly format.
 
  **Image:** https://github.com/SreejaBethu/Realtime-Stock-Market-Analysis-Visualization/blob/main/stock%20market%20graph.PNG
