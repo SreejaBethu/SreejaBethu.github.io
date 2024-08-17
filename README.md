@@ -39,7 +39,7 @@ This project visualizes the medal counts for countries participating in the Pari
 
 **Project 3: Real-time Weather Forecasting**
        
-       A machine learning project that **predicted temperature forecasts with 90%** accuracy. This project leverages the OpenWeatherMap API and machine-learning techniques to forecast weather temperatures using **python**. Uses historical weather data to train a **Random Forest Regressor model**, which predicts future temperatures. The forecasted **temperatures are converted to Fahrenheit** for ease of understanding. The project also provides **visualizations** to compare **actual vs predicted temperatures**, allowing for model evaluation and improvement. 
+       A machine learning project that predicted temperature forecasts with 90% accuracy. This project leverages the OpenWeatherMap API and machine-learning techniques to forecast weather temperatures using python. Uses historical weather data to train a Random Forest Regressor model, which predicts future temperatures. The forecasted temperatures are converted to Fahrenheit for ease of understanding. The project also provides visualizations to compare actual vs predicted temperatures, allowing for model evaluation and improvement. 
 
  **Image:** https://github.com/SreejaBethu/Forecasting-Weather/blob/main/Figure_1.png
         
