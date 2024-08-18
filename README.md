@@ -1,5 +1,3 @@
-<html>
-    <body>
 # Data Analyst
 I am a detail-focused and CISCO-certified Data Analyst with experience in data analysis, visualization, and business needs analysis. Proven to understand customer requirements and translate into actionable project plans. Dedicated and hard-working with a passion for Big Data. Excelled in client-facing roles, demonstrating strong leadership and Python programming skills. Achieved a significant reduction in customer complaints, showcasing expertise in data analysis and a commitment to excellence.
 
@@ -49,8 +47,10 @@ A machine learning project that predicted temperature forecasts with 90% accurac
   
   A simple financial analysis web application using Streamlit and Yahoo Finance. This app allows users to input a stock ticker and retrieve **real-time financial data, including stock information, price information, and business metrics**. The app uses the **Yahoo Finance API** to fetch and display the data in a user-friendly format.
 
- <image> https://github.com/SreejaBethu/Realtime-Stock-Market-Analysis-Visualization/blob/main/stock%20market%20graph.PNG </image>
- 
+ **image**: https://github.com/SreejaBethu/Realtime-Stock-Market-Analysis-Visualization/blob/main/stock%20market%20graph.PNG
+
+ <html>
+    <body>
         <section>
             <section id="contact">
         <h2>Contact</h2>
@@ -58,9 +58,9 @@ A machine learning project that predicted temperature forecasts with 90% accurac
          <p>LinkedIn: <a href="https://www.linkedin.com/in/sreejabethu">LinkedIn Profile</a></p>
          <p>GitHub: <a href="https://github.com/SreejaBethu">GitHub Profile</a></p>
     </section>
-    <footer>
-        <p> 2024 Sreeja Bethu </p>
-    </footer>
+        <footer>
+            <p> 2024 Sreeja Bethu </p>
+        </footer>
     </body>
 </html>
 
