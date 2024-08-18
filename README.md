@@ -1,5 +1,5 @@
 # Data Analyst
-I am a detail-focused and CISCO-certified Data Analyst with experience in data analysis, visualization, and business needs analysis. Proven to understand customer requirements and translate into actionable project plans. Dedicated and hard-working with a passion for Big Data. Excelled in client-facing roles, demonstrating strong leadership and Python programming skills. Achieved a significant reduction in customer complaints, showcasing expertise in data analysis and a commitment to excellence.
+I am a detail-focused and CISCO-certified Data Analyst with experience in data analysis, visualization, and business needs analysis. Proven to understand customer requirements and translate into actionable project plans. Dedicated and hard-working with a passion for Big Data. Excelled in client-facing roles, demonstrating strong leadership and Python programming skills.
 
 #### Technical Skills: Python, SQL, Power BI, Tableau
 
