@@ -26,28 +26,29 @@ I am a detail-focused and CISCO-certified Data Analyst with experience in data a
  
  This project aims to develop a facial recognition system using **artificial intelligence** **machine learning techniques** using **Python**. The system is designed to identify and verify individuals based on their facial features, with potential security, law enforcement, and identity verification applications.         
 
- **Image:** https://github.com/SreejaBethu/Facial-Recognizition-Using-Artifical-Intelligence-/blob/main/project%20AI%20facial%20recognization.PNG
- 
+ **Image:** ![project AI facial recognization](https://github.com/user-attachments/assets/3474be8b-8011-4fd0-a242-eaf30b3e3948)
+
 **Project 2: Paris Olympics Medal List**
 
 This project visualizes the medal counts for countries participating in the Paris Olympics 2024 using Streamlit, Seaborn, Matplotlib, and Plotly.
 
-  **Image:** https://github.com/SreejaBethu/Paris-Olympics-2024-Medals-List/blob/main/Screenshot%20(15).png
+ ![Screenshot (15)](https://github.com/user-attachments/assets/73bf7a43-8106-4d1e-a204-920981206497)
   
-  **Image:** https://github.com/SreejaBethu/Paris-Olympics-2024-Medals-List/blob/main/Screenshot%20(16).png
+ ![Screenshot (16)](https://github.com/user-attachments/assets/34b220ee-0287-4183-81eb-524a56ad0eac)
 
+ ![Screenshot (17)](https://github.com/user-attachments/assets/8c6043be-7c44-47be-97e5-7fdc890d1165)
 
 **Project 3: Real-time Weather Forecasting**
        
 A machine learning project that predicted temperature forecasts with 90% accuracy. This project leverages the OpenWeatherMap API and machine-learning techniques to forecast weather temperatures using python. Uses historical weather data to train a Random Forest Regressor model, which predicts future temperatures. The forecasted temperatures are converted to Fahrenheit for ease of understanding. The project also provides visualizations to compare actual vs predicted temperatures, allowing for model evaluation and improvement. 
 
- **Image:** https://github.com/SreejaBethu/Forecasting-Weather/blob/main/Figure_1.png
-        
+![2024-07-13](https://github.com/user-attachments/assets/94290875-095b-418b-93b9-b4df56b7af02)
+     
 **Project 4: Realtime Stock Market Analysis Visualization**
   
   A simple financial analysis web application using Streamlit and Yahoo Finance. This app allows users to input a stock ticker and retrieve **real-time financial data, including stock information, price information, and business metrics**. The app uses the **Yahoo Finance API** to fetch and display the data in a user-friendly format.
 
- **image**: https://github.com/SreejaBethu/Realtime-Stock-Market-Analysis-Visualization/blob/main/stock%20market%20graph.PNG
+![CaptureStock market trading](https://github.com/user-attachments/assets/da3efed5-e56f-4c78-83d0-7b37d583fff2)
 
  <html>
     <body>
