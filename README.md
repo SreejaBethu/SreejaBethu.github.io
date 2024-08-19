@@ -4,8 +4,11 @@ As a driven and innovative Data Analyst, I thrive at the intersection of data, t
 With a CISCO certification and a Master's degree in Management Information Systems, I possess a unique blend of technical expertise and business acumen. My proficiency in Python, SQL, Tableau, and Excel enables me to extract insights from complex data sets and present them clearly, actionable.
 
 **Technical Skills:** Python, scikit-learn, TensorFlow,
+
 **Data Analysis and Visualization:** SQL, Excel, Power BI, Tableau
+
 **Data Management:** Data warehousing, ETL processes, Data cleaning & preprocessing
+
 **Machine Learning and AI:** Machine learning algorithms, Artificial intelligence, facial recognition
 
 ## Education								       		
