@@ -9,7 +9,7 @@ With a CISCO certification and a Master's degree in Management Information Syste
 #### Machine Learning and AI: Machine learning algorithms, Artificial intelligence, facial recognition
 
 ## Education								       		
-- M.S., Management Information Systems| AUM at Montgomery (_December 2023_)	 			        		
+- M.S., Management Information Systems | AUM at Montgomery (_December 2023_)	 			        		
 - Bachelors, Computer Engineering & Technology | ALIET (_May 2018_)
 
 ## Work Experience
