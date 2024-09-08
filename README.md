@@ -72,6 +72,7 @@ With a CISCO certification and a Master's degree in Management Information Syste
 
 ## Project 2: [Cost of Living Index GLobally](https://github.com/SreejaBethu/Cost-Of-Living-Index-Globally)
 
+This Streamlit app is a data visualization tool that allows users to explore and compare the cost of living indices across different countries. The app takes in a dataset of cost of living indices for various countries and provides an interactive interface for users to select specific indices and countries to visualize.
 ![Screenshot (19)](https://github.com/user-attachments/assets/9980d95e-42e8-478c-903d-f29473e45445)
 
 ## Project 3: [Paris Olympics Medal List](https://github.com/SreejaBethu/Paris-Olympics-2024-Medals-List)
@@ -84,13 +85,13 @@ This project visualizes the medal counts for countries participating in the Pari
 
  ![Screenshot (17)](https://github.com/user-attachments/assets/8c6043be-7c44-47be-97e5-7fdc890d1165)
 
-## Project 3: [Real-time Weather Forecasting](https://github.com/SreejaBethu/Forecasting-Weather)
+## Project 4: [Real-time Weather Forecasting](https://github.com/SreejaBethu/Forecasting-Weather)
        
-A machine learning project that predicted temperature forecasts with 90% accuracy. This project leverages the OpenWeatherMap API and machine-learning techniques to forecast weather temperatures using python. Uses historical weather data to train a Random Forest Regressor model, which predicts future temperatures. The forecasted temperatures are converted to Fahrenheit for ease of understanding. The project also provides visualizations to compare actual vs predicted temperatures, allowing for model evaluation and improvement. 
+A machine learning project that predicted temperature forecasts with 90% accuracy. This project leverages the OpenWeatherMap API and machine-learning techniques to forecast weather temperatures using Python. Uses historical weather data to train a Random Forest Regressor model, which predicts future temperatures. The forecasted temperatures are converted to Fahrenheit for ease of understanding. The project also provides visualizations to compare actual vs predicted temperatures, allowing for model evaluation and improvement. 
 
 ![2024-07-13](https://github.com/user-attachments/assets/94290875-095b-418b-93b9-b4df56b7af02)
      
-## Project 4: [Realtime Stock Market Analysis Visualization](https://github.com/SreejaBethu/Realtime-Stock-Market-Analysis-Visualization)
+## Project 5: [Realtime Stock Market Analysis Visualization](https://github.com/SreejaBethu/Realtime-Stock-Market-Analysis-Visualization)
   
   A simple financial analysis web application using Streamlit and Yahoo Finance. This app allows users to input a stock ticker and retrieve **real-time financial data, including stock information, price information, and business metrics**. The app uses the **Yahoo Finance API** to fetch and display the data in a user-friendly format.
 
