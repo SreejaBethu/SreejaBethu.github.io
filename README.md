@@ -70,7 +70,11 @@ With a CISCO certification and a Master's degree in Management Information Syste
  This project aims to develop a facial recognition system using **artificial intelligence** **machine learning techniques** using **Python**. The system is designed to identify and verify individuals based on their facial features, with potential security, law enforcement, and identity verification applications.         
  ![project AI facial recognization](https://github.com/user-attachments/assets/3474be8b-8011-4fd0-a242-eaf30b3e3948)
 
-## Project 2: [Paris Olympics Medal List](https://github.com/SreejaBethu/Paris-Olympics-2024-Medals-List)
+## Project 2: [Cost of Living Index GLobally](https://github.com/SreejaBethu/Cost-Of-Living-Index-Globally)
+
+![Screenshot (19)](https://github.com/user-attachments/assets/9980d95e-42e8-478c-903d-f29473e45445)
+
+## Project 3: [Paris Olympics Medal List](https://github.com/SreejaBethu/Paris-Olympics-2024-Medals-List)
 
 This project visualizes the medal counts for countries participating in the Paris Olympics 2024 using Streamlit, Seaborn, Matplotlib, and Plotly.
 
