@@ -43,7 +43,7 @@ With a CISCO certification and a Master's degree in Management Information Syste
 - Enhanced team productivity by streamlining communication and implementing efficient project management tools.
 - Optimized departmental processes with the implementation of innovative strategies, resulting in improved efficiency and reduced costs.
 
-**Associate Data Analyst @ Knoah Solutions (_November 2019 - August 2020_)**
+**Associate Data Analyst @ Knoah Solutions (AUgust 2019 - August 2020_)**
 
 - Create user stories from requirements, develop Business requirements document (BRD) and Functional requirement document(FRD).
 - Improved decision-making processes by presenting comprehensive data visualizations and reports to key stakeholders.
@@ -51,14 +51,14 @@ With a CISCO certification and a Master's degree in Management Information Syste
 - Tracked and analyzed all the project tasks and deadlines using Trello and Kanban.
 - Participated in Agile Scrum ceremonies and provided technical expertise
 
-**Data Analyst @Yuvi Education Pvt Ltd (_July 2018 - October 2019_)**
+**Data Analyst @Yuvi Education Pvt Ltd (_July 2018 - July 2019_)**
 
 - Streamlined reporting processes by automating routine tasks using Python and Excel macros.
 - Identified trends and patterns in complex datasets, translating findings into easily understandable visualizations and reports.
 - Reduced manual processing time with automation scripts, allowing more focus on strategic initiatives within the department.
 - Enhanced collaboration between departments by developing standardized metrics and KPIs for measuring performance across various functions within the organization
 
-**Data Analyst Internship (_January 2018 - July 2018_)**
+**Data Analyst Internship (_January 2018 - June 2018_)**
 - Collaborated with cross-functional teams to ensure data integrity and accuracy, resulting in better-informed decisions.
 - Used statistical methods to analyze data and generate useful business reports.
 - Improved decision-making processes with accurate data analysis and visualization techniques.
