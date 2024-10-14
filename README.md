@@ -1,4 +1,4 @@
-[![MasterHead](C:\Users\bethu\OneDrive\Pictures\Github_banner_business_data_analyst.jpg)]
+[![MasterHead](https://github.com/SreejaBethu/SreejaBethu.github.io/blob/main/Github_banner_business_data_analyst.jpg)]
 
 <h3 align="center">An Experienced Business Data Analyst</h3>
 
