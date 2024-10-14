@@ -2,7 +2,7 @@
 
 <h3 align="center">An Experienced Business Data Analyst</h3>
 
-<img align="right" alt="Coding" width="400" src="https://easy-peasy.ai/ai-image-generator/images/animated-black-female-data-analyst-gif"
+<img align="right" alt="Coding" width="400" src="https://easy-peasy.ai/ai-image-generator/images/animated-black-female-data-analyst-gif"/> 
 
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=sreejabethu&label=Profile%20views&color=0e75b6&style=flat" alt="sreejabethu" /> </p>
