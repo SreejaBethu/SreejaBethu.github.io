@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -211,3 +212,218 @@
   </div>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sales Data Analysis & Forecasting Project</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: honeydew;
+      color: #030000;
+      line-height: 1.6;
+      text-align: center;
+      padding: 20px;
+    }
+    .project-banner {
+      width: 100%;
+      height: 300px; /* Adjust height as needed */
+      background-image: url('images/Forecast-Sales.jpeg'); /* Update with your banner image path */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: whitesmoke;
+      position: relative;
+    }
+    .project-banner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #c2d0d1ef; /* Dark overlay for text readability */
+    }
+    .project-banner h1 {
+      position: relative; /* So that it sits above the overlay */
+      font-size: 2.5em;
+      padding: 10px 20px;
+      background: rgba(0,0,0,0.5);
+      border-radius: 4px;
+    }
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 20px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #00796b;
+      margin-top: 0;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .project-description {
+      font-size: 1.1em;
+      margin-bottom: 30px;
+    }
+    .section {
+      margin-bottom: 40px;
+      text-align: left;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #00796b;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      text-align: left;
+      padding-left: 20px;
+    }
+    .diagram {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .diagram img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .caption {
+      font-size: 0.9rem;
+      color:#fff;
+      margin-top: 10px;
+    }
+    code {
+      background: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    a {
+      color: #00796b;
+      text-decoration: none;
+    }
+    ol {
+      text-align: left;
+      padding-left: 20px;
+    }
+    a {
+      color: #00796b;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+   <!-- Project Banner Section -->
+   <header class="project-banner">
+    <h1>Sales Data Analysis & Forecasting</h1>
+  </header>
+
+  <div class="container">
+    <h1>📊 Sales Data Analysis & Forecasting</h1>
+    <p class="project-description">
+      Welcome to the Sales Data Analysis & Forecasting project! 🚀 This repository showcases my data analysis skills through exploratory data analysis (EDA), data cleaning, and visualization of sales and customer feedback data. The goal is to extract actionable insights to drive business decisions.
+    </p>
+    
+    <div class="section">
+      <h2>📝 Project Highlights</h2>
+      <h3>🔍 Overview</h3>
+      <ul>
+        <li>📈 <strong>Exploratory Data Analysis (EDA):</strong> Detecting patterns and trends in sales data.</li>
+        <li>🛠 <strong>Data Cleaning & Transformation:</strong> Ensuring the quality and reliability of the dataset.</li>
+        <li>📊 <strong>Visualizations:</strong> Creating engaging and informative charts for decision-makers.</li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h2>🛠 Tools & Technologies Used</h2>
+      <ul>
+        <li>🖥 <strong>Programming Language:</strong> Python</li>
+        <li>
+          📚 <strong>Libraries:</strong>
+          <ul>
+            <li>🐼 Pandas – for data manipulation and cleaning</li>
+            <li>🧮 NumPy – for numerical computations</li>
+            <li>🎨 Matplotlib and Seaborn – for visualization</li>
+          </ul>
+        </li>
+        <li>IDE: PyCharm</li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h2>📁 Dataset Overview</h2>
+      <p>The dataset includes the following columns:</p>
+      <ul>
+        <li>🆔 <strong>product_id:</strong> Unique identifier for each product</li>
+        <li>🏷️ <strong>product_name:</strong> Name of the product</li>
+        <li>📦 <strong>category:</strong> Product category</li>
+        <li>💰 <strong>discounted_price</strong> and <strong>actual_price:</strong> Pricing details</li>
+        <li>🔢 <strong>discount_percentage:</strong> Discount percentage offered</li>
+        <li>⭐ <strong>rating</strong> and <strong>rating_count:</strong> Product rating and number of ratings</li>
+        <li>🗒️ <strong>about_product:</strong> Short description of the product</li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h2>🔑 Key Insights Extracted</h2>
+      <ul>
+        <li>
+          🎯 <strong>Product Ratings Distribution:</strong> Analyzed how customers rate products across various categories. <em>Insight:</em> Certain categories consistently outperform others in average ratings.
+        </li>
+        <li>
+          📊 <strong>Category-Wise Discount Analysis:</strong> Average discount percentages by category to identify pricing strategies. <em>Insight:</em> Categories with optimal discounts tend to have better sales performance.
+        </li>
+        <li>
+          💹 <strong>Sales and Ratings Trends:</strong> Identified correlations between ratings, rating counts, and sales trends to understand customer preferences.
+        </li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h2>📊 Visualizations</h2>
+      <div class="diagram">
+        <h3>Histogram: Distribution of Product Ratings</h3>
+        <img src="https://github.com/user-attachments/assets/78d112c1-ed3a-4dd7-b2f2-f6275fa74181" alt="Histogram of Product Ratings">
+      </div>
+
+      <div class="diagram">
+        <h3>Bar Chart: Average Discount Percentage Across Categories</h3>
+        <img src="https://github.com/user-attachments/assets/b05ced4d-2e10-436b-97b9-18fa9dfdb0d4" alt="Bar Chart of Discount Percentages">
+      </div>
+
+      <div class="diagram">
+        <h3>Average Rating Counts by Product Category</h3>
+        <img src="https://github.com/user-attachments/assets/d686caa2-fc53-484f-9ce1-e20d23ae7e29" alt="Average Rating Counts by Category">
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2>🛠️ How to Run This Project</h2>
+      <ol>
+        <li>Clone the repository: <code>git clone https://github.com/your-repo/sales-data-analysis.git</code></li>
+        <li>Install the required Python libraries: <code><b>pip install -r requirements.txt</b></code></li>
+        <li>Run the project: <code><b>python main.py</b></code></li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>
+>>>>>>> 552158a9e6fbd8f0c15295d40a14472fadba09df
