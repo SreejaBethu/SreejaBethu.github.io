@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website! This site showcases my professional experience, data projects, skills, and ways to connect with me.
 
 ## 🔗 Live Demo
-Check it out here: [https://yourusername.github.io/portfolio/](https://SreejaBethu.github.io/portfolio/) *(replace with your actual URL after deployment)*
+Check it out here: [https://sreejabethu.github.io/portfolio/](https://SreejaBethu.github.io/portfolio/) *(replace with your actual URL after deployment)*
 
 ## 🛠️ Built With
 - HTML5 / CSS3
