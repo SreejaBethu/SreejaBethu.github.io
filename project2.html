@@ -2,166 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cost of Living Index Globally - Data Analysis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Optional: Bootstrap CSS for layout -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Portfolio Projects</title>
   <style>
     body {
-      background-color: #f7fafc;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: honeydew;
+      color: #030000;
+      line-height: 1.6;
+      text-align: center;
+      padding: 20px;
     }
-    .header {
-      background: url('images/Project2.jpg') no-repeat center center;
+    .project-banner {
+      width: 100%;
+      height: 300px;
       background-size: cover;
-      color: #000202;
-      padding: 40px 0;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: whitesmoke;
+      position: relative;
+    }
+    .project-banner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #c2d0d1ef;
+    }
+    .project-banner h1 {
+      position: relative;
+      font-size: 2.5em;
+      padding: 10px 20px;
+      background: rgba(0,0,0,0.5);
+      border-radius: 4px;
+    }
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 20px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #00796b;
+      margin-top: 0;
+    }
+    .project-description {
+      font-size: 1.1em;
+      margin-bottom: 30px;
+    }
+    .section {
+      margin-bottom: 40px;
+      text-align: left;
+    }
+    .section h2 {
       text-align: center;
-    }
-    .header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-    .header p {
-      font-size: 1.2rem;
-    }
-    .graph-container {
-      margin: 40px 0;
-    }
-    .graph-container h2 {
       margin-bottom: 20px;
+      border-bottom: 2px solid #00796b;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    ul, ol {
+      text-align: left;
+      padding-left: 20px;
+    }
+    .diagram {
+      margin-bottom: 30px;
       text-align: center;
     }
-    /* New CSS class to control canvas size */
-    .graph-canvas {
-        width: 400px;  /* Adjust the width as needed */
-        height: 300px; /* Adjust the height as needed */
-        display: block;
-        margin: 0 auto;
-      }
-    footer {
-      background-color: #343a40;
-      color: #fff;
-      padding: 15px 0;
-      text-align: center;
+    .diagram img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    a {
+      color: #00796b;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <!-- Header Section -->
-  <header class="header">
-    <div class="container">
-      <h1>Cost of Living Index Globally</h1>
-      <p>Comprehensive Data Analysis and Visualization</p>
-    </div>
+
+  <!-- NEW PROJECT -->
+  <header class="project-banner" style="background-image: url('images/Smart-Report-Analyzer.png');">
+    <h1>Smart Report Analyzer (LLM-Powered)</h1>
   </header>
 
-  <!-- Graphs Section -->
   <div class="container">
-    <!-- Graph 1: Bar Chart for Cost-of-Living Index by City -->
-    <div class="graph-container">
-      <h2>Cost-of-Living Index by City</h2>
-      <canvas id="chart1"></canvas>
+    <h1>🧠 Smart Report Analyzer</h1>
+    <p class="project-description">
+      A Streamlit app that uses LLMs from Hugging Face to summarize and interact with PDF, Excel, and CSV reports. Ask questions, get AI-powered insights, and generate instant visualizations.
+    </p>
+
+    <div class="section">
+      <h2>🔍 Features</h2>
+      <ul>
+        <li>📂 Upload PDF, Excel, or CSV files</li>
+        <li>🧠 Generate summaries using Flan-T5, Bart, and Tapas</li>
+        <li>💬 Ask natural language questions about the content</li>
+        <li>📊 Auto-generate EDA plots with Plotly</li>
+      </ul>
     </div>
 
-    <!-- Graph 2: Line Chart for Trend Over Time -->
-    <div class="graph-container">
-      <h2>Trend Over Time (City X)</h2>
-      <canvas id="chart2"></canvas>
+    <div class="section">
+      <h2>🛠 Tech Stack</h2>
+      <ul>
+        <li>Streamlit, Hugging Face Transformers</li>
+        <li>Flan-T5, Tapas, Bart</li>
+        <li>Pandas, Plotly, pdfplumber</li>
+      </ul>
     </div>
 
-    <!-- Graph 3: Pie Chart for Cost Breakdown -->
-    <div class="graph-container">
-      <h2>Cost Breakdown Distribution</h2>
-      <canvas id="chart3"></canvas>
+    <div class="section">
+      <h2>🔗 Links</h2>
+      <ul>
+        <li>🌐 <a href="https://smart-report-analyzer.streamlit.app" target="_blank">Live App</a></li>
+        <li>💻 <a href="https://github.com/SreejaBethu/Smart-Report-Analyzer" target="_blank">GitHub Repository</a></li>
+        <li>📖 <a href="https://medium.com/@bethusreeja/smart-report-analyzer-my-llm-powered-app-for-summarizing-pdfs-and-excel-reports-0b7297d6bb00" target="_blank">Medium Article</a></li>
+        <li>🧵 <a href="https://discuss.streamlit.io/t/smart-report-analyzer-llm-powered-summarization-q-a-for-excel-pdf-reports/98179" target="_blank">Streamlit Community Post</a></li>
+      </ul>
     </div>
   </div>
 
-  <!-- Footer Section -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Cost of Living Index Globally</p>
-    </div>
-  </footer>
-
-  <!-- Chart.js Library from CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    // Graph 1: Bar Chart - Cost-of-Living Index by City
-    const ctx1 = document.getElementById('chart1').getContext('2d');
-    const chart1 = new Chart(ctx1, {
-      type: 'bar',
-      data: {
-        labels: ['New York', 'London', 'Tokyo', 'Paris', 'Sydney'],
-        datasets: [{
-          label: 'Cost-of-Living Index',
-          data: [120, 110, 100, 95, 90], // Replace with actual data
-          backgroundColor: 'rgba(52, 152, 219, 0.6)',
-          borderColor: 'rgba(41, 128, 185, 1)',
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
-
-    // Graph 2: Line Chart - Trend Over Time for City X
-    const ctx2 = document.getElementById('chart2').getContext('2d');
-    const chart2 = new Chart(ctx2, {
-      type: 'line',
-      data: {
-        labels: ['2016', '2017', '2018', '2019', '2020', '2021', '2022'],
-        datasets: [{
-          label: 'City X Cost-of-Living Trend',
-          data: [95, 97, 98, 100, 102, 105, 107], // Replace with actual trend data
-          fill: false,
-          borderColor: 'rgba(46, 204, 113, 1)',
-          tension: 0.1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: false
-          }
-        }
-      }
-    });
-
-    // Graph 3: Pie Chart - Cost Breakdown Distribution
-    const ctx3 = document.getElementById('chart3').getContext('2d');
-    const chart3 = new Chart(ctx3, {
-      type: 'pie',
-      data: {
-        labels: ['Housing', 'Food', 'Transportation', 'Utilities', 'Healthcare'],
-        datasets: [{
-          label: 'Cost Breakdown',
-          data: [40, 25, 15, 10, 10], // Replace with actual percentages
-          backgroundColor: [
-            'rgba(231, 76, 60, 0.7)',
-            'rgba(241, 196, 15, 0.7)',
-            'rgba(52, 152, 219, 0.7)',
-            'rgba(155, 89, 182, 0.7)',
-            'rgba(46, 204, 113, 0.7)'
-          ],
-          borderColor: [
-            'rgba(192, 57, 43, 1)',
-            'rgba(243, 156, 18, 1)',
-            'rgba(41, 128, 185, 1)',
-            'rgba(142, 68, 173, 1)',
-            'rgba(39, 174, 96, 1)'
-          ],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        responsive: true
-      }
-    });
-  </script>
 </body>
 </html>
