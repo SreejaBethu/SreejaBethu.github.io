@@ -466,10 +466,14 @@ body {
   }
   
   /* Responsive Navigation */
-  @media (max-width: 768px) {
-    nav .container {
-      flex-direction: column;
-    }
+@media (max-width: 768px) {
+  /* Adjust layout for tablets */
+}
+
+@media (max-width: 480px) {
+  /* Adjust layout for mobile phones */
+}
+
     
     nav ul {
       flex-direction: column;
@@ -480,5 +484,4 @@ body {
       margin: 5px 0;
     }
   }
->>>>>>> 552158a9e6fbd8f0c15295d40a14472fadba09df
   
