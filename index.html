@@ -1,471 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SREEJA BETHU</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sreeja Bethu Portfolio" />
+  <title>Sreeja Bethu | Data Analyst</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    #experienceandeducation {
-      background: #ffffff;
-      padding: 60px 0;
-    }
-    .container {
-      width: 80%;
-      margin: 0 auto;
-    }
-    .about-section, .skills-section {
-      padding: 30px 0;
-    }
-    .about-container {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-    .about-photo {
-      flex: 1;
-      min-width: 260px;
-    }
-    .about-photo img {
-      width: 100%;
-      max-width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    .about-text {
-      flex: 2;
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .about-text-box {
-      background-color: #f9f9f9;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .about-icons {
-      display: flex;
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .about-icons a img {
-      width: 200px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 10 px;
-      transition: transform 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .about-icons a img:hover {
-      transform: scale(1.1);
-    }
-    h2 {
-      text-align: center;
-      font-size: 2.5em;
-      margin-bottom: 40px;
-      color: #333;
-    }
-    .experience-container {
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-    }
-    /* Side-scroll list styling */
-    .side-scroll {
-      width: 30%;
-      max-height: 400px;
-      overflow-y: auto;
-      border-right: 2px solid #aaf6f8;
-    }
-    .side-scroll ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .side-scroll li {
-      padding: 15px;
-      font-size: 1.1em;
-      color: #0f7a70;
-      cursor: pointer;
-      border-bottom: 1px solid #ddd;
-      transition: background-color 0.3s ease;
-    }
-    .side-scroll li:hover {
-      background-color: #d1efe8;
-    }
-    /* Details container styling */
-    .details-container {
-      width: 70%;
-      padding: 20px;
-      background: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      min-height: 400px;
-      position: relative;
-    }
-    .details {
-      width: 100%;
-      top: 0;
-      left: 0;
-      background: #f4f4f4;
-      border-radius: 10px;
-      display: none;
-      animation: slideIn 0.5s ease-in-out;
-      padding: 20px;
-    }
-    .details.active {
-      display: block;
-    }
-    .details h3 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
-      color: #666;
-    }
-    .details p {
-      font-size: 1em;
-      color: #666;
-      line-height: 1.5em;
-    }
-    .details ul {
-      margin: 10px 0 0 20px;
-      padding: 0;
-    }
-    .details li {
-      margin-bottom: 10px;
-      font-size: 1em;
-      color: #555;
-    }
-    .details h4 {
-      margin-top: 15px;
-      color: #444;
-      font-size: 1.2em;
-    }
-    /* Coursework container to split list in two columns */
-    .coursework-container {
-      display: flex;
-      gap: 20px;
-      margin-top: 10px;
-    }
-    .coursework-container ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      flex: 1;
-    }
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateX(-20px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    /* Additional styles for other sections (projects, skills, etc.) */
-    .company-list {
-      width: 30%;
-      background: #00796b;
-      color: white;
-      padding: 20px;
-      border-radius: 10px;
-    }
-    .company-list div {
-      padding: 15px;
-      margin: 5px 0;
-      cursor: pointer;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-    .company-list div:hover {
-      background: rgba(255, 255, 255, 0.5);
-    }
-
-    /* Updated Skills Section: Three columns side by side */
-    .skills-container {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .skill-section {
-      flex: 1;
-      min-width: 210px;
-    }
-    .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-    }
-    .skill, .skill-box {
-      background: #f4f4f4;
-      padding: 10px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .skill {
-      width: 180px;
-    }
-    .skill-box {
-      width: 200px;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #f4f4f9; color: #333; }
+    header, section, footer { padding: 60px 20px; max-width: 1100px; margin: auto; }
+    header { background: linear-gradient(120deg, #00796b, #33c9ba); color: white; text-align: center; padding: 80px 20px; }
+    header h1 { font-size: 2.8rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; }
+    nav { background: white; padding: 15px 20px; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 999; }
+    nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; list-style: none; }
+    nav a { text-decoration: none; color: #00796b; font-weight: 600; }
+    nav a:hover { color: #004d40; }
+    h2 { font-size: 2rem; margin-bottom: 30px; text-align: center; color: #00796b; }
+    .about-section, .projects-section, .skills-section, .contact-section { background: white; border-radius: 10px; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 40px; }
+    .about-section p { font-size: 1.1rem; line-height: 1.7; margin-bottom: 20px; }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .project-card { background: #f0fdfc; border: 1px solid #b2dfdb; border-radius: 10px; padding: 20px; transition: transform 0.3s; }
+    .project-card:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .project-card h3 { margin-bottom: 10px; color: #004d40; }
+    .project-card p { margin-bottom: 8px; }
+    .skills-grid { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
+    .skill-badge { background: #e0f2f1; color: #004d40; padding: 10px 15px; border-radius: 20px; font-weight: 600; }
+    form { display: grid; gap: 15px; max-width: 500px; margin: auto; }
+    input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; }
+    button { background: #00796b; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; }
+    button:hover { background: #004d40; }
+    footer { text-align: center; font-size: 0.9rem; color: #777; }
   </style>
 </head>
 <body>
   <nav>
-    <div class="container">
-      <div class="logo">
-        <h1>SREEJA BETHU</h1>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experienceandeducation">Experience & Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="https://www.linkedin.com/in/sreejabethu/" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a></li>
-        <li><a href="https://github.com/SreejaBethu" target="_blank"><i class="fab fa-github fa-lg"></i></a></li>
-      </ul>
-    </div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://www.linkedin.com/in/sreejabethu" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="https://github.com/SreejaBethu" target="_blank"><i class="fab fa-github"></i></a></li>
+    </ul>
   </nav>
 
-  <header class="hero">
-    <div class="container">
-      <h2>SREEJA BETHU</h2>
-      <p>Data Analyst | Business Insights | Predictive Modeling</p>
-    </div>
+  <header>
+    <h1>Sreeja Bethu</h1>
+    <p>Data Analyst | Business Intelligence | Predictive Modeling</p>
   </header>
 
   <section id="about" class="about-section">
-    <div class="container">
-      <h2>About Me</h2>
-      <div class="about-container">
-        <div class="about-photo">
-        <img src="images/Sreeja-Bethu-Photo.jpg" alt="Sreeja Bethu">
-      </div>
-      <div class="about-text">
-        <div class="about-text-box">
-          <p>I am a results-driven Data Analyst with expertise in business intelligence, machine learning, and statistical modeling. With experience across healthcare, insurance, and AI-driven solutions, I leverage data to drive strategic business decisions.</p>
-          <p>My passion lies in transforming raw data into actionable insights, optimizing workflows, and building interactive dashboards to enhance decision-making.</p>
-        </div>
-        <div class="about-icons">
-          <a href="images/AUM.jpg" target="blank">
-            <img src="images/AUM.jpg" alt="Gallery Icon 1">
-          </a>
-          <a href="images/AIproject.png" target="blank">
-            <img src="images/AIProject.png" alt="Gallery Icon 2">
-          </a>
-          <a href="images/CISCO.jpeg/" target="blank">
-            <img src="images/CISCO.jpeg" alt="Gallery Icon 3">
-          </a>
-          <a href="images/PowerBipwc" target="blank">
-            <img src="images/Powerbipwc.jpeg" alt="Gallery Icon 4">
-          </a>
-        </div>
-      </div>
-    </div>
+    <h2>About Me</h2>
+    <p>I am a results-driven Data Analyst with expertise in business intelligence, machine learning, and statistical modeling. With experience across healthcare, insurance, and AI-driven solutions, I leverage data to drive strategic business decisions and build actionable dashboards for data-driven insights.</p>
   </section>
-  
-  
-<section id="experienceandeducation" class="section">
-  <div class="container">
-    <h2>Experience & Education</h2>
-    <div class="experience-container">
-        <!-- Side-scroll list of positions -->
-        <div class="side-scroll">
-          <ul>
-            <li onmouseover="showDetails('merck')">Data Analyst</li>
-            <li onmouseover="showDetails('vitech')">Senior Business Analyst</li>
-            <li onmouseover="showDetails('amazon')">ML Data Associate-1</li>
-            <li onmouseover="showDetails('knoah')">Associate Data Analyst</li>
-            <li onmouseover="showDetails('yuvi')">Associate Data Analyst</li>
-            <!-- Updated onmouseover parameter to match the master's details ID -->
-            <li onmouseover="showDetails('masters')">Masters</li>
-          </ul>
-        </div>
-        <!-- Details display area -->
-        <div class="details-container">
-          <div class="details" id="merck">
-            <h3>Data Analyst</h3>
-            <p><strong>PA | Feb 2024 – Present</strong></p>
-            <ul>
-              <li>Extracted, cleaned, and processed clinical trial data from EHRs, CTMS, and external research datasets using SQL and Python.</li>
-              <li>Developed predictive models to improve clinical trial outcome predictions by 15%.</li>
-              <li>Designed Power BI dashboards for patient response and treatment adherence.</li>
-              <li>Applied survival analysis (Kaplan-Meier curves, Cox regression) to analyze patient survival rates.</li>
-              <li>Collaborated with clinical researchers, biostatisticians, and regulatory teams to align analytics with FDA guidelines.</li>
-            </ul>
-          </div>
-          <div class="details" id="vitech">
-            <h3>Senior Business Analyst</h3>
-            <p><strong>India | May 2021 – Jul 2022</strong></p>
-            <ul>
-              <li>Optimized insurance claims processes, reducing claim processing time by 20%.</li>
-              <li>Developed Tableau dashboards & Power BI reports for fraud detection insights.</li>
-              <li>Decreased fraudulent claims by 25% by implementing pattern recognition algorithms.</li>
-              <li>Increased customer retention by 15% by identifying high-value policyholders and refining marketing strategies.</li>
-              <li>Partnered with actuarial & underwriting teams to design data models for policyholder risk assessment.</li>
-            </ul>
-          </div>
-          <div class="details" id="amazon">
-            <h3>ML Data Associate-1</h3>
-            <p><strong>India | April 2020 – Aug 2021</strong></p>
-            <ul>
-              <li>Applied predictive analytics to forecast customer complaints and improve service delivery.</li>
-              <li>Enhanced Alexa's speech recognition accuracy by 15% by improving speech-to-text dataset quality.</li>
-              <li>Automated annotation workflows, reducing manual effort by 25%.</li>
-              <li>Conducted A/B testing on voice assistant models, refining NLP performance by 10%.</li>
-            </ul>
-          </div>
-          <div class="details" id="knoah">
-            <h3>Associate Data Analyst</h3>
-            <p><strong>India | Aug 2019 – Aug 2020</strong></p>
-            <ul>
-              <li>Reduced customer complaints by 25% by analyzing support center data and optimizing customer service workflows.</li>
-              <li>Implemented AI-driven chatbots, cutting call-handling time by 20%.</li>
-              <li>Developed real-time dashboards (Tableau, Power BI) to monitor CSAT & NPS scores.</li>
-              <li>Applied predictive analytics to forecast customer complaints and improve service delivery.</li>
-            </ul>
-          </div>
-          <div class="details" id="yuvi">
-            <h3>Associate Data Analyst</h3>
-            <p><strong>India | Aug 2019 – Aug 2020</strong></p>
-            <ul>
-              <li>Developed predictive analytics models, reducing student dropout rates by 18%.</li>
-              <li>Designed personalized learning recommendation engines, increasing student engagement by 20%.</li>
-              <li>Automated 40% of academic reporting tasks, enhancing efficiency for faculty &amp; administrators.</li>
-            </ul>
-          </div>
-          <div class="details" id="masters">
-            <h3>Auburn University at Montgomery, AL</h3>
-            <p><strong>Ms, Management Information Systems (August 2022 - December 2023)</strong></p>
-            <h4>Course Work:</h4>
-            <div class="coursework-container">
-              <ul>
-                <li>Data Analytics for Comp Adv</li>
-                <li>Enterprise Information Systems</li>
-                <li>Qual Mngt and Integrated Sys</li>
-                <li>Lead Innv:Prod Design Proto</li>
-              </ul>
-              <ul>
-                <li>Information Security</li>
-                <li>Healthcare Info law &amp; Priv Sec</li>
-                <li>Information Resource Mngt</li>
-                <li>Innovation Strategy</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+
+  <section id="projects" class="projects-section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Cost of Living Index</h3>
+        <p>Streamlit app analyzing global cost of living using public datasets.</p>
+        <p><strong>Tech:</strong> Python, Streamlit, Pandas</p>
+        <a href="https://github.com/SreejaBethu/Cost-Of-Living-Index-By-Country" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>GenAI Job Application Assistant</h3>
+        <p>LLM-based assistant to tailor resumes, write cover letters, and automate job applications.</p>
+        <p><strong>Tech:</strong> Python, Streamlit, Gemini, n8n</p>
+        <a href="https://github.com/SreejaBethu/GEN-AI-CAPSTONE-PROJECT" target="_blank">GitHub</a>
       </div>
     </div>
   </section>
 
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <a href="project1.html" class="project-tile">
-          <div class="tile-cover" style="background-image: url('images/Forecast-Sales.jpeg');"></div>
-          <div class="tile-overlay">
-            <h3>Sales Data Analysis & Forecasting</h3>
-          </div>
-        </a>
-        <a href="project2.html" class="project-tile">
-          <div class="tile-cover" style="background-image: url('images/Project2.png');"></div>
-          <div class="tile-overlay">
-            <h3>Smart Report Analyzer Using LLM</h3>
-          </div>
-        </a>
-        <a href="project3.html" class="project-tile">
-          <div class="tile-cover" style="background-image: url('images/project3.jpg');"></div>
-          <div class="tile-overlay">
-            <h3>Weather Forecasting</h3>
-          </div>
-        </a>
-      </div>
+  <section id="skills" class="skills-section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-badge">SQL</div>
+      <div class="skill-badge">Python</div>
+      <div class="skill-badge">Streamlit</div>
+      <div class="skill-badge">Power BI</div>
+      <div class="skill-badge">Tableau</div>
+      <div class="skill-badge">Airflow</div>
+      <div class="skill-badge">n8n</div>
+      <div class="skill-badge">Statistical Modeling</div>
+      <div class="skill-badge">Machine Learning</div>
+      <div class="skill-badge">Snowflake</div>
     </div>
   </section>
 
-  <section id="skills" class="section">
-    <div class="container">
-      <div class="skills-grid">
-        <h2>Skills</h2>
-        <div class="skill"><i class="fas fa-chart-line"></i> Data Analysis</div>
-        <div class="skill"><i class="fas fa-database"></i> SQL</div>
-        <div class="skill"><i class="fab fa-python"></i> Python</div>
-        <div class="skill"><i class="fas fa-chart-bar"></i> Data Visualization</div>
-        <div class="skill"><i class="fab fa-github"></i> GitHub</div>
-        <div class="skill"><i class="fas fa-file-excel"></i> Excel</div>
-      </div>
-      <div class="skill-section">
-        <h2>Statistical & Analytical Skills</h2>
-        <div class="skills-grid">
-        <div class="skill-box"><i class="fas fa-calculator"></i> Regression Analysis</div>
-        <div class="skill-box"><i class="fas fa-chart-pie"></i> Data Visualization</div>
-        <div class="skill-box"><i class="fas fa-microscope"></i> Hypothesis Testing</div>
-      </div>
-      <h2>Leadership Qualities</h2>
-      <div class="skills-grid">
-        <div class="skill-box"><i class="fas fa-users"></i> Team Collaboration</div>
-        <div class="skill-box"><i class="fas fa-lightbulb"></i> Strategic Thinking</div>
-        <div class="skill-box"><i class="fas fa-project-diagram"></i> Project Management</div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    function showDetails(detailId) {
-      // Hide all detail sections
-      var details = document.querySelectorAll('.details');
-      details.forEach(function(detail) {
-        detail.classList.remove('active');
-      });
-      // Show the selected detail section
-      document.getElementById(detailId).classList.add('active');
-    }
-    
-    // Optionally, display the first detail by default
-    document.addEventListener("DOMContentLoaded", function() {
-      showDetails('merck');
-    });
-  </script>
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact</h2>
-      <form action="mailto:bethusreeja@gmail.com" method="post" enctype="text/plain" style="max-width: 600px; margin: 0 auto;">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
-  
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
-  
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; margin-bottom: 10px;"></textarea><br>
-  
-        <button type="submit" style="padding: 10px 20px; background-color: #00796b; color: white; border: none; border-radius: 5px; cursor: pointer;">Send</button>
-      </form>
-      <div style="text-align: center; font-size: 1.4em; margin-top: 30px;">
-        <a href="mailto:bethusreeja@gmail.com" style="margin: 0 10px;"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/sreejabethu/" target="_blank" style="margin: 0 10px;"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/SreejaBethu" target="_blank" style="margin: 0 10px;"><i class="fab fa-github"></i></a>
-      </div>
-    </div>
+  <section id="contact" class="contact-section">
+    <h2>Contact</h2>
+    <form action="mailto:bethusreeja22@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
   </section>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 SREEJA BETHU. All rights reserved.</p>
-      <p style="text-align: center; font-size: 1.1em; margin-top: 30px;">
-        <a href="mailto:bethusreeja@gmail.com">bethusreeja@gmail.com</a> |
-        <a href="https://www.linkedin.com/in/sreejabethu/" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/SreejaBethu" target="_blank">GitHub</a>
-      </p>
-    </div>
+    <p>&copy; 2025 Sreeja Bethu. All rights reserved.</p>
   </footer>
 </body>
 </html>
