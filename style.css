@@ -225,9 +225,6 @@ body {
   }
   
   /* Responsive Navigation */
-    html {
-      scroll-behavior: smooth;
-    }
 
   @media (max-width: 768px) {
     nav .container {
