@@ -9,11 +9,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; background: #f4f4f9; color: #333; }
     header, section, footer { padding: 60px 20px; max-width: 1100px; margin: auto; }
     header { background: linear-gradient(120deg, #00796b, #33c9ba); color: white; text-align: center; padding: 80px 20px; }
     header h1 { font-size: 2.8rem; margin-bottom: 10px; }
-    header p { font-size: 1.2rem; }
+    header p { font-size: 1.2rem; margin-bottom: 10px; }
     nav { background: white; padding: 15px 20px; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 999; }
     nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; list-style: none; }
     nav a { text-decoration: none; color: #00796b; font-weight: 600; }
@@ -31,11 +32,14 @@
     .project-card p { margin-bottom: 8px; }
     .skills-grid { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
     .skill-badge { background: #e0f2f1; color: #004d40; padding: 10px 15px; border-radius: 20px; font-weight: 600; }
+    .achievements-section ul { list-style-type: disc; padding-left: 40px; text-align: left; }
+    .achievements-section li { margin-bottom: 10px; }
     form { display: grid; gap: 15px; max-width: 500px; margin: auto; }
     input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; }
     button { background: #00796b; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; }
     button:hover { background: #004d40; }
-    footer { text-align: center; font-size: 0.9rem; color: #777; }
+    footer { text-align: center; font-size: 0.9rem; color: #777; padding-bottom: 20px; }
+    .footer-links a { color: white; margin: 0 10px; font-size: 1.2rem; text-decoration: none; }
   </style>
 </head>
 <body>
@@ -44,6 +48,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="achievements">Highlights</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="https://www.linkedin.com/in/sreejabethu" target="_blank"><i class="fab fa-linkedin"></i></a></li>
       <li><a href="https://github.com/SreejaBethu" target="_blank"><i class="fab fa-github"></i></a></li>
@@ -114,7 +119,7 @@
     </div>
   </section>
 
-  <section id="achievements" class="section">
+  <section id="achievements" class="achievements-section">
   <h2>Highlights</h2>
   <ul>
     <li>Improved clinical trial predictions by 15% at Merck using ML.</li>
