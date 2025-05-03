@@ -41,8 +41,70 @@
     footer { text-align: center; font-size: 0.9rem; color: #777; padding-bottom: 20px; }
     .footer-links a { color: white; margin: 0 10px; font-size: 1.2rem; text-decoration: none; }
   </style>
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+  }
+</script>
+style>
+  .toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #00796b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  body.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
+  }
+  body.dark-mode header {
+    background: linear-gradient(120deg, #1e1e1e, #333);
+    color: #e0e0e0;
+  }
+  body.dark-mode nav {
+    background: #1e1e1e;
+    border-bottom: 1px solid #444;
+  }
+  body.dark-mode nav a {
+    color: #b2dfdb;
+  }
+  body.dark-mode .about-section,
+  body.dark-mode .projects-section,
+  body.dark-mode .skills-section,
+  body.dark-mode .contact-section,
+  body.dark-mode .achievements-section {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: none;
+  }
+  body.dark-mode .project-card {
+    background: #2a2a2a;
+    border-color: #444;
+  }
+  body.dark-mode .skill-badge {
+    background: #263238;
+    color: #80cbc4;
+  }
+  body.dark-mode button {
+    background: #263238;
+    color: #e0e0e0;
+  }
+  body.dark-mode input,
+  body.dark-mode textarea {
+    background: #333;
+    color: #e0e0e0;
+    border-color: #555;
+  }
+</style>
 </head>
 <body>
+  <button class="toggle-btn" onclick="toggleTheme()">Toggle Dark Mode</button>
   <nav>
     <ul>
       <li><a href="#about">About</a></li>
