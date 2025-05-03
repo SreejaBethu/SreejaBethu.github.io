@@ -10,7 +10,8 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background: #f4f4f9; color: #333; }
+    body {
+  transistion: backgorund-color 0.3s ease, color 0.3s ease;}
     header, section, footer { padding: 60px 20px; max-width: 1100px; margin: auto; }
     header { background: linear-gradient(120deg, #00796b, #33c9ba); color: white; text-align: center; padding: 80px 20px; }
     header h1 { font-size: 2.8rem; margin-bottom: 10px; }
@@ -43,10 +44,13 @@
   </style>
 <script>
   function toggleTheme() {
-    document.body.classList.toggle('dark-mode');
+  const body = document.body;
+  const icon = document.getElementById('theme-icon');
+  body.classList.toggle('dark-mode');
+  icon.className = body.classList.contains('dark-mode') ? 'fas fa-sun' : 'fas fa-moon';
   }
 </script>
-style>
+<style>
   .toggle-btn {
     position: fixed;
     top: 20px;
@@ -68,8 +72,10 @@ style>
     color: #e0e0e0;
   }
   body.dark-mode nav {
-    background: #1e1e1e;
-    border-bottom: 1px solid #444;
+  transition: background-color 0.3s ease, color 0.3s ease;}
+  body.dark-mode header {
+    background: linear-gradient(120deg, #1e1e1e, #333);
+    color: #e0e0e0;
   }
   body.dark-mode nav a {
     color: #b2dfdb;
@@ -104,7 +110,9 @@ style>
 </style>
 </head>
 <body>
-  <button class="toggle-btn" onclick="toggleTheme()">Toggle Dark Mode</button>
+  <button class="toggle-btn" onclick="toggleTheme()">
+  <i id="theme-icon" class="fas fa-moon"></i>
+</button>
   <nav>
     <ul>
       <li><a href="#about">About</a></li>
