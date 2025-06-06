@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Wait for the DOM to fully load
 document.addEventListener("DOMContentLoaded", function() {
     // Get the canvas element by its ID and set up the chart context
@@ -55,6 +54,4 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       }
     });
-  });
->>>>>>> 552158a9e6fbd8f0c15295d40a14472fadba09df
-  
+  });  
