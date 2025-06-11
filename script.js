@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- 3. Set up the Intersection Observer for Scroll Animations ---
-    const animatedElements = document.querySelectorAll('.section-container, .project-card, .highlight-section li');
+    const animatedElements = document.querySelectorAll('.section-container, .project-card, .highlight-section');
     
     // Check if we found any elements to animate
     if (animatedElements.length > 0) {
