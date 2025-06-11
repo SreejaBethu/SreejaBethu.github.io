@@ -1,26 +1,29 @@
-/* --- style.css (Upgraded Version) --- */
+/* --- style.css (Final Version) --- */
 
 /* --- 1. General & Layout Styles --- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { 
     font-family: 'Inter', sans-serif; 
-    /* UI UPGRADE: Subtle gradient adds depth */
-    background: linear-gradient(to bottom, #f7f9fc, #f1f4f8); 
+    background: #f7f9fc;
     color: #333; 
     transition: background-color 0.4s ease, color 0.4s ease;
-    /* UI UPGRADE: Smoother font rendering */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-main { padding: 40px 20px; max-width: 1100px; margin: auto; }
+/* THIS IS THE KEY FIX: Center the main content */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
 section { margin-bottom: 60px; }
 
-/* --- 2. Header & Navigation --- */
+/* --- 2. Header, Footer & Navigation (Full-width elements) --- */
+header, footer { text-align: center; }
 header { 
     background: linear-gradient(135deg, #00695c, #009688); 
     color: white; 
-    text-align: center; 
     padding: 100px 20px 80px; 
 }
 header h1 { font-size: 3.2rem; margin-bottom: 15px; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
@@ -29,14 +32,21 @@ nav {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 15px 20px; 
     border-bottom: 1px solid #e0e0e0; 
     position: sticky; top: 0; 
     z-index: 1000; 
+    padding: 0 20px;
 }
-nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; list-style: none; }
+.nav-container { max-width: 1100px; margin: 0 auto; }
+nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; list-style: none; padding: 15px 0; }
 nav a { text-decoration: none; color: #004d40; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: background-color 0.2s ease, color 0.2s ease; }
 nav a:hover { color: #00796b; background-color: #e8f5e9; }
+footer { background: #eef2f7; padding: 40px 20px; }
+.footer-container { max-width: 1100px; margin: 0 auto; }
+.footer-links { margin-bottom: 15px; }
+.footer-links a { color: #555; margin: 0 12px; font-size: 1.6rem; text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: #00796b; }
+footer p { color: #777; font-size: 0.9rem; }
 
 /* --- 3. Section & Content Styles --- */
 h2 { font-size: 2.5rem; margin-bottom: 50px; text-align: center; color: #004d40; font-weight: 700; }
@@ -46,7 +56,7 @@ h2 { font-size: 2.5rem; margin-bottom: 50px; text-align: center; color: #004d40;
 .about-text { flex: 1; font-size: 1.1rem; line-height: 1.8; color: #4a5568; }
 .about-text strong { color: #004d40; font-weight: 600; }
 
-/* --- 4. Upgraded Project Card Styles --- */
+/* --- 4. Project Card Styles --- */
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
 .project-card { 
     background: #ffffff; 
@@ -54,7 +64,6 @@ h2 { font-size: 2.5rem; margin-bottom: 50px; text-align: center; color: #004d40;
     border-radius: 12px; 
     display: flex; flex-direction: column; 
     overflow: hidden; 
-    /* UI UPGRADE: Smoother, more professional shadow and transition */
     box-shadow: 0 4px 15px rgba(0, 90, 78, 0.05);
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out; 
 }
@@ -64,10 +73,10 @@ h2 { font-size: 2.5rem; margin-bottom: 50px; text-align: center; color: #004d40;
     border-color: #00796b;
 }
 .project-image { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid #e0e0e0; }
-.project-card .project-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+.project-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
 .project-card h3 { margin-top: 0; margin-bottom: 15px; color: #004d40; font-size: 1.5rem; }
 .project-card p { color: #4a5568; margin-bottom: 15px; line-height: 1.7; flex-grow: 1; }
-.project-card .project-tech { margin-top: auto; padding-top: 15px; font-size: 0.9rem; font-weight: 500; color: #00796b; }
+.project-tech { margin-top: auto; padding-top: 15px; font-size: 0.9rem; font-weight: 500; color: #00796b; }
 .project-card a { 
     background: #00796b; color: white; padding: 12px 20px; border-radius: 8px; 
     text-decoration: none; align-self: flex-start; 
@@ -89,6 +98,7 @@ h2 { font-size: 2.5rem; margin-bottom: 50px; text-align: center; color: #004d40;
 .highlight-section ul { list-style: none; padding: 0; }
 .highlight-section li { background: linear-gradient(to right, #e8f5e9, #ffffff); border-left: 5px solid #00796b; padding: 25px; margin-bottom: 20px; border-radius: 0 8px 8px 0; }
 .highlight-section strong { color: #004d40; font-size: 1.1rem; }
+.highlight-skills { margin-top: 15px; }
 .highlight-section a { color: #00796b; font-weight: 600; text-decoration: none; }
 .highlight-section a:hover { text-decoration: underline; }
 form { display: grid; gap: 20px; max-width: 550px; margin: auto; }
@@ -98,27 +108,20 @@ button[type="submit"] { background: #00796b; color: white; padding: 15px 25px; b
 button[type="submit"]:hover { background: #004d40; transform: translateY(-2px); }
 
 /* --- 6. Animation, Footer & Theme Toggle --- */
-@keyframes fadeInSlideUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+@keyframes fadeInSlideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 .js-init-hidden { opacity: 0; }
 .fade-in { animation: fadeInSlideUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
-footer { text-align: center; font-size: 0.9rem; color: #777; padding: 40px 20px; }
-.footer-links { margin-bottom: 15px; }
-.footer-links a { color: #555; margin: 0 12px; font-size: 1.6rem; text-decoration: none; transition: color 0.2s; }
-.footer-links a:hover { color: #00796b; }
 .toggle-btn { position: fixed; bottom: 20px; right: 20px; background: #fff; color: #00796b; border: 1px solid #e0e0e0; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; z-index: 1000; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: all 0.3s ease; }
 .toggle-btn:hover { transform: scale(1.1); box-shadow: 0 6px 16px rgba(0,0,0,0.2); }
 
 /* --- 7. Dark Mode Styles --- */
-body.dark-mode { background: linear-gradient(to bottom, #1a202c, #121212); color: #e2e8f0; }
+body.dark-mode { background: #1a202c; color: #e2e8f0; }
 body.dark-mode nav { background: rgba(26, 32, 44, 0.8); border-bottom-color: #2d3748; }
 body.dark-mode nav a { color: #81e6d9; }
 body.dark-mode nav a:hover { color: #f7fafc; background-color: #2d3748; }
 body.dark-mode h2, body.dark-mode .project-card h3 { color: #81e6d9; }
 body.dark-mode .section-container { background: #2d3748; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); }
-body.dark-mode .about-text, body.dark-mode p { color: #a0aec0; }
+body.dark-mode .about-text, body.dark-mode .highlight-section p { color: #a0aec0; }
 body.dark-mode .about-content img { border-color: #26a69a; }
 body.dark-mode .project-card { background: #2d3748; border-color: #4a5568; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); }
 body.dark-mode .project-card:hover { border-color: #81e6d9; }
@@ -131,6 +134,7 @@ body.dark-mode .highlight-section strong, body.dark-mode .highlight-section a { 
 body.dark-mode button[type="submit"] { background: #26a69a; color: #1a202c; }
 body.dark-mode input, body.dark-mode textarea { background: #1a202c; color: #e2e8f0; border-color: #4a5568; }
 body.dark-mode input:focus, body.dark-mode textarea:focus { border-color: #81e6d9; box-shadow: 0 0 0 3px rgba(129, 230, 217, 0.3); }
-body.dark-mode footer, body.dark-mode .footer-links a { color: #a0aec0; }
+body.dark-mode footer { background: #1a202c; }
+body.dark-mode .footer-links a, body.dark-mode footer p { color: #a0aec0; }
 body.dark-mode .footer-links a:hover { color: #81e6d9; }
 body.dark-mode .toggle-btn { background: #2d3748; color: #81e6d9; border-color: #4a5568; }
