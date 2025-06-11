@@ -3,16 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- SEO UPDATE: More descriptive meta tag to improve search engine visibility. -->
   <meta name="description" content="Portfolio of Sreeja Bethu, a Data Analyst and GenAI Specialist based in the USA. Expertise in Python, Power BI, SQL, and building LLM-powered automation solutions." />
-  
   <title>Sreeja Bethu | Data Analyst & GenAI Innovator</title>
   
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Your existing CSS - No changes needed here, it's already great. */
+    /* Your existing CSS - with one addition for project images */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; background: #f4f7f6; color: #333; transition: background-color 0.3s ease, color 0.3s ease; }
@@ -30,12 +27,25 @@
     .about-content img { width: 180px; height: 180px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 4px solid #b2dfdb; }
     .about-text { flex: 1; font-size: 1.1rem; line-height: 1.8; color: #555; }
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    .project-card { background: #f8fdfd; border: 1px solid #b2dfdb; border-radius: 10px; padding: 25px; transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+    .project-card { background: #f8fdfd; border: 1px solid #b2dfdb; border-radius: 10px; padding: 25px; transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; overflow: hidden; }
     .project-card:hover { transform: translateY(-8px); box-shadow: 0 8px 20px rgba(0, 77, 64, 0.1); }
+    
+    /* --- CSS ADDITION: Styles for the project images --- */
+    .project-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #e0f2f1;
+    }
+    
     .project-card h3 { margin-bottom: 15px; color: #004d40; font-size: 1.4rem; }
-    .project-card p { flex-grow: 1; color: #444; margin-bottom: 15px; line-height: 1.6; }
+    .project-card .project-content { flex-grow: 1; display: flex; flex-direction: column; }
+    .project-card .project-content p { color: #444; margin-bottom: 15px; line-height: 1.6; }
+    .project-card .project-content div { margin-top: auto; padding-top: 10px; } /* Pushes the tech stack to the bottom */
     .project-card strong { color: #00695c; }
-    .project-card a { background: #00796b; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; align-self: flex-start; transition: background-color 0.2s; }
+    .project-card a { background: #00796b; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; align-self: flex-start; transition: background-color 0.2s; margin-top: 15px; }
     .project-card a:hover { background: #004d40; }
     .skills-grid { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
     .skill-badge { background: #e0f2f1; color: #004d40; padding: 10px 18px; border-radius: 20px; font-weight: 600; font-size: 0.95rem; }
@@ -54,6 +64,7 @@
     .footer-links a { color: #555; margin: 0 10px; font-size: 1.5rem; text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: #00796b; }
     .toggle-btn { position: fixed; top: 15px; right: 15px; background: #fff; color: #00796b; border: 1px solid #00796b; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; z-index: 1000; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); transition: background-color 0.3s, color 0.3s; }
+    
     body.dark-mode { background: #121212; color: #e0e0e0; }
     body.dark-mode header { background: linear-gradient(120deg, #1e1e1e, #333); }
     body.dark-mode nav { background: #1e1e1e; border-bottom-color: #333; }
@@ -64,6 +75,8 @@
     body.dark-mode .about-text, body.dark-mode p { color: #ccc; }
     body.dark-mode .about-content img { border-color: #26a69a; }
     body.dark-mode .project-card { background: #2a2a2a; border-color: #444; }
+    /* --- CSS ADDITION: Dark mode style for project images --- */
+    body.dark-mode .project-image { border-color: #444; }
     body.dark-mode .project-card a { background: #26a69a; }
     body.dark-mode .project-card a:hover { background: #00897b; }
     body.dark-mode .skill-badge { background: #263238; color: #80cbc4; }
@@ -81,7 +94,6 @@
     const body = document.body;
     const icon = document.getElementById('theme-icon');
     body.classList.toggle('dark-mode');
-    // Save theme preference to local storage
     if (body.classList.contains('dark-mode')) {
         localStorage.setItem('theme', 'dark');
         icon.className = 'fas fa-sun';
@@ -90,9 +102,7 @@
         icon.className = 'fas fa-moon';
     }
   }
-
-  // Check for saved theme preference on page load
-  document.addEventListener('DOMContentLoaded', (event) => {
+  document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('theme') === 'dark') {
       document.body.classList.add('dark-mode');
       document.getElementById('theme-icon').className = 'fas fa-sun';
@@ -111,17 +121,13 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#highlights">Highlights</a></li>
-      <!-- I changed "achievements" and "academic" to "highlights" for a cleaner nav bar -->
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <header>
     <h1>Sreeja Bethu</h1>
-    <!-- HERO UPDATE: Transformed the keyword list into a compelling, action-oriented statement. -->
-    <p>
-      I transform complex data into strategic business assets. As a Data Analyst and GenAI specialist, I engineer automated analytics pipelines and build intelligent LLM-powered tools to drive decision-making and innovation.
-    </p>
+    <p>I transform complex data into strategic business assets. As a Data Analyst and GenAI specialist, I engineer automated analytics pipelines and build intelligent LLM-powered tools to drive decision-making and innovation.</p>
   </header>
   
   <main>
@@ -130,7 +136,6 @@
       <div class="about-content">
         <img src="images/Sreeja-Bethu-Photo.jpg" alt="Sreeja Bethu Profile Photo" />
         <div class="about-text">
-          <!-- ABOUT UPDATE: Refined the text to be more direct and impactful. -->
           <p>As a detail-oriented Data Analyst with 5+ years of experience, my passion lies in solving business problems by uncovering the stories hidden within data. I specialize in designing and implementing end-to-end analytics solutions, leveraging a powerful stack including <strong>SQL, Python, and Power BI</strong> to create dashboards that aren't just informative, but foundational to strategic planning.</p>
           <p>My work extends into the cutting edge of technology, where I architect and deploy <strong>Generative AI and LLM-powered automations</strong>. I'm driven by the challenge of turning complex, unstructured information into automated, actionable insights that save time and create new value.</p>
           <p>I thrive in collaborative environments, dedicated to creating solutions that directly drive business growth. Let's connect and build something impactful together!</p> 
@@ -142,33 +147,39 @@
       <h2>My Projects</h2>
       <div class="projects-grid">
         
-        <!-- PROJECT 1 UPDATE: Restructured to show Problem -> Solution -> Challenge. -->
         <div class="project-card">
-          <h3>GenAI Job Application Assistant</h3>
-          <p><strong>Problem:</strong> The manual job application process is repetitive and time-intensive.
-          <br><strong>Solution:</strong> Architected an intelligent assistant using Gemini and n8n to automate resume tailoring, cover letter generation, and application tracking, dramatically improving efficiency and personalization for job seekers.</p>
-          <p><strong>Key Challenge:</strong> Engineering robust LLM prompts and an n8n workflow to ensure consistently high-quality, context-aware outputs across diverse job descriptions.</p>
-          <div><strong>Tech:</strong> Python, Streamlit, Gemini, n8n Automation</div>
+          <!-- IMAGE ADDED HERE -->
+          <img src="images/project-genai-job.png" alt="GenAI Job Application Assistant" class="project-image">
+          <div class="project-content">
+              <h3>GenAI Job Application Assistant</h3>
+              <p><strong>Problem:</strong> The manual job application process is repetitive and time-intensive.<br><strong>Solution:</strong> Architected an intelligent assistant using Gemini and n8n to automate resume tailoring and cover letter generation, dramatically improving efficiency for job seekers.</p>
+              <p><strong>Key Challenge:</strong> Engineering robust LLM prompts and an n8n workflow to ensure consistently high-quality, context-aware outputs across diverse job descriptions.</p>
+              <div><strong>Tech:</strong> Python, Streamlit, Gemini, n8n Automation</div>
+          </div>
           <a href="https://github.com/SreejaBethu/GEN-AI-CAPSTONE-PROJECT" target="_blank" rel="noopener noreferrer">View on GitHub</a>
         </div>
         
-        <!-- PROJECT 2 UPDATE: Restructured to show Problem -> Solution -> Challenge. -->
         <div class="project-card">
-          <h3>Smart Report Analyzer</h3>
-          <p><strong>Problem:</strong> Extracting key data from unstructured PDF reports is a slow, error-prone manual task.
-          <br><strong>Solution:</strong> Built a smart analyzer using LLMs to automatically parse financial and healthcare PDFs, extracting key information, generating concise summaries, and deriving actionable insights.</p>
-          <p><strong>Key Challenge:</strong> Overcoming inconsistent PDF layouts and structures. This required developing a sophisticated pre-processing pipeline to clean and normalize data before feeding it to the LLM for accurate extraction.</p>
-          <div><strong>Tech:</strong> Gen AI, NLP & LLMs, Python, Data Processing, Streamlit</div>
+          <!-- IMAGE ADDED HERE -->
+          <img src="images/project-smart-report-analyzer.png" alt="Smart Report Analyzer Dashboard" class="project-image">
+          <div class="project-content">
+            <h3>Smart Report Analyzer</h3>
+            <p><strong>Problem:</strong> Extracting key data from unstructured PDF reports is a slow, error-prone manual task.<br><strong>Solution:</strong> Built a smart analyzer using LLMs to automatically parse financial and healthcare PDFs, extracting key information and generating concise, actionable summaries.</p>
+            <p><strong>Key Challenge:</strong> Overcoming inconsistent PDF layouts. This required developing a sophisticated pre-processing pipeline to clean and normalize data before feeding it to the LLM for accurate extraction.</p>
+            <div><strong>Tech:</strong> Gen AI, NLP & LLMs, Python, Data Processing, Streamlit</div>
+          </div>
           <a href="https://github.com/SreejaBethu/Smart-Report-Analyzer" target="_blank" rel="noopener noreferrer">View on GitHub</a>
         </div>
 
-        <!-- PROJECT 3 UPDATE: Restructured to show Problem -> Solution -> Challenge. -->
         <div class="project-card">
-          <h3>Cost of Living Index Dashboard</h3>
-          <p><strong>Problem:</strong> Individuals and businesses lack a simple tool for comparing global living costs for relocation.
-          <br><strong>Solution:</strong> Developed an interactive Streamlit dashboard that analyzes and visualizes cost of living data, allowing users to easily compare key metrics across countries and cities.</p>
-          <p><strong>Key Challenge:</strong> Sourcing, cleaning, and harmonizing disparate public datasets into a unified, analyzable format to ensure the data presented was both accurate and easily comparable for end-users.</p>
-          <div><strong>Tech:</strong> Python, Streamlit, Pandas, Data Visualization</div>
+          <!-- IMAGE ADDED HERE -->
+          <img src="images/project-cost-living.jpg" alt="Cost of Living Index Dashboard" class="project-image">
+          <div class="project-content">
+            <h3>Cost of Living Index Dashboard</h3>
+            <p><strong>Problem:</strong> Individuals and businesses lack a simple tool for comparing global living costs.<br><strong>Solution:</strong> Developed an interactive Streamlit dashboard that analyzes and visualizes cost of living data, allowing users to easily compare key metrics across countries.</p>
+            <p><strong>Key Challenge:</strong> Sourcing, cleaning, and harmonizing disparate public datasets into a unified, analyzable format to ensure the data presented was both accurate and easily comparable for end-users.</p>
+            <div><strong>Tech:</strong> Python, Streamlit, Pandas, Data Visualization</div>
+          </div>
           <a href="https://github.com/SreejaBethu/Cost-Of-Living-Index-By-Country" target="_blank" rel="noopener noreferrer">View on GitHub</a>
         </div>
       </div>
@@ -194,14 +205,12 @@
 
     <section id="highlights" class="section-container highlight-section">
       <h2>Key Experience & Highlights</h2>
-      <!-- HIGHLIGHTS UPDATE: Re-framed academic project as key experience using the STAR method (Situation, Task, Action, Result). -->
       <ul>
         <li>
          <strong>Portable Facial Recognition AI System (AUM AI Research Lab)</strong>
-         <p>Tasked with developing a facial recognition system that could operate on a single image and be deployed on low-cost, resource-constrained hardware. I engineered a lightweight AI algorithm using Python and OpenCV, successfully optimizing and deploying it on a Raspberry Pi. <strong>This project was selected to be featured on the official AUM AI Research Lab page as an exemplary student innovation.</strong></p>
+         <p>Tasked with developing a facial recognition system that could operate on a single image and be deployed on low-cost hardware. I engineered a lightweight AI algorithm using Python and OpenCV, successfully optimizing and deploying it on a Raspberry Pi. <strong>This project was selected to be featured on the official AUM AI Research Lab page as an exemplary student innovation.</strong></p>
          <p>
-           🛠️ <em>Skills Demonstrated:</em> Python, OpenCV, Computer Vision, ML Model Optimization, Embedded Systems (Raspberry Pi).
-           <br>
+           🛠️ <em>Skills Demonstrated:</em> Python, OpenCV, Computer Vision, ML Model Optimization, Embedded Systems (Raspberry Pi).<br>
            <a href="https://www.aum.edu/collegeofbusiness/academic-departments/department-of-information-systems/artificial-intelligence-research-laboratory/" target="_blank" rel="noopener noreferrer">View Feature on AUM.edu</a>
          </p>
         </li>
@@ -211,7 +220,7 @@
     <section id="contact" class="section-container">
       <h2>Get In Touch</h2>
       <p style="text-align: center; max-width: 600px; margin: -20px auto 30px auto;">I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious team. Let's connect!</p>
-      <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST"> <!-- Recommended: Use a service like Formspree to handle form submissions easily -->
+      <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
@@ -225,7 +234,6 @@
       <a href="https://www.linkedin.com/in/sreejabethu" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
       <a href="https://github.com/SreejaBethu" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
     </div>
-    <!-- FOOTER UPDATE: Corrected the year to the current one. -->
     <p>© 2024 Sreeja Bethu. All rights reserved.</p>
   </footer>
 </body>
