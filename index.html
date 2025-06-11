@@ -9,7 +9,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Main CSS block with adjustments for larger cards */
+    /* Main CSS block */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; background: #f4f7f6; color: #333; transition: background-color 0.3s ease, color 0.3s ease; }
@@ -27,40 +27,57 @@
     .about-content img { width: 180px; height: 180px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 4px solid #b2dfdb; }
     .about-text { flex: 1; font-size: 1.1rem; line-height: 1.8; color: #555; }
 
-    /* --- CSS CHANGE 1: Wider project cards --- */
     .projects-grid { 
         display: grid; 
-        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); /* Increased from 300px to 360px */
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
         gap: 30px; 
     }
     
-    .project-card { background: #f8fdfd; border: 1px solid #b2dfdb; border-radius: 10px; padding: 25px; transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; overflow: hidden; }
-    .project-card:hover { transform: translateY(-8px); box-shadow: 0 8px 20px rgba(0, 77, 64, 0.1); }
-
-    /* --- CSS CHANGE 2: Taller project images --- */
-    .project-image {
-        width: 100%;
-        height: 220px; /* Increased from 180px to 220px */
-        object-fit: cover;
-        border-radius: 8px;
-        margin-bottom: 20px;
-        border: 1px solid #e0f2f1;
+    .project-card { 
+      background: #f8fdfd; border: 1px solid #b2dfdb; border-radius: 10px; padding: 25px; 
+      display: flex; flex-direction: column; overflow: hidden;
+      /* ENHANCED HOVER EFFECT */
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; 
     }
+    .project-card:hover {
+        /* ENHANCED HOVER EFFECT */
+        transform: translateY(-10px);
+        box-shadow: 0 12px 24px rgba(0, 77, 64, 0.15);
+    }
+    
+    .project-image { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e0f2f1; }
     
     .project-card h3 { margin-bottom: 15px; color: #004d40; font-size: 1.4rem; }
     .project-card .project-content { flex-grow: 1; display: flex; flex-direction: column; }
     .project-card .project-content p { color: #444; margin-bottom: 15px; line-height: 1.6; }
     .project-card .project-content div { margin-top: auto; padding-top: 10px; } 
     .project-card strong { color: #00695c; }
-    .project-card a { background: #00796b; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; align-self: flex-start; transition: background-color 0.2s; margin-top: 15px; }
+    .project-card a { background: #00796b; color: white; padding: 10px 18px; border-radius: 5px; text-decoration: none; align-self: flex-start; transition: background-color 0.2s; margin-top: 15px; display: inline-flex; align-items: center; }
     .project-card a:hover { background: #004d40; }
+    
+    /* --- CSS ADDITION: For GitHub icon spacing --- */
+    .project-card a .fab {
+        margin-right: 8px;
+    }
+    
     .skills-grid { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
-    .skill-badge { background: #e0f2f1; color: #004d40; padding: 10px 18px; border-radius: 20px; font-weight: 600; font-size: 0.95rem; }
+    .skill-badge { 
+        background: #e0f2f1; color: #004d40; padding: 10px 18px; border-radius: 20px; 
+        font-weight: 600; font-size: 0.95rem;
+        /* ENHANCED HOVER EFFECT */
+        transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+    .skill-badge:hover {
+        transform: scale(1.05); /* Makes the badge pop */
+    }
+
     .highlight-section ul { list-style: none; padding: 0; }
     .highlight-section li { background: #f8fdfd; border-left: 4px solid #00796b; padding: 20px; margin-bottom: 20px; border-radius: 0 8px 8px 0; }
     .highlight-section strong { color: #004d40; }
     .highlight-section a { color: #00796b; font-weight: 600; text-decoration: none; }
     .highlight-section a:hover { text-decoration: underline; }
+    
+    /* Contact Form & Footer Styles */
     form { display: grid; gap: 15px; max-width: 500px; margin: auto; }
     input, textarea { padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; transition: border-color 0.2s, box-shadow 0.2s; }
     input:focus, textarea:focus { border-color: #00796b; box-shadow: 0 0 5px rgba(0, 121, 107, 0.3); outline: none; }
@@ -70,8 +87,25 @@
     .footer-links { margin-bottom: 15px; }
     .footer-links a { color: #555; margin: 0 10px; font-size: 1.5rem; text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: #00796b; }
+    
+    /* --- CSS FOR SCROLL ANIMATIONS --- */
+    @keyframes fadeInSlideUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    /* Hide element initially until it gets the .fade-in class */
+    .section-container, .project-card, .highlight-section li {
+      opacity: 0; 
+    }
+    /* The class that triggers the animation */
+    .fade-in {
+        animation: fadeInSlideUp 0.6s ease-out forwards;
+    }
+
+    /* Theme Toggle Button */
     .toggle-btn { position: fixed; top: 15px; right: 15px; background: #fff; color: #00796b; border: 1px solid #00796b; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; z-index: 1000; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); transition: background-color 0.3s, color 0.3s; }
     
+    /* --- Dark Mode Styles --- */
     body.dark-mode { background: #121212; color: #e0e0e0; }
     body.dark-mode header { background: linear-gradient(120deg, #1e1e1e, #333); }
     body.dark-mode nav { background: #1e1e1e; border-bottom-color: #333; }
@@ -95,26 +129,6 @@
     body.dark-mode .footer-links a:hover { color: #80cbc4; }
     body.dark-mode .toggle-btn { background: #1e1e1e; color: #80cbc4; border-color: #80cbc4; }
   </style>
-<script>
-  function toggleTheme() {
-    const body = document.body;
-    const icon = document.getElementById('theme-icon');
-    body.classList.toggle('dark-mode');
-    if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-        icon.className = 'fas fa-sun';
-    } else {
-        localStorage.setItem('theme', 'light');
-        icon.className = 'fas fa-moon';
-    }
-  }
-  document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('theme') === 'dark') {
-      document.body.classList.add('dark-mode');
-      document.getElementById('theme-icon').className = 'fas fa-sun';
-    }
-  });
-</script>
 </head>
 <body>
   <button class="toggle-btn" onclick="toggleTheme()" aria-label="Toggle dark mode">
@@ -161,7 +175,8 @@
               <p><strong>Key Challenge:</strong> Engineering robust LLM prompts and an n8n workflow to ensure consistently high-quality, context-aware outputs across diverse job descriptions.</p>
               <div><strong>Tech:</strong> Python, Streamlit, Gemini, n8n Automation</div>
           </div>
-          <a href="https://github.com/SreejaBethu/GEN-AI-CAPSTONE-PROJECT" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          <!-- HTML UPDATE: Added GitHub Icon -->
+          <a href="https://github.com/SreejaBethu/GEN-AI-CAPSTONE-PROJECT" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
         </div>
         
         <div class="project-card">
@@ -172,7 +187,8 @@
             <p><strong>Key Challenge:</strong> Overcoming inconsistent PDF layouts. This required developing a sophisticated pre-processing pipeline to clean and normalize data before feeding it to the LLM for accurate extraction.</p>
             <div><strong>Tech:</strong> Gen AI, NLP & LLMs, Python, Data Processing, Streamlit</div>
           </div>
-          <a href="https://github.com/SreejaBethu/Smart-Report-Analyzer" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          <!-- HTML UPDATE: Added GitHub Icon -->
+          <a href="https://github.com/SreejaBethu/Smart-Report-Analyzer" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
         </div>
 
         <div class="project-card">
@@ -183,7 +199,8 @@
             <p><strong>Key Challenge:</strong> Sourcing, cleaning, and harmonizing disparate public datasets into a unified, analyzable format to ensure the data presented was both accurate and easily comparable for end-users.</p>
             <div><strong>Tech:</strong> Python, Streamlit, Pandas, Data Visualization</div>
           </div>
-          <a href="https://github.com/SreejaBethu/Cost-Of-Living-Index-By-Country" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          <!-- HTML UPDATE: Added GitHub Icon -->
+          <a href="https://github.com/SreejaBethu/Cost-Of-Living-Index-By-Country" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
         </div>
       </div>
     </section>
@@ -191,6 +208,7 @@
     <section id="skills" class="section-container">
       <h2>Core Skills</h2>
       <div class="skills-grid">
+        <!-- Skill badges are great candidates for animation -->
         <div class="skill-badge">SQL (Snowflake, PostgreSQL)</div>
         <div class="skill-badge">Python (Pandas, Scikit-Learn)</div>
         <div class="skill-badge">Power BI & Tableau</div>
@@ -239,5 +257,3 @@
     </div>
     <p>© 2024 Sreeja Bethu. All rights reserved.</p>
   </footer>
-</body>
-</html>
