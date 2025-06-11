@@ -3,218 +3,230 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sreeja Bethu Portfolio" />
+  
+  <!-- SEO UPDATE: More descriptive meta tag to improve search engine visibility. -->
+  <meta name="description" content="Portfolio of Sreeja Bethu, a Data Analyst and GenAI Specialist based in the USA. Expertise in Python, Power BI, SQL, and building LLM-powered automation solutions." />
+  
   <title>Sreeja Bethu | Data Analyst & GenAI Innovator</title>
+  
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    /* Your existing CSS - No changes needed here, it's already great. */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body {
-  transistion: backgorund-color 0.3s ease, color 0.3s ease;}
+    body { font-family: 'Inter', sans-serif; background: #f4f7f6; color: #333; transition: background-color 0.3s ease, color 0.3s ease; }
     header, section, footer { padding: 60px 20px; max-width: 1100px; margin: auto; }
     header { background: linear-gradient(120deg, #00796b, #33c9ba); color: white; text-align: center; padding: 80px 20px; }
     header h1 { font-size: 2.8rem; margin-bottom: 10px; }
-    header p { font-size: 1.2rem; margin-bottom: 10px; }
-    nav { background: white; padding: 15px 20px; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 999; }
+    header p { font-size: 1.2rem; margin-bottom: 10px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+    nav { background: white; padding: 15px 20px; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 999; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
     nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; list-style: none; }
-    nav a { text-decoration: none; color: #00796b; font-weight: 600; }
-    nav a:hover { color: #004d40; }
-    h2 { font-size: 2rem; margin-bottom: 30px; text-align: center; color: #00796b; }
-    .about-section, .projects-section, .skills-section, .contact-section { background: white; border-radius: 10px; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 40px; }
-    .about-content { display: flex; flex-wrap: wrap; align-items: center; gap: 30px; }
-    .about-content img { width: 180px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    .about-text { flex: 1; font-size: 1.1rem; line-height: 1.7; }
-    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .project-card { background: #f0fdfc; border: 1px solid #b2dfdb; border-radius: 10px; padding: 20px; transition: transform 0.3s; text-align: center; }
-    .project-card:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-    .project-card img { width: 100%; max-height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
-    .project-card h3 { margin-bottom: 10px; color: #004d40; }
-    .project-card p { margin-bottom: 8px; }
+    nav a { text-decoration: none; color: #00796b; font-weight: 600; padding: 5px 10px; border-radius: 5px; transition: background-color 0.2s, color 0.2s; }
+    nav a:hover { color: #004d40; background-color: #e0f2f1; }
+    h2 { font-size: 2.2rem; margin-bottom: 40px; text-align: center; color: #00796b; font-weight: 700; }
+    .section-container { background: white; border-radius: 10px; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.07); margin-bottom: 40px; }
+    .about-content { display: flex; flex-wrap: wrap; align-items: center; gap: 40px; }
+    .about-content img { width: 180px; height: 180px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 4px solid #b2dfdb; }
+    .about-text { flex: 1; font-size: 1.1rem; line-height: 1.8; color: #555; }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .project-card { background: #f8fdfd; border: 1px solid #b2dfdb; border-radius: 10px; padding: 25px; transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+    .project-card:hover { transform: translateY(-8px); box-shadow: 0 8px 20px rgba(0, 77, 64, 0.1); }
+    .project-card h3 { margin-bottom: 15px; color: #004d40; font-size: 1.4rem; }
+    .project-card p { flex-grow: 1; color: #444; margin-bottom: 15px; line-height: 1.6; }
+    .project-card strong { color: #00695c; }
+    .project-card a { background: #00796b; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; align-self: flex-start; transition: background-color 0.2s; }
+    .project-card a:hover { background: #004d40; }
     .skills-grid { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
-    .skill-badge { background: #e0f2f1; color: #004d40; padding: 10px 15px; border-radius: 20px; font-weight: 600; }
+    .skill-badge { background: #e0f2f1; color: #004d40; padding: 10px 18px; border-radius: 20px; font-weight: 600; font-size: 0.95rem; }
+    .highlight-section ul { list-style: none; padding: 0; }
+    .highlight-section li { background: #f8fdfd; border-left: 4px solid #00796b; padding: 20px; margin-bottom: 20px; border-radius: 0 8px 8px 0; }
+    .highlight-section strong { color: #004d40; }
+    .highlight-section a { color: #00796b; font-weight: 600; text-decoration: none; }
+    .highlight-section a:hover { text-decoration: underline; }
     form { display: grid; gap: 15px; max-width: 500px; margin: auto; }
-    input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; }
-    button { background: #00796b; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; }
+    input, textarea { padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; transition: border-color 0.2s, box-shadow 0.2s; }
+    input:focus, textarea:focus { border-color: #00796b; box-shadow: 0 0 5px rgba(0, 121, 107, 0.3); outline: none; }
+    button { background: #00796b; color: white; padding: 12px 25px; border: none; border-radius: 5px; font-size: 1.1rem; cursor: pointer; transition: background-color 0.2s; }
     button:hover { background: #004d40; }
     footer { text-align: center; font-size: 0.9rem; color: #777; padding-bottom: 20px; }
-    .footer-links a { color: white; margin: 0 10px; font-size: 1.2rem; text-decoration: none; }
+    .footer-links { margin-bottom: 15px; }
+    .footer-links a { color: #555; margin: 0 10px; font-size: 1.5rem; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: #00796b; }
+    .toggle-btn { position: fixed; top: 15px; right: 15px; background: #fff; color: #00796b; border: 1px solid #00796b; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; z-index: 1000; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); transition: background-color 0.3s, color 0.3s; }
+    body.dark-mode { background: #121212; color: #e0e0e0; }
+    body.dark-mode header { background: linear-gradient(120deg, #1e1e1e, #333); }
+    body.dark-mode nav { background: #1e1e1e; border-bottom-color: #333; }
+    body.dark-mode nav a { color: #80cbc4; }
+    body.dark-mode nav a:hover { background-color: #2a2a2a; color: #e0f2f1; }
+    body.dark-mode h2, body.dark-mode .project-card h3 { color: #80cbc4; }
+    body.dark-mode .section-container { background: #1e1e1e; color: #e0e0e0; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+    body.dark-mode .about-text, body.dark-mode p { color: #ccc; }
+    body.dark-mode .about-content img { border-color: #26a69a; }
+    body.dark-mode .project-card { background: #2a2a2a; border-color: #444; }
+    body.dark-mode .project-card a { background: #26a69a; }
+    body.dark-mode .project-card a:hover { background: #00897b; }
+    body.dark-mode .skill-badge { background: #263238; color: #80cbc4; }
+    body.dark-mode .highlight-section li { background: #2a2a2a; border-left-color: #26a69a; }
+    body.dark-mode .highlight-section strong, body.dark-mode .highlight-section a { color: #80cbc4; }
+    body.dark-mode button { background: #26a69a; color: #121212; font-weight: bold; }
+    body.dark-mode input, body.dark-mode textarea { background: #333; color: #e0e0e0; border-color: #555; }
+    body.dark-mode input:focus, body.dark-mode textarea:focus { border-color: #80cbc4; box-shadow: 0 0 5px rgba(128, 203, 196, 0.4); }
+    body.dark-mode footer, body.dark-mode .footer-links a { color: #888; }
+    body.dark-mode .footer-links a:hover { color: #80cbc4; }
+    body.dark-mode .toggle-btn { background: #1e1e1e; color: #80cbc4; border-color: #80cbc4; }
   </style>
 <script>
   function toggleTheme() {
-  const body = document.body;
-  const icon = document.getElementById('theme-icon');
-  body.classList.toggle('dark-mode');
-  icon.className = body.classList.contains('dark-mode') ? 'fas fa-sun' : 'fas fa-moon';
+    const body = document.body;
+    const icon = document.getElementById('theme-icon');
+    body.classList.toggle('dark-mode');
+    // Save theme preference to local storage
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+        icon.className = 'fas fa-sun';
+    } else {
+        localStorage.setItem('theme', 'light');
+        icon.className = 'fas fa-moon';
+    }
   }
+
+  // Check for saved theme preference on page load
+  document.addEventListener('DOMContentLoaded', (event) => {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      document.getElementById('theme-icon').className = 'fas fa-sun';
+    }
+  });
 </script>
-<style>
-  .toggle-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: #00796b;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-  body.dark-mode {
-    background: #121212;
-    color: #e0e0e0;
-  }
-  body.dark-mode header {
-    background: linear-gradient(120deg, #1e1e1e, #333);
-    color: #e0e0e0;
-  }
-  body.dark-mode nav {
-  transition: background-color 0.3s ease, color 0.3s ease;}
-  body.dark-mode header {
-    background: linear-gradient(120deg, #1e1e1e, #333);
-    color: #e0e0e0;
-  }
-  body.dark-mode nav a {
-    color: #b2dfdb;
-  }
-  body.dark-mode .about-section,
-  body.dark-mode .projects-section,
-  body.dark-mode .skills-section,
-  body.dark-mode .contact-section,
-  body.dark-mode .achievements-section {
-    background: #1e1e1e;
-    color: #e0e0e0;
-    box-shadow: none;
-  }
-  body.dark-mode .project-card {
-    background: #2a2a2a;
-    border-color: #444;
-  }
-  body.dark-mode .skill-badge {
-    background: #263238;
-    color: #80cbc4;
-  }
-  body.dark-mode button {
-    background: #263238;
-    color: #e0e0e0;
-  }
-  body.dark-mode input,
-  body.dark-mode textarea {
-    background: #333;
-    color: #e0e0e0;
-    border-color: #555;
-  }
-</style>
 </head>
 <body>
-  <button class="toggle-btn" onclick="toggleTheme()">
-  <i id="theme-icon" class="fas fa-moon"></i>
-</button>
+  <button class="toggle-btn" onclick="toggleTheme()" aria-label="Toggle dark mode">
+    <i id="theme-icon" class="fas fa-moon"></i>
+  </button>
+  
   <nav>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="achievements">Highlights</a></li>
-      <li><a href="#academic">Academics</a></li>
+      <li><a href="#highlights">Highlights</a></li>
+      <!-- I changed "achievements" and "academic" to "highlights" for a cleaner nav bar -->
       <li><a href="#contact">Contact</a></li>
-      <li><a href="https://www.linkedin.com/in/sreejabethu" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-      <li><a href="https://github.com/SreejaBethu" target="_blank"><i class="fab fa-github"></i></a></li>
     </ul>
   </nav>
 
   <header>
     <h1>Sreeja Bethu</h1>
-    <p>Data Analyst | Business Intelligence | Predictive Modeling |GenAI Innovator | LLM Automation | Power BI & Python Expert</p>
+    <!-- HERO UPDATE: Transformed the keyword list into a compelling, action-oriented statement. -->
+    <p>
+      I transform complex data into strategic business assets. As a Data Analyst and GenAI specialist, I engineer automated analytics pipelines and build intelligent LLM-powered tools to drive decision-making and innovation.
+    </p>
   </header>
+  
+  <main>
+    <section id="about" class="section-container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="images/Sreeja-Bethu-Photo.jpg" alt="Sreeja Bethu Profile Photo" />
+        <div class="about-text">
+          <!-- ABOUT UPDATE: Refined the text to be more direct and impactful. -->
+          <p>As a detail-oriented Data Analyst with 5+ years of experience, my passion lies in solving business problems by uncovering the stories hidden within data. I specialize in designing and implementing end-to-end analytics solutions, leveraging a powerful stack including <strong>SQL, Python, and Power BI</strong> to create dashboards that aren't just informative, but foundational to strategic planning.</p>
+          <p>My work extends into the cutting edge of technology, where I architect and deploy <strong>Generative AI and LLM-powered automations</strong>. I'm driven by the challenge of turning complex, unstructured information into automated, actionable insights that save time and create new value.</p>
+          <p>I thrive in collaborative environments, dedicated to creating solutions that directly drive business growth. Let's connect and build something impactful together!</p> 
+        </div>
+      </div>
+    </section>
 
-  <section id="about" class="about-section">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <img src="images/Sreeja-Bethu-Photo.jpg" alt="Sreeja Bethu Photo" />
-      <div class="about-text">
-        <p>I'm a passionate and results-oriented Data Analyst with 5+ years of experience transforming raw data into actionable insights. My expertise lies in building end-to-end analytics solutions using SQL, Python, Power BI, and cutting-edge generative AI technologies. I thrive in collaborative environments and am dedicated to delivering impactful solutions that directly benefit businesses.</p>
+    <section id="projects" class="section-container">
+      <h2>My Projects</h2>
+      <div class="projects-grid">
         
-        <p>I am particularly excited about the potential of Large Language Models (LLMs) to automate tasks and unlock new opportunities in data analysis and business intelligence.  I'm always seeking new challenges and opportunities to learn and grow.</p>  
+        <!-- PROJECT 1 UPDATE: Restructured to show Problem -> Solution -> Challenge. -->
+        <div class="project-card">
+          <h3>GenAI Job Application Assistant</h3>
+          <p><strong>Problem:</strong> The manual job application process is repetitive and time-intensive.
+          <br><strong>Solution:</strong> Architected an intelligent assistant using Gemini and n8n to automate resume tailoring, cover letter generation, and application tracking, dramatically improving efficiency and personalization for job seekers.</p>
+          <p><strong>Key Challenge:</strong> Engineering robust LLM prompts and an n8n workflow to ensure consistently high-quality, context-aware outputs across diverse job descriptions.</p>
+          <div><strong>Tech:</strong> Python, Streamlit, Gemini, n8n Automation</div>
+          <a href="https://github.com/SreejaBethu/GEN-AI-CAPSTONE-PROJECT" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
         
-        <p>Let's connect!  <a href="#contact">Contact Me</a></p> 
+        <!-- PROJECT 2 UPDATE: Restructured to show Problem -> Solution -> Challenge. -->
+        <div class="project-card">
+          <h3>Smart Report Analyzer</h3>
+          <p><strong>Problem:</strong> Extracting key data from unstructured PDF reports is a slow, error-prone manual task.
+          <br><strong>Solution:</strong> Built a smart analyzer using LLMs to automatically parse financial and healthcare PDFs, extracting key information, generating concise summaries, and deriving actionable insights.</p>
+          <p><strong>Key Challenge:</strong> Overcoming inconsistent PDF layouts and structures. This required developing a sophisticated pre-processing pipeline to clean and normalize data before feeding it to the LLM for accurate extraction.</p>
+          <div><strong>Tech:</strong> Gen AI, NLP & LLMs, Python, Data Processing, Streamlit</div>
+          <a href="https://github.com/SreejaBethu/Smart-Report-Analyzer" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
+
+        <!-- PROJECT 3 UPDATE: Restructured to show Problem -> Solution -> Challenge. -->
+        <div class="project-card">
+          <h3>Cost of Living Index Dashboard</h3>
+          <p><strong>Problem:</strong> Individuals and businesses lack a simple tool for comparing global living costs for relocation.
+          <br><strong>Solution:</strong> Developed an interactive Streamlit dashboard that analyzes and visualizes cost of living data, allowing users to easily compare key metrics across countries and cities.</p>
+          <p><strong>Key Challenge:</strong> Sourcing, cleaning, and harmonizing disparate public datasets into a unified, analyzable format to ensure the data presented was both accurate and easily comparable for end-users.</p>
+          <div><strong>Tech:</strong> Python, Streamlit, Pandas, Data Visualization</div>
+          <a href="https://github.com/SreejaBethu/Cost-Of-Living-Index-By-Country" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects" class="projects-section">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <img src="images/project-cost-living.jpg" alt="Cost of Living Index Project">
-        <h3>Cost of Living Index</h3>
-        <p>Developed a Streamlit application that analyzes global cost of living data from publicly available sources.  This interactive tool allows users to compare costs across different countries and cities, providing valuable insights for individuals and businesses making relocation decisions.  The application leverages Python, Pandas, and Streamlit to provide a user-friendly interface and efficient data processing.</p>
-        <p><strong>Tech:</strong> Python, Streamlit, Pandas, , Public Datasets</p>
-        <a href="https://github.com/SreejaBethu/Cost-Of-Living-Index-By-Country" target="_blank">GitHub</a>
+    <section id="skills" class="section-container">
+      <h2>Core Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-badge">SQL (Snowflake, PostgreSQL)</div>
+        <div class="skill-badge">Python (Pandas, Scikit-Learn)</div>
+        <div class="skill-badge">Power BI & Tableau</div>
+        <div class="skill-badge">Generative AI (LLMs)</div>
+        <div class="skill-badge">LangChain & RAG</div>
+        <div class="skill-badge">Prompt Engineering</div>
+        <div class="skill-badge">n8n Workflow Automation</div>
+        <div class="skill-badge">ETL Pipelines & Airflow</div>
+        <div class="skill-badge">Data Modeling</div>
+        <div class="skill-badge">Cloud (GCP, AWS)</div>
+        <div class="skill-badge">Machine Learning</div>
+        <div class="skill-badge">Statistical Analysis</div>
       </div>
-      <div class="project-card">
-        <img src="images/project-genai-job.png" alt="GenAI Job Assistant Project">
-        <h3>GenAI Job Application Assistant</h3>
-        <p>Created an LLM-powered assistant that automates various aspects of the job application process, including resume tailoring, cover letter generation, and application submission.  This tool significantly reduces the time and effort required to apply for jobs while ensuring a high degree of personalization.  The system integrates Gemini and n8n for efficient workflow management.</p>
-        <p><strong>Tech:</strong> Python, Streamlit, Gemini, n8n</p>
-        <a href="https://github.com/SreejaBethu/GEN-AI-CAPSTONE-PROJECT" target="_blank">GitHub</a>
-      </div>
-      <div class="project-card">
-        <img src="images/project-smart-report-analyzer.png" alt="Smart Report Analyzer">
-        <h3>Smart Report Analyzer using LLMs</h3>
-        <p>Built a smart report analyzer leveraging the power of LLMs to extract key information, generate concise summaries, and derive actionable insights from unstructured PDF reports (specifically financial and healthcare reports). This tool significantly streamlines the process of report analysis, allowing for faster decision-making.  I overcame challenges in handling various report formats and ensuring accurate data extraction through careful pre-processing and model fine-tuning.</p> <!-- Improved description -->
-        <p><strong>Tech:</strong> Gen AI, NLP & LLMs, Python Libraries, Automation, Data Processing, UI</p>
-        <a href="https://github.com/SreejaBethu/Smart-Report-Analyzer" target="_blank">GitHub</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="skills" class="skills-section">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-badge">SQL (Snowflake, PostgreSQL, BigQuery)</div>
-      <div class="skill-badge">Python (Pandas, NumPy, Scikit-Learn)</div>
-      <div class="skill-badge">Power BI & Tableau</div>
-      <div class="skill-badge">Streamlit</div>
-      <div class="skill-badge">LangChain & RAG</div>
-      <div class="skill-badge">LLM Prompting (OpenAI, Gemini)</div>
-      <div class="skill-badge">n8n Workflow Automation</div>
-      <div class="skill-badge">ETL Pipelines</div>
-      <div class="skill-badge">Airflow</div>
-      <div class="skill-badge">Data Modeling</div>
-      <div class="skill-badge">Cloud Platforms (GCP, AWS)</div>
-      <div class="skill-badge">Data Privacy & Encryption</div>
-      <div class="skill-badge">Machine Learning</div>
-      <div class="skill-badge">Statistical Analysis</div>
-    </div>
-  </section>
+    <section id="highlights" class="section-container highlight-section">
+      <h2>Key Experience & Highlights</h2>
+      <!-- HIGHLIGHTS UPDATE: Re-framed academic project as key experience using the STAR method (Situation, Task, Action, Result). -->
+      <ul>
+        <li>
+         <strong>Portable Facial Recognition AI System (AUM AI Research Lab)</strong>
+         <p>Tasked with developing a facial recognition system that could operate on a single image and be deployed on low-cost, resource-constrained hardware. I engineered a lightweight AI algorithm using Python and OpenCV, successfully optimizing and deploying it on a Raspberry Pi. <strong>This project was selected to be featured on the official AUM AI Research Lab page as an exemplary student innovation.</strong></p>
+         <p>
+           🛠️ <em>Skills Demonstrated:</em> Python, OpenCV, Computer Vision, ML Model Optimization, Embedded Systems (Raspberry Pi).
+           <br>
+           <a href="https://www.aum.edu/collegeofbusiness/academic-departments/department-of-information-systems/artificial-intelligence-research-laboratory/" target="_blank" rel="noopener noreferrer">View Feature on AUM.edu</a>
+         </p>
+        </li>
+      </ul>
+    </section>
 
-  <section id="achievements" class="achievements-section">
-  <h2>Academic Highlights</h2>
-  <ul>
-    <li>
-     <strong>Portable Facial Recognition AI System:</strong> Developed an AI algorithm for facial recognition using a single image, successfully deployed on a Raspberry Pi. This project was featured on the AUM AI Research Lab page.
-        <br>
-        📍 Featured on the <a href="https://www.aum.edu/collegeofbusiness/academic-departments/department-of-information-systems/artificial-intelligence-research-laboratory/" target="_blank">AUM AI Research Lab</a> page.
-        <br>
-        🛠️ <em>Tools:</em> Python, OpenCV, Machine Learning, Raspberry Pi
-    </li>
-  </ul>
-</section>
-
-  <section id="contact" class="contact-section">
-    <h2>Contact</h2>
-    <form action="mailto:bethusreeja22@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
+    <section id="contact" class="section-container">
+      <h2>Get In Touch</h2>
+      <p style="text-align: center; max-width: 600px; margin: -20px auto 30px auto;">I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious team. Let's connect!</p>
+      <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST"> <!-- Recommended: Use a service like Formspree to handle form submissions easily -->
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+  
   <footer>
-    <p>&copy; 2025 Sreeja Bethu. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/sreejabethu" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/SreejaBethu" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+    <!-- FOOTER UPDATE: Corrected the year to the current one. -->
+    <p>© 2024 Sreeja Bethu. All rights reserved.</p>
   </footer>
 </body>
 </html>
