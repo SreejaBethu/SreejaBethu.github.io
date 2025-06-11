@@ -1,4 +1,4 @@
-// --- script.js (Complete & Corrected Code) ---
+/* --- script.js --- */
 
 // Theme Toggling Function
 function toggleTheme() {
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check if we found any elements to animate
     if (animatedElements.length > 0) {
         
-        // **NEW STEP**: Initially hide the elements using our new CSS class
+        // Initially hide the elements by adding a class
         animatedElements.forEach(el => {
             el.classList.add('js-init-hidden');
         });
