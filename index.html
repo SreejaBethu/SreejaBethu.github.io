@@ -1,144 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Sreeja Bethu, a Data Analyst and GenAI Specialist with expertise in Python, Power BI, and SQL." />
-  <title>Sreeja Bethu | Data Analyst & GenAI Innovator</title>
-  
-  <!-- Link to Google Fonts and Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Link to your external stylesheet -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sreeja Bethu | Data, Business & Product Analyst</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts - Keep Inter and Playfair Display or choose others -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <button class="toggle-btn" aria-label="Toggle dark mode">
-    <i id="theme-icon" class="fas fa-moon"></i>
-  </button>
-  
-  <nav>
-    <div class="nav-container">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#highlights">Highlights</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/images/profile.jpg" alt="Sreeja Bethu Profile" class="profile-pic">
+                <h1>Sreeja Bethu</h1>
+                <p>Data, Business & Product Analyst</p> <!-- UPDATED ROLE -->
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/sreejabethu" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:bethusreeja@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+             <div class="copyright">
+                <p>© 2024 Sreeja Bethu</p>
+                <p>Designed and Developed by Sreeja Bethu</p>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content">
+            <!-- Hamburger Menu for Mobile -->
+            <button class="hamburger" id="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Hero Section -->
+            <section id="hero" class="hero-section">
+                <div class="hero-content">
+                    <h2 class="hero-title">Hey there, I'm Sreeja Bethu!</h2>
+                    <!-- UPDATED TAGLINE -->
+                    <h1 class="hero-subtitle">I'm a versatile Analyst,<br>leveraging data to uncover<br>business opportunities and<br>inform product strategy.</h1>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="about-section">
+                <div class="section-header">
+                    <h2>About Me</h2>
+                </div>
+                <div class="about-content">
+                    <!-- UPDATED ABOUT ME CONTENT -->
+                    <p>I am a data-driven and results-oriented analyst with a unique blend of expertise across Data, Business, and Product domains. My passion lies in transforming raw data into actionable insights, bridging the gap between technical details and strategic business objectives, and guiding product development with a clear understanding of user behavior and market needs.</p>
+                    <p>My journey is defined by a commitment to critical thinking and problem-solving. I thrive in environments where I can leverage analytical tools and methodologies to identify trends, forecast performance, optimize processes, and contribute directly to informed decision-making. I excel at collaborating with cross-functional teams, including engineering, marketing, and product management, to ensure data-backed insights translate into tangible growth and improved experiences.</p>
+                    <p>Outside of my professional pursuits, I enjoy staying updated on emerging technologies, exploring data visualization techniques, and engaging with communities focused on data science and analytics. These interests continually expand my perspective and enhance my analytical capabilities.</p>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="skills-section">
+                <div class="section-header">
+                    <h2>My Expertise</h2> <!-- Changed to Expertise from Skills -->
+                </div>
+                <div class="skills-grid">
+                    <!-- UPDATED SKILLS CONTENT -->
+                    <div class="skill-item">
+                        <h3>Data Analysis & Visualization</h3>
+                        <p>Statistical Analysis, Exploratory Data Analysis (EDA), A/B Testing Analysis, Data Cleaning, Dashboarding & Reporting</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Business Analysis & Strategy</h3>
+                        <p>Requirements Gathering, Process Mapping, Stakeholder Management, SWOT Analysis, Market Research, Cost-Benefit Analysis</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Product Analytics & Growth</h3>
+                        <p>User Behavior Analysis, Funnel Optimization, Feature Performance Tracking, KPI Definition, Experiment Design, Roadmap Prioritization</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Technical Skills</h3>
+                        <p>SQL (Advanced), Python (Pandas, NumPy, Matplotlib, Seaborn), Excel (Advanced), Tableau, Power BI, Google Analytics, Salesforce, JIRA, Confluence</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Methodologies & Soft Skills</h3>
+                        <p>Agile, Scrum, Lean, Problem Solving, Critical Thinking, Communication, Presentation, Storytelling with Data, Cross-functional Collaboration</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Domain Knowledge</h3>
+                        <p>E-commerce, SaaS, Fintech, Healthcare (adapt as per your industry experience)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="projects-section">
+                <div class="section-header">
+                    <h2>My Analytical Projects</h2> <!-- UPDATED TITLE -->
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 (Example) -->
+                    <div class="project-card">
+                        <img src="assets/images/food_delivery_thumb.jpg" alt="Food Delivery App Data Analysis Project">
+                        <div class="project-info">
+                            <h3>Optimizing Food Delivery User Funnel</h3>
+                            <p>Data Analysis, SQL, A/B Testing, Product Insights</p>
+                            <a href="case-study-food-delivery.html" class="btn btn-project">View Case Study</a>
+                        </div>
+                    </div>
+                    <!-- Project 2 (Example) -->
+                    <div class="project-card">
+                        <img src="assets/images/travel_app_thumb.jpg" alt="Travel Booking Platform Business Analysis">
+                        <div class="project-info">
+                            <h3>Improving Travel Booking Conversion Rates</h3>
+                            <p>Business Analysis, Data Visualization, Performance Metrics</p>
+                            <a href="case-study-travel-app.html" class="btn btn-project">View Case Study</a>
+                        </div>
+                    </div>
+                    <!-- Add more analytical project cards as needed -->
+                     <div class="project-card">
+                        <img src="assets/images/project3-thumb.jpg" alt="[Project Name]">
+                        <div class="project-info">
+                            <h3>[Project Title 3 - e.g., Customer Churn Prediction]</h3>
+                            <p>[Skills used, e.g., Predictive Modeling, Python, Data Storytelling]</p>
+                            <a href="case-study-3.html" class="btn btn-project">View Case Study</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/images/project4-thumb.jpg" alt="[Project Name]">
+                        <div class="project-info">
+                            <h3>[Project Title 4 - e.g., Sales Performance Dashboard]</h3>
+                            <p>[Skills used, e.g., Dashboard Design, Power BI, KPI Tracking]</p>
+                            <a href="case-study-4.html" class="btn btn-project">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="contact-section">
+                <div class="section-header">
+                    <h2>Get In Touch</h2>
+                </div>
+                <p class="contact-intro">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+                <div class="contact-links">
+                    <a href="mailto:bethusreeja@gmail.com" class="btn btn-contact">
+                        <i class="fas fa-envelope"></i> Email Me
+                    </a>
+                    <a href="https://www.linkedin.com/in/sreejabethu" target="_blank" class="btn btn-contact">
+                        <i class="fab fa-linkedin-in"></i> Connect on LinkedIn
+                    </a>
+                    <a href="https://calendly.com/your-calendly-link" target="_blank" class="btn btn-contact">
+                        <i class="far fa-calendar-alt"></i> Schedule a Call
+                    </a>
+                </div>
+            </section>
+        </main>
     </div>
-  </nav>
 
-  <header>
-    <h1>Sreeja Bethu</h1>
-    <p>I transform complex data into strategic business assets. As a Data Analyst and GenAI specialist, I engineer automated analytics pipelines and build intelligent LLM-powered tools to drive decision-making and innovation.</p>
-  </header>
-  
-  <main>
-    <section id="about" class="section-container">
-      <h2>About Me</h2>
-      <div class="about-content">
-        <img src="images/Sreeja-Bethu-Photo.jpg" alt="Sreeja Bethu Profile Photo" />
-        <div class="about-text">
-          <p>As a detail-oriented Data Analyst with 5+ years of experience, my passion lies in solving business problems by uncovering the stories hidden within data. I specialize in designing and implementing end-to-end analytics solutions, leveraging a powerful stack including <strong>SQL, Python, and Power BI</strong> to create dashboards that aren't just informative, but foundational to strategic planning.</p>
-          <p>My work extends into the cutting edge of technology, where I architect and deploy <strong>Generative AI and LLM-powered automations</strong>. I'm driven by the challenge of turning complex, unstructured information into automated, actionable insights that save time and create new value.</p>
-          <p>I thrive in collaborative environments, dedicated to creating solutions that directly drive business growth. Let's connect and build something impactful together!</p> 
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section-container">
-      <h2>My Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="images/project-genai-job.png" alt="GenAI Job Application Assistant" class="project-image">
-          <div class="project-content">
-              <h3>GenAI Job Application Assistant</h3>
-              <p><strong>Problem:</strong> The manual job application process is repetitive and time-intensive.<br><strong>Solution:</strong> Architected an intelligent assistant using Gemini and n8n to automate resume tailoring and cover letter generation, dramatically improving efficiency for job seekers.</p>
-              <p><strong>Key Challenge:</strong> Engineering robust LLM prompts and an n8n workflow to ensure consistently high-quality, context-aware outputs across diverse job descriptions.</p>
-              <div class="project-tech"><strong>Tech:</strong> Python, Streamlit, Gemini, n8n Automation</div>
-          </div>
-          <a href="https://github.com/SreejaBethu/GEN-AI-CAPSTONE-PROJECT" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
-        </div>
-        <div class="project-card">
-          <img src="images/project-smart-report-analyzer.png" alt="Smart Report Analyzer Dashboard" class="project-image">
-          <div class="project-content">
-            <h3>Smart Report Analyzer</h3>
-            <p><strong>Problem:</strong> Extracting key data from unstructured PDF reports is a slow, error-prone manual task.<br><strong>Solution:</strong> Built a smart analyzer using LLMs to automatically parse financial and healthcare PDFs, extracting key information and generating concise, actionable summaries.</p>
-            <p><strong>Key Challenge:</strong> Overcoming inconsistent PDF layouts. This required developing a sophisticated pre-processing pipeline to clean and normalize data before feeding it to the LLM for accurate extraction.</p>
-            <div class="project-tech"><strong>Tech:</strong> Gen AI, NLP & LLMs, Python, Data Processing, Streamlit</div>
-          </div>
-          <a href="https://github.com/SreejaBethu/Smart-Report-Analyzer" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
-        </div>
-        <div class="project-card">
-          <img src="images/project-cost-living.jpg" alt="Cost of Living Index Dashboard" class="project-image">
-          <div class="project-content">
-            <h3>Cost of Living Index Dashboard</h3>
-            <p><strong>Problem:</strong> Individuals and businesses lack a simple tool for comparing global living costs.<br><strong>Solution:</strong> Developed an interactive Streamlit dashboard that analyzes and visualizes cost of living data, allowing users to easily compare key metrics across countries.</p>
-            <p><strong>Key Challenge:</strong> Sourcing, cleaning, and harmonizing disparate public datasets into a unified, analyzable format to ensure the data presented was both accurate and easily comparable for end-users.</p>
-            <div class="project-tech"><strong>Tech:</strong> Python, Streamlit, Pandas, Data Visualization</div>
-          </div>
-          <a href="https://github.com/SreejaBethu/Cost-Of-Living-Index-By-Country" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="section-container">
-      <h2>Core Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-badge">SQL (Snowflake, PostgreSQL)</div>
-        <div class="skill-badge">Python (Pandas, Scikit-Learn)</div>
-        <div class="skill-badge">Power BI & Tableau</div>
-        <div class="skill-badge">Generative AI (LLMs)</div>
-        <div class="skill-badge">LangChain & RAG</div>
-        <div class="skill-badge">Prompt Engineering</div>
-        <div class="skill-badge">n8n Workflow Automation</div>
-        <div class="skill-badge">ETL Pipelines & Airflow</div>
-        <div class="skill-badge">Data Modeling</div>
-        <div class="skill-badge">Cloud (GCP, AWS)</div>
-        <div class="skill-badge">Machine Learning</div>
-        <div class="skill-badge">Statistical Analysis</div>
-      </div>
-    </section>
-
-    <section id="highlights" class="section-container highlight-section">
-      <h2>Key Experience & Highlights</h2>
-      <ul>
-        <li>
-         <strong>Portable Facial Recognition AI System (AUM AI Research Lab)</strong>
-         <p>Tasked with developing a facial recognition system that could operate on a single image and be deployed on low-cost hardware. I engineered a lightweight AI algorithm using Python and OpenCV, successfully optimizing and deploying it on a Raspberry Pi. <strong>This project was selected to be featured on the official AUM AI Research Lab page as an exemplary student innovation.</strong></p>
-         <p class="highlight-skills">
-           🛠️ <em>Skills Demonstrated:</em> Python, OpenCV, Computer Vision, ML Model Optimization, Embedded Systems (Raspberry Pi).<br>
-           <a href="https://www.aum.edu/collegeofbusiness/academic-departments/department-of-information-systems/artificial-intelligence-research-laboratory/" target="_blank" rel="noopener noreferrer">View Feature on AUM.edu</a>
-         </p>
-        </li>
-      </ul>
-    </section>
-
-    <section id="contact" class="section-container">
-      <h2>Get In Touch</h2>
-      <p style="text-align: center; max-width: 600px; margin: -20px auto 30px auto;">I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious team. Let's connect!</p>
-      <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
-  
-  <footer>
-    <div class="footer-container">
-      <div class="footer-links">
-        <a href="https://www.linkedin.com/in/sreejabethu" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/SreejaBethu" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      </div>
-      <p>© 2024 Sreeja Bethu. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Link to your external JavaScript file -->
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
