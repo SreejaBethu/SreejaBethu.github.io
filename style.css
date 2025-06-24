@@ -4,15 +4,17 @@
     --secondary-color: #8c7ae6; /* Lighter purple for accents */
     --text-color-dark: #333;
     --text-color-light: #f4f4f4;
-    --bg-color-light: #ffffff; /* White for sidebar, cards, etc. */
-    --bg-color-main-content: #f8f8f8; /* A very light, almost imperceptible gray, close to Gamma's main content background */
+    --bg-color-white: #ffffff; /* Pure white for sidebar, cards */
+    --bg-color-page: #F7F7F7; /* Very subtle light gray background for the overall page, directly from Gamma's dev tools */
     --border-color: #e0e0e0;
-    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.08); /* Softer, more diffused shadow for cards */
+    --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.12); /* Slightly stronger on hover */
+    --card-border-radius: 16px; /* Larger border-radius for cards, matching Gamma */
 
-    /* --- Font Styles (Confirmed and already set up) --- */
-    --font-inter: 'Inter', sans-serif; /* For body text */
-    --font-display: 'Playfair Display', serif; /* For headings */
+    /* --- Font Styles --- */
+    --font-inter: 'Inter', sans-serif;
     --max-content-width: 960px; /* Max width for content within main section */
+    --section-padding-y: 4em; /* Consistent vertical padding for sections */
 }
 
 * {
@@ -22,10 +24,10 @@
 }
 
 body {
-    font-family: var(--font-inter); /* Applied Inter to body */
+    font-family: var(--font-inter);
     line-height: 1.6;
     color: var(--text-color-dark);
-    background-color: var(--bg-color-light); /* Main body background is white, for sidebar and overall container */
+    background-color: var(--bg-color-page); /* Overall page background is now the subtle light gray */
     scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
@@ -35,13 +37,15 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    color: var(--secondary-color); /* Hover color change */
+    text-decoration: none; /* No underline on hover for cleaner look */
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display); /* Applied Playfair Display to headings */
+    font-family: var(--font-inter); /* All headings use Inter */
     color: var(--text-color-dark);
     margin-bottom: 0.8em;
+    font-weight: 700; /* Default bold for headings */
 }
 
 h1 { font-size: 2.8em; }
@@ -61,9 +65,9 @@ p {
 /* Sidebar */
 .sidebar {
     width: 280px;
-    background-color: var(--bg-color-light); /* Kept white, like Gamma */
+    background-color: var(--bg-color-white); /* Pure white, like Gamma */
     border-right: 1px solid var(--border-color);
-    padding: 2.5em 1.5em;
+    padding: 2.5em 1.5em; /* Adjusted padding */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,7 +82,7 @@ p {
 
 .sidebar-header {
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 2.5em; /* Increased margin */
 }
 
 .profile-pic {
@@ -92,6 +96,7 @@ p {
 
 .sidebar-header h1 {
     font-size: 1.8em;
+    font-weight: 800; /* Heavier bold for name */
     margin-bottom: 0.2em;
     color: var(--text-color-dark);
 }
@@ -99,13 +104,14 @@ p {
 .sidebar-header p {
     color: #666;
     font-weight: 500;
+    font-size: 0.95em;
 }
 
 .main-nav ul {
     list-style: none;
     padding: 0;
     width: 100%;
-    margin-bottom: 2em;
+    margin-bottom: 2.5em; /* Increased margin */
 }
 
 .main-nav li {
@@ -116,7 +122,7 @@ p {
     display: block;
     padding: 0.8em 1.5em;
     color: var(--text-color-dark);
-    font-weight: 500;
+    font-weight: 600; /* Slightly bolder for nav links */
     border-radius: 8px;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -150,26 +156,30 @@ p {
     font-size: 0.8em;
     color: #888;
     text-align: center;
+    line-height: 1.4;
 }
 
-/* Main Content Area - This will get the new background color */
+/* Main Content Area */
 .content {
     margin-left: 280px; /* Offset for the fixed sidebar */
     flex-grow: 1;
-    padding: 2em;
+    padding: 2.5em; /* Increased padding around the content */
     max-width: calc(100% - 280px); /* Adjust max-width for sidebar */
     display: flex;
     flex-direction: column;
-    background-color: var(--bg-color-main-content); /* ADDED: Apply the light background */
+    /* No direct background-color here. Body handles overall. Sections will have white backgrounds. */
 }
 
 .content section {
-    padding: 4em 0;
-    border-bottom: 1px solid var(--border-color);
+    padding: var(--section-padding-y) 3em; /* Padding for inner content of sections */
+    background-color: var(--bg-color-white); /* White background for all content sections */
+    border-radius: var(--card-border-radius); /* Rounded corners for sections */
+    box-shadow: var(--shadow-soft); /* Soft shadow for sections */
+    margin-bottom: 2.5em; /* Spacing between sections */
 }
 
 .content section:last-child {
-    border-bottom: none;
+    margin-bottom: 0; /* No margin below the last section */
 }
 
 .section-header {
@@ -182,6 +192,7 @@ p {
     position: relative;
     display: inline-block;
     padding-bottom: 0.3em;
+    font-weight: 700; /* Bold for section titles */
 }
 
 .section-header h2::after {
@@ -203,7 +214,7 @@ p {
     border-radius: 8px;
     font-weight: 600;
     text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Added box-shadow transition */
     border: none;
     cursor: pointer;
     text-decoration: none;
@@ -217,6 +228,7 @@ p {
 .btn-primary:hover {
     background-color: var(--secondary-color);
     transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle lift effect */
     text-decoration: none;
 }
 
@@ -230,11 +242,12 @@ p {
     background-color: var(--primary-color);
     color: var(--text-color-light);
     transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-decoration: none;
 }
 
 .btn-project {
-    background-color: var(--bg-color-light); /* Project card background is white */
+    background-color: var(--bg-color-white);
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
     padding: 0.6em 1.2em;
@@ -245,6 +258,7 @@ p {
 .btn-project:hover {
     background-color: var(--primary-color);
     color: var(--text-color-light);
+    box-shadow: none; /* No shadow on project button hover */
 }
 
 .btn-contact {
@@ -271,10 +285,10 @@ p {
     text-align: center;
     /* This gradient precisely matches the Gamma site's hero background */
     background: linear-gradient(135deg, #e0f2f7, #c7d9f7);
-    border-radius: 15px; /* Subtle rounded corners */
-    box-shadow: var(--shadow-light);
-    padding: 4em 2em;
-    margin-bottom: 2em;
+    border-radius: var(--card-border-radius); /* Use consistent card border radius */
+    box-shadow: var(--shadow-soft); /* Use consistent card shadow */
+    padding: var(--section-padding-y) 2em; /* Use consistent section padding */
+    margin-bottom: 2.5em; /* Consistent spacing after hero */
 }
 
 .hero-content {
@@ -283,13 +297,15 @@ p {
 
 .hero-title {
     font-size: 1.5em;
+    font-weight: 600; /* Less bold for intro text */
     color: var(--primary-color);
     margin-bottom: 0.5em;
 }
 
 .hero-subtitle {
-    font-family: var(--font-display);
+    font-family: var(--font-inter); /* Use Inter for subtitle */
     font-size: 3.5em;
+    font-weight: 800; /* Heavier bold for main tagline */
     line-height: 1.2;
     margin-bottom: 1em;
     color: var(--text-color-dark);
@@ -302,70 +318,65 @@ p {
 }
 
 /* About Section */
+/* Styles for .content section already apply card-like appearance */
 .about-section {
-    background-color: var(--bg-color-light); /* Keep white for about section content area */
-    border-radius: 10px;
-    box-shadow: var(--shadow-light);
-    padding: 3em; /* Added padding to align with card-like sections */
+    /* No specific background or shadow needed here as .content section handles it */
+    /* Remove padding and margin specific rules if they conflict with .content section */
     max-width: var(--max-content-width);
-    margin: 2em auto; /* Adjust margin for spacing within the main content area */
+    margin: 0 auto; /* Ensure content is centered within its section */
 }
 
 .about-content p {
-    font-size: 1.1em;
-    line-height: 1.8;
+    font-size: 1.05em; /* Slightly adjusted font size */
+    line-height: 1.7; /* Adjusted line height */
     color: #555;
 }
 
 /* Skills Section */
+/* Styles for .content section already apply card-like appearance */
 .skills-section {
-    /* Changed to match the main content background color */
-    background-color: var(--bg-color-main-content);
-    padding-top: 4em;
-    padding-bottom: 4em;
-    max-width: 100%; /* Allows it to span full content width */
+    max-width: var(--max-content-width);
+    margin: 0 auto; /* Ensure content is centered within its section */
 }
 
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5em;
-    max-width: var(--max-content-width);
-    margin: 0 auto;
 }
 
 .skill-item {
-    background-color: var(--bg-color-light); /* Skill items remain white */
+    background-color: var(--bg-color-page); /* These skill items are subtly darker than background on Gamma */
     padding: 1.5em;
-    border-radius: 10px;
-    box-shadow: var(--shadow-light);
-    transition: transform 0.2s ease;
+    border-radius: 10px; /* Slightly smaller radius for nested items */
+    box-shadow: inset 0 1px 4px rgba(0,0,0,0.05); /* Subtle inner shadow or light border */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid var(--border-color); /* Added subtle border */
 }
 
 .skill-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px); /* Less dramatic lift */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* More pronounced shadow on hover for skill items */
 }
 
 .skill-item h3 {
     font-size: 1.4em;
     color: var(--primary-color);
     margin-bottom: 0.5em;
+    font-weight: 600;
 }
 
 .skill-item p {
-    font-size: 0.95em;
+    font-size: 0.9em; /* Slightly smaller font for skill descriptions */
     color: #666;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 /* Projects Section */
+/* Styles for .content section already apply card-like appearance */
 .projects-section {
-    background-color: var(--bg-color-light); /* Project section itself is white like cards */
-    border-radius: 10px;
-    box-shadow: var(--shadow-light);
-    padding: 3em; /* Added padding to align with card-like sections */
     max-width: var(--max-content-width);
-    margin: 2em auto; /* Adjust margin for spacing within the main content area */
+    margin: 0 auto; /* Ensure content is centered within its section */
 }
 
 .projects-grid {
@@ -375,9 +386,9 @@ p {
 }
 
 .project-card {
-    background-color: var(--bg-color-light); /* Project cards remain white */
-    border-radius: 10px;
-    box-shadow: var(--shadow-light);
+    background-color: var(--bg-color-white); /* Project cards white */
+    border-radius: var(--card-border-radius); /* Consistent border radius */
+    box-shadow: var(--shadow-soft); /* Consistent shadow */
     overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
@@ -386,7 +397,7 @@ p {
 
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-hover); /* Stronger shadow on hover */
 }
 
 .project-card img {
@@ -408,6 +419,7 @@ p {
     font-size: 1.5em;
     color: var(--text-color-dark);
     margin-bottom: 0.5em;
+    font-weight: 700;
 }
 
 .project-info p {
@@ -417,13 +429,10 @@ p {
 }
 
 /* Contact Section */
+/* Styles for .content section already apply card-like appearance */
 .contact-section {
-    background-color: var(--bg-color-light); /* Contact section itself is white like cards */
-    border-radius: 10px;
-    box-shadow: var(--shadow-light);
-    padding: 3em; /* Added padding to align with card-like sections */
     max-width: 600px; /* Make contact section narrower */
-    margin: 2em auto; /* Adjust margin for spacing within the main content area */
+    margin: 0 auto; /* Ensure content is centered within its section */
     text-align: center;
 }
 
@@ -437,6 +446,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 1em;
+    margin-top: 2em; /* Spacing below intro text */
 }
 
 /* Hamburger Menu (Mobile Only) */
@@ -479,18 +489,21 @@ p {
 /* Case Study Specific Styles (Used in case-study-*.html) */
 .case-study-hero {
     min-height: 40vh;
-    padding: 4em 2em;
+    padding: var(--section-padding-y) 2em;
     background: linear-gradient(135deg, #e0f2f7, #c7d9f7); /* Same gradient as main hero */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 2.5em; /* Consistent spacing */
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--shadow-soft);
 }
 
 .case-study-hero .hero-title {
     font-size: 3em;
     margin-bottom: 0.5em;
+    font-weight: 800; /* Bold for case study titles */
 }
 
 .case-study-hero .hero-subtitle {
@@ -498,14 +511,15 @@ p {
     color: #555;
     max-width: 800px;
     margin: 0 auto;
+    font-weight: 400; /* Regular weight for subtitle */
 }
 
 .case-study-content {
-    background-color: var(--bg-color-light); /* Case study content background is white */
-    border-radius: 10px;
-    box-shadow: var(--shadow-light);
+    background-color: var(--bg-color-white); /* White background for case study content */
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--shadow-soft);
     max-width: 800px;
-    margin: 2em auto; /* Adjusted margin for spacing within the main content area */
+    margin: 0 auto; /* Centered within the content area */
     padding: 3em; /* Increased padding for better spacing */
 }
 
@@ -519,6 +533,7 @@ p {
     color: var(--primary-color);
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 0.5em;
+    font-weight: 700;
 }
 
 .case-study-section h3 {
@@ -526,6 +541,7 @@ p {
     margin-top: 1.5em;
     margin-bottom: 0.8em;
     color: var(--text-color-dark);
+    font-weight: 600;
 }
 
 .case-study-section img {
@@ -534,8 +550,18 @@ p {
     display: block;
     margin: 2em auto;
     border-radius: 8px;
-    box-shadow: var(--shadow-light);
+    box-shadow: var(--shadow-soft);
 }
+
+.image-caption {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: -1em; /* Pulls caption closer to image */
+    margin-bottom: 2em; /* Space after caption */
+}
+
 
 .key-insights {
     background-color: #e6f3ff; /* A slightly more pronounced light blue for emphasis */
@@ -548,6 +574,7 @@ p {
 .key-insights h3 {
     color: var(--primary-color);
     margin-top: 0;
+    font-weight: 700;
 }
 
 .process-steps {
@@ -558,11 +585,12 @@ p {
 }
 
 .process-step {
-    background-color: var(--bg-color-main-content); /* Process steps background follows main content */
+    background-color: var(--bg-color-page); /* These follow the subtle background color */
     padding: 1.2em;
-    border-radius: 8px;
-    box-shadow: var(--shadow-light);
+    border-radius: 8px; /* Slightly smaller radius for nested items */
+    box-shadow: inset 0 1px 4px rgba(0,0,0,0.05); /* Subtle inner shadow or light border */
     text-align: center;
+    border: 1px solid var(--border-color); /* Added subtle border */
 }
 
 .process-step i {
@@ -575,6 +603,7 @@ p {
     font-size: 1.2em;
     color: var(--text-color-dark);
     margin-bottom: 0.5em;
+    font-weight: 600;
 }
 
 .case-study-content ul {
@@ -604,7 +633,12 @@ p {
     .content {
         margin-left: 0;
         max-width: 100%;
-        background-color: var(--bg-color-main-content); /* Ensure mobile content also has the background */
+        padding: 1.5em; /* Reduced padding on mobile */
+    }
+
+    .content section {
+        padding: 2em; /* Reduced inner padding on mobile for sections */
+        margin-bottom: 1.5em; /* Reduced spacing between sections on mobile */
     }
 
     .hamburger {
@@ -612,7 +646,7 @@ p {
     }
 
     .hero-section {
-        padding: 6em 1em; /* More padding on mobile hero */
+        padding: 4em 1em; /* Reduced padding on mobile hero */
     }
     .hero-subtitle {
         font-size: 2.5em; /* Smaller hero text on mobile */
@@ -630,7 +664,7 @@ p {
 
     .contact-links {
         max-width: 300px;
-        margin: 0 auto;
+        margin: 1.5em auto 0; /* Adjusted margin for mobile contact links */
     }
 
     .skills-grid, .projects-grid {
@@ -640,19 +674,14 @@ p {
     .section-header h2 {
         font-size: 2em;
     }
-
-    .about-section, .projects-section, .contact-section, .case-study-content {
-        padding: 2em; /* Smaller padding on mobile for these sections */
-        margin: 1.5em auto; /* Adjust margin for smaller screens */
-    }
 }
 
 @media (max-width: 768px) {
     .content {
-        padding: 1.5em;
+        padding: 1em; /* Further reduced padding */
     }
     .content section {
-        padding: 3em 0;
+        padding: 1.5em;
     }
 }
 
@@ -666,5 +695,9 @@ p {
     }
     .hero-title {
         font-size: 1.2em;
+    }
+    .profile-pic {
+        width: 100px;
+        height: 100px;
     }
 }
