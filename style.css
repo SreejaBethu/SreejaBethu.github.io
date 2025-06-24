@@ -4,8 +4,8 @@
     --secondary-color: #8c7ae6; /* Lighter purple for accents */
     --text-color-dark: #333;
     --text-color-light: #f4f4f4;
-    --bg-color-white: #ffffff; /* Pure white for sidebar, cards */
-    --bg-color-page-blue: #eef3f7; /* Very subtle light blue background for the overall page */
+    --bg-color-white: #ffffff; /* Pure white for sidebar, main content cards */
+    --bg-color-page-subtle-blue: #eef3f7; /* Very subtle light blue/grey for the overall page background, matching Gamma */
     --border-color: #e0e0e0;
     --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.08); /* Softer, more diffused shadow for cards */
     --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.12); /* Slightly stronger on hover */
@@ -27,7 +27,7 @@ body {
     font-family: var(--font-inter);
     line-height: 1.6;
     color: var(--text-color-dark);
-    background-color: var(--bg-color-page-blue); /* NOW THE ENTIRE PAGE IS LIGHT BLUE */
+    background-color: var(--bg-color-page-subtle-blue); /* Overall page background is now the subtle light blue */
     scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
@@ -66,7 +66,7 @@ p {
 /* Sidebar */
 .sidebar {
     width: 280px;
-    background-color: var(--bg-color-white); /* Pure white, like Gamma */
+    background-color: var(--bg-color-white); /* Pure white, matching Gamma */
     border-right: 1px solid var(--border-color);
     padding: 2.5em 1.5em; /* Adjusted padding */
     display: flex;
@@ -168,13 +168,13 @@ p {
     max-width: calc(100% - 280px); /* Adjust max-width for sidebar */
     display: flex;
     flex-direction: column;
-    /* No direct background-color here. Let body handle overall background. */
+    /* This section is designed to *contain* the white cards, letting body's subtle blue show through */
 }
 
-/* All content sections are now distinct white cards */
+/* All main content sections (Hero, About, Skills, Projects, Contact) are now distinct white cards */
 .content section {
     padding: var(--section-padding-y) 3em; /* Padding for inner content of sections */
-    background-color: var(--bg-color-white); /* White background for all content sections */
+    background-color: var(--bg-color-white); /* White background for all main content sections */
     border-radius: var(--card-border-radius); /* Rounded corners for sections */
     box-shadow: var(--shadow-soft); /* Soft shadow for sections */
     margin-bottom: 2.5em; /* Spacing between sections */
@@ -279,13 +279,14 @@ p {
 
 
 /* Hero Section */
+/* This section also becomes a distinct white card */
 .hero-section {
     min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* This gradient precisely matches the Gamma site's hero background */
+    /* Keeping the gradient for the hero background, it provides a nice visual break */
     background: linear-gradient(135deg, #e0f2f7, #c7d9f7);
     border-radius: var(--card-border-radius); /* Use consistent card border radius */
     box-shadow: var(--shadow-soft); /* Use consistent card shadow */
@@ -320,10 +321,10 @@ p {
 }
 
 /* About Section */
-/* This section already benefits from .content section styles for card-like appearance */
+/* Handled by .content section styling */
 .about-section {
     max-width: var(--max-content-width);
-    margin: 0 auto; /* Ensure content is centered within its section */
+    margin: 0 auto;
 }
 
 .about-content p {
@@ -333,10 +334,10 @@ p {
 }
 
 /* Skills Section */
-/* This section already benefits from .content section styles for card-like appearance */
+/* Handled by .content section styling */
 .skills-section {
     max-width: var(--max-content-width);
-    margin: 0 auto; /* Ensure content is centered within its section */
+    margin: 0 auto;
 }
 
 .skills-grid {
@@ -346,12 +347,11 @@ p {
 }
 
 .skill-item {
-    background-color: var(--bg-color-white); /* Skill items are white */
+    background-color: var(--bg-color-white); /* Skill items are now white */
     padding: 1.5em;
     border-radius: 10px; /* Slightly smaller radius for nested items */
     box-shadow: var(--shadow-soft); /* Soft shadow for these nested cards */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    /* Removed subtle inner shadow or light border if it causes visual clutter */
 }
 
 .skill-item:hover {
@@ -373,10 +373,10 @@ p {
 }
 
 /* Projects Section */
-/* This section already benefits from .content section styles for card-like appearance */
+/* Handled by .content section styling */
 .projects-section {
     max-width: var(--max-content-width);
-    margin: 0 auto; /* Ensure content is centered within its section */
+    margin: 0 auto;
 }
 
 .projects-grid {
@@ -429,10 +429,10 @@ p {
 }
 
 /* Contact Section */
-/* This section already benefits from .content section styles for card-like appearance */
+/* Handled by .content section styling */
 .contact-section {
     max-width: 600px; /* Make contact section narrower */
-    margin: 0 auto; /* Ensure content is centered within its section */
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -487,6 +487,7 @@ p {
 
 
 /* Case Study Specific Styles (Used in case-study-*.html) */
+/* The case study hero section will also be a distinct card */
 .case-study-hero {
     min-height: 40vh;
     padding: var(--section-padding-y) 2em;
@@ -586,12 +587,11 @@ p {
 }
 
 .process-step {
-    background-color: var(--bg-color-white); /* Process steps are now white cards */
+    background-color: var(--bg-color-white); /* Process steps are now white cards, consistent */
     padding: 1.2em;
     border-radius: 8px; /* Slightly smaller radius for nested items */
     box-shadow: var(--shadow-soft); /* Soft shadow for these nested cards */
     text-align: center;
-    /* Removed border to simplify, let shadow do the work */
 }
 
 .process-step i {
