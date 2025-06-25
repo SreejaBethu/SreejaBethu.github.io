@@ -42,6 +42,7 @@ section {
     margin: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .container {
@@ -106,9 +107,15 @@ section {
 }
 
 .social-icons a:hover {
-    color: #007bff;
+    color: hwb(174 52% 4% / 0.715);
 }
 
+/* Button Styling */
+.btn-block {
+    width: 80%;
+    margin: 20px auto; /* Center the button */
+    display: block;
+}
 /* Add some overall styling */
 h1, h2 {
     font-weight: bold;
