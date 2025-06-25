@@ -60,23 +60,29 @@ section {
     margin-bottom: 5px;
 }
 
-.projects .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center the project cards */
+/* Projects Section - CSS Grid for Tile Layout */
+.projects .project-grid {
+    display: grid;
+    /* This creates columns that are at least 280px wide.
+       'auto-fit' ensures as many columns fit as possible without overflow.
+       '1fr' makes columns take up equal fractions of available space. */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; /* Spacing between grid items (tiles) */
+    justify-items: center; /* Center items within their grid cells */
+    padding: 0 15px; /* Add some horizontal padding to the grid container */
 }
 
-.projects .col-md-4 {
-    width: 30%;
-    padding: 10px;
-    box-sizing: border-box;
+.projects .project-item {
+    /* No specific width/padding here, as grid handles layout */
+    /* Ensure height of items are consistent if content length varies a lot */
+    height: 100%;
     transition: transform 0.3s ease;
-    margin-bottom: 20px; /* Add some space between cards */
 }
 
-.projects .col-md-4:hover {
+.projects .project-item:hover {
     transform: translateY(-10px);
 }
+
 
 .project-card {
     border: 1px solid #ddd;
@@ -84,6 +90,10 @@ section {
     padding: 15px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-card img {
@@ -92,6 +102,23 @@ section {
     object-fit: cover;
     border-radius: 6px;
     margin-bottom: 10px;
+}
+
+.project-card h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    flex-shrink: 0;
+}
+
+.project-card p {
+    flex-grow: 1; /* Allow paragraph to take up available space */
+    font-size: 16px; /* Slightly smaller font for tighter fit in card */
+    line-height: 1.4;
+    overflow: hidden; /* Hide overflow if text is too long */
+    text-overflow: ellipsis; /* Add ellipsis for long text */
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Limit to 4 lines */
+    -webkit-box-orient: vertical;
 }
 
 .contact {
