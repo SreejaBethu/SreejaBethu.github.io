@@ -69,18 +69,27 @@ section {
        - minmax(280px, 1fr): Each column will be at least 280px wide,
          and expand to take equal fractional space if more room is available.
        This should ensure wrapping to new lines when space runs out. */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr;
     gap: 25px; /* Spacing between grid items (tiles) */
     justify-items: center; /* Center items within their grid cells */
     padding: 0 15px; /* Add some horizontal padding to the grid container */
 
     /* TEMPORARY DEBUGGING BORDER - REMOVE THIS LATER */
-    border: 2px dashed red;
+    border: 3px dashed red;
 }
+
+/* Large screens (desktops) - 3 columns */
+@media (min-width: 992px) {
+    .projects .project-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+}
+
 
 .projects .project-item {
     /* No specific width/padding here, as grid handles layout */
     height: 100%;
+    width: 100%;
     transition: transform 0.3s ease;
 
     /* TEMPORARY DEBUGGING BORDER - REMOVE THIS LATER */
@@ -115,6 +124,7 @@ section {
     margin-top: 10px;
     margin-bottom: 5px;
     flex-shrink: 0; /* Prevent heading from shrinking */
+    color: #007bff;
 }
 
 .project-card p {
@@ -126,6 +136,12 @@ section {
     display: -webkit-box;
     -webkit-line-clamp: 4; /* Limit to 4 lines */
     -webkit-box-orient: vertical;
+}
+
+.project-card .btn {
+    margin-top: auto; /* Push button to the bottom of the card */
+    width: auto; /* Let button size itself */
+    padding: 8px 15px; /* Adjust button padding */
 }
 
 .contact {
@@ -149,6 +165,7 @@ section {
 /* Button Styling */
 .btn-block {
     width: 80%;
+    max-width: 300px;
     margin: 20px auto;
     display: block;
 }
