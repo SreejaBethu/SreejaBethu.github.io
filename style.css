@@ -11,16 +11,16 @@ header {
     background-color: #add8e6; /* Light Blue */
     color: #fff;
     padding: 10px 0;
-    text-align: center; /* Center the header content */
+    text-align: center;
 }
 
 .navbar {
     display: flex;
-    justify-content: center; /* Center the navigation links */
+    justify-content: center;
 }
 
 .navbar-brand {
-    margin-right: auto; /* Push the brand to the left */
+    margin-right: auto;
 }
 
 .hero {
@@ -38,7 +38,7 @@ header {
 
 section {
     padding: 50px 0;
-    background-color: #fff; /* White background for sections */
+    background-color: #fff;
     margin: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -49,6 +49,7 @@ section {
     width: 80%;
     margin: auto;
     overflow: hidden;
+    max-width: 1200px; /* Added max-width to container for large screens */
 }
 
 .skills ul {
@@ -63,43 +64,49 @@ section {
 /* Projects Section - CSS Grid for Tile Layout */
 .projects .project-grid {
     display: grid;
-    /* This creates columns that are at least 280px wide.
-       'auto-fit' ensures as many columns fit as possible without overflow.
-       '1fr' makes columns take up equal fractions of available space. */
+    /* This creates responsive columns:
+       - Auto-fit: create as many columns as can fit.
+       - minmax(280px, 1fr): Each column will be at least 280px wide,
+         and expand to take equal fractional space if more room is available.
+       This should ensure wrapping to new lines when space runs out. */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px; /* Spacing between grid items (tiles) */
     justify-items: center; /* Center items within their grid cells */
     padding: 0 15px; /* Add some horizontal padding to the grid container */
+
+    /* TEMPORARY DEBUGGING BORDER - REMOVE THIS LATER */
+    border: 2px dashed red;
 }
 
 .projects .project-item {
     /* No specific width/padding here, as grid handles layout */
-    /* Ensure height of items are consistent if content length varies a lot */
     height: 100%;
     transition: transform 0.3s ease;
+
+    /* TEMPORARY DEBUGGING BORDER - REMOVE THIS LATER */
+    border: 1px solid blue;
 }
 
 .projects .project-item:hover {
     transform: translateY(-10px);
 }
 
-
 .project-card {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 15px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    height: 100%;
-    display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Make card fill its project-item container */
+    display: flex; /* Use flexbox for vertical alignment within card */
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; /* Distribute space vertically: top, middle, bottom */
 }
 
 .project-card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 200px; /* Set a fixed height for the images */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
     border-radius: 6px;
     margin-bottom: 10px;
 }
@@ -107,7 +114,7 @@ section {
 .project-card h3 {
     margin-top: 10px;
     margin-bottom: 5px;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Prevent heading from shrinking */
 }
 
 .project-card p {
@@ -136,16 +143,16 @@ section {
 }
 
 .social-icons a:hover {
-    color:#007bff;
+    color: #007bff;
 }
 
 /* Button Styling */
 .btn-block {
     width: 80%;
-    margin: 20px auto; /* Center the button */
+    margin: 20px auto;
     display: block;
 }
-/* Add some overall styling */
+
 h1, h2 {
     font-weight: bold;
     color: #333;
