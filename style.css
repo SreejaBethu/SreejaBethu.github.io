@@ -76,7 +76,7 @@ section {
          and expand to take equal fractional space if more room is available.
        This should ensure wrapping to new lines when space runs out. */
     grid-template-columns: 1fr;
-    gap: 25px; /* Spacing between grid items (tiles) */
+    gap: 15px; /* Spacing between grid items (tiles) */
     justify-items: center; /* Center items within their grid cells */
     padding: 0 15px; /* Add some horizontal padding to the grid container */ 
 }
@@ -100,10 +100,6 @@ section {
     height: 100%;
     width: 100%;
     transition: transform 0.3s ease;
-
-    /* TEMPORARY DEBUGGING BORDER - REMOVE THIS LATER */
-    border: 1px solid blue;
-    background-color: rgba(0, 255, 0, 0.2);
 }
 
 .projects .project-item:hover {
@@ -112,8 +108,8 @@ section {
 
 .project-card {
     border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
+    border-radius: 6px;
+    padding: 12px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: 100%; /* Make card fill its project-item container */
@@ -125,7 +121,7 @@ section {
 
 .project-card img {
     width: 100%;
-    height: 120px; /* Set a fixed height for the images */
+    height: 80px; /* Set a fixed height for the images */
     object-fit: cover; /* Maintain aspect ratio and cover the area */
     border-radius: 6px;
     margin-bottom: 10px;
@@ -140,7 +136,7 @@ section {
 
 .project-card p {
     flex-grow: 1; /* Allow paragraph to take up available space */
-    font-size: 16px; /* Slightly smaller font for tighter fit in card */
+    font-size: 12px; /* Slightly smaller font for tighter fit in card */
     line-height: 1.4;
     overflow: hidden; /* Hide overflow if text is too long */
     text-overflow: ellipsis; /* Add ellipsis for long text */
@@ -152,7 +148,7 @@ section {
 .project-card .btn {
     margin-top: auto; /* Push button to the bottom of the card */
     width: auto; /* Let button size itself */
-    padding: 8px 15px; /* Adjust button padding */
+    padding: 6px 12px; /* Adjust button padding */
 }
 
 .contact {
