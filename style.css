@@ -1,3 +1,8 @@
+/* Universal Box-Sizing - CRITICAL FOR LAYOUT CONSISTENCY */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: sans-serif;
     margin: 0;
@@ -73,11 +78,7 @@ section {
     grid-template-columns: 1fr;
     gap: 25px; /* Spacing between grid items (tiles) */
     justify-items: center; /* Center items within their grid cells */
-    padding: 0 15px; /* Add some horizontal padding to the grid container */
-
-    /* TEMPORARY DEBUGGING BORDER - REMOVE THIS LATER */
-    border: 3px dashed red;
-    background-color: rgba(255, 255, 0, 0.2); 
+    padding: 0 15px; /* Add some horizontal padding to the grid container */ 
 }
 
 /* Multiple screens (tablets) - 3 columns */
