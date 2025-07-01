@@ -76,11 +76,9 @@ section {
          and expand to take equal fractional space if more room is available.
        This should ensure wrapping to new lines when space runs out. */
     
-    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px; /* Spacing between grid items (tiles) */
-    justify-items: strech; /* Center items within their grid cells */
-    align-items: strech;
-    padding: 0 15px; /* Add some horizontal padding to the grid container */ 
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Spacing between grid items (tiles) */
+    padding: 20px 0; /* Add some horizontal padding to the grid container */ 
 }
 
 /* Multiple screens (tablets) - 3 columns */
@@ -103,17 +101,45 @@ section {
     }
 }
 
-.projects .project-item {
+.project-item {
     /* No specific width/padding here, as grid handles layout */
-   
-    width: 100%;
-    transition: transform 0.3s ease;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    height: 400px; /* Fixed height for clean alignment */
     
 }
 
-.projects .project-item:hover {
-    transform: translateY(-10px);
+.project-item:hover {
+    transform: translateY(-8px);
+}
+
+.project-item img {
+    width: 100%;
+    height: 180px; /* Consistent image height */
+    object-fit: cover;
+}
+
+.project-item h3 {
+    font-size: 18px;
+    margin: 10px 15px 5px;
+    color: #007bff;
+}
+
+.project-item p {
+    font-size: 14px;
+    margin: 0 15px 10px;
+    color: #444;
+    flex-grow: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .project-card {
@@ -130,14 +156,6 @@ section {
     justify-content: flex-start;
     background-color: #fff;
     
-}
-
-.project-card img {
-    width: 100%;
-    height: auto; 
-    object-fit: cover; /* Maintain aspect ratio and cover the area */
-    border-radius: 6px;
-    margin-bottom: 10px;
 }
 
 .project-card h3 {
@@ -158,9 +176,10 @@ section {
 }
 
 .project-card .btn {
-    margin-top: auto; /* Push button to the bottom of the card */
-    width: auto; /* Let button size itself */
-    padding: 6px 12px; /* Adjust button padding */
+    margin: 0 15px 12px;
+    padding: 6px 12px;
+    font-size: 13px;
+    align-self: flex-start;
 }
 
 .contact {
