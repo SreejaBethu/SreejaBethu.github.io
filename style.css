@@ -7,7 +7,7 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff; /* AliceBlue - Light Blue */
+    background-color: linear-gradient(to bottom, #fdfdfd, #e9f3fa);
     color: #333;
     line-height: 1.6;
 }
@@ -44,7 +44,7 @@ header {
 
 section {
     padding: 50px 0;
-    background-color: #fff;
+    background-color: #f7ff;
     margin: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -211,6 +211,14 @@ section {
     display: block;
 }
 
+.btn-outline-dark {
+    color: #17a2b8;
+    border-color: #17a2b8;
+}
+.btn-outline-dark:hover {
+    background-color: #17a2b8;
+    color: white;
+}
 h1, h2 {
     font-weight: bold;
     color: #333;
