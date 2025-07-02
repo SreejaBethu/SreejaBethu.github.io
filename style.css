@@ -17,8 +17,6 @@ header {
     color: #fff;
     padding: 10px 0;
     text-align: center;
-    position: sticky;
-    top: 0;
     z-index: 1000;
 }
 
