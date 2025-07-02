@@ -7,13 +7,13 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: linear-gradient(to bottom, #87eae7, #87cbe0);
+    background-color: #f4f7f9;
     color: #333;
     line-height: 1.6;
 }
 
 header {
-    background-color: #add8e6; /* Light Blue */
+    background-color: #023e8a; /* Light Blue */
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -30,7 +30,7 @@ header {
 }
 
 .hero {
-    background-color: #86d0e1; /* PowderBlue */
+    background-color: #0077b6; /* PowderBlue */
     color: #fff;
     padding: 40px 0;
     text-align: center;
@@ -44,10 +44,10 @@ header {
 
 section {
     padding: 50px 0;
-    background-color: rgb(165, 238, 242);
+    background-color:#ffffff;
     margin: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     text-align: center;
 }
 
@@ -131,7 +131,7 @@ section {
 .project-item h3 {
     font-size: 18px;
     margin: 10px 15px 5px;
-    color: #007bff;
+    color: #0096c7;
 }
 
 .project-item p {
@@ -165,7 +165,7 @@ section {
     margin-top: 10px;
     margin-bottom: 5px;
     flex-shrink: 0; /* Prevent heading from shrinking */
-    color: #007bff;
+    color: #0096c7;
 }
 
 .project-card p {
@@ -183,6 +183,8 @@ section {
     padding: 6px 12px;
     font-size: 13px;
     align-self: flex-start;
+    color: #0096c7;
+    border-color: #0096c7;
 }
 
 .contact {
@@ -200,7 +202,7 @@ section {
 }
 
 .social-icons a:hover {
-    color: #007bff;
+    color: #0096c7;
 }
 
 /* Button Styling */
