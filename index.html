@@ -1,120 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sreeja Bethu - Data, Business Analyst & Product</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Font Awesome for icons -->
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sreeja Bethu - Data, Business Analyst & Product</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <a class="navbar-brand" href="#">Sreeja Bethu</a>
-                <div class="navbar-nav">
-                    <a class="nav-link"><a class="nav-link" href="#about">About</a>
-                    <a class="nav-link"><a class="nav-link" href="#skills">Skills</a>
-                    <a class="nav-link"><a class="nav-link" href="#projects">Projects</a>
-                    <a class="nav-link"><a class="nav-link" href="#contact">Contact</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <!-- Header / Nav -->
+  <header>
+    <nav class="navbar">
+      <div class="container header-inner">
+        <a class="navbar-brand" href="index.html">Sreeja Bethu</a>
 
-    <section id="hero" class="hero">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h1>Data-Driven Insights for Business Growth</h1>
-                    <p>Experienced Business Data Analyst with a passion for transforming data into actionable strategies. With over 5 years of experience, I transform complex datasets from industries like healthcare, tech into actionable strategies. I leverage a deep technical toolkit in SQL, Python, AI to build scalable solutions that enhance efficiency and inform executive decisions.</p>
-                </div>
-                <div class="col-md-6">
-                    <img src="images/Sreeja-Bethu-Photo.jpg" alt="Sreeja Bethu" class="img-fluid rounded-circle" style="width: 320px;">  <!-- Replace with your image file -->
-                </div>
-            </div>
+        <div class="menu-rows" role="navigation" aria-label="Primary">
+          <a class="menu-link" href="index.html#about">About</a>
+          <a class="menu-link" href="index.html#skills">Skills</a>
+          <a class="menu-link" href="index.html#projects">Projects</a>
+          <a class="menu-link" href="case-studies.html">Case Studies</a>
+          <a class="menu-link" href="index.html#contact">Contact</a>
         </div>
-    </section>
+      </div>
+    </nav>
+  </header>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p> Data Analyst specializing in automating insights and driving measurable business growth. With over 5 years of experience, I transform complex datasets from industries like healthcare, tech into actionable strategies. I leverage a deep technical toolkit in SQL, Python, AI to build scalable solutions that enhance efficiency and inform executive decisions. </p>
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <h1>Data-Driven Insights for Business Growth</h1>
+          <p class="sub">
+            Senior Business & Data Analyst with <strong>5+ years</strong> experience turning complex data into clear,
+            executive-ready decisions. I specialize in scalable analytics, KPI design, and AI-assisted workflows using
+            SQL, Python, and modern BI.
+          </p>
         </div>
-    </section>
-
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>BI & Reporting:</strong> Power BI, Tableau, Excel, Google Sheets</li>
-                <li><strong>Data Analysis:</strong> SQL, Python (Pandas, NumPy), ETL pipelines, Data Modeling, Data warehousing</li>
-                <li><strong>Project Management:</strong> Agile, Scrum, Stakeholder Management, Jira</li>
-                <li><strong>Cloud & AI/ML:</strong> AWS, Generative AI(Google Gemini SDK), NLP, RAG, Predictive Modeling</li>
-            </ul>
-            <a href="#" class="btn btn-primary btn-block">View Skills</a> <!-- Button -->
+        <div class="col-md-5 text-center">
+          <img src="images/Sreeja-Bethu-Photo.jpg" alt="Sreeja Bethu" class="img-fluid rounded-circle" style="width: 320px;">
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-item">
-                        <img src="images/project-smart-report-analyzer.png" alt="Smart Report Analyzer" > <!-- Replace with your image -->
-                        <h3>Smart Report Analyzer</h3>
-                        <p>Leverages LLMs and AI agents to automatically analyze reports (PDF/Excel/CSV) and generate actionable summaries, charts, and insights.</p>
-                        <a href="https://github.com/SreejaBethu/Smart-Report-Analyzer" target="_blank" class="btn btn-sm btn-outline-primary">Details</a>
-                        <a href="https://github.com/SreejaBethu/Smart-Report-Analyzer" target="_blank" class="btn btn-sm btn-outline-dark mt-2">
-                        <i class="fab fa-github"></i> GitHub</a>
-                    </div>
-        
-                    <div class="project-item">
-                            <img src="images/project-Forecast-Sales.jpeg" alt="Sales Data Analysis Forecasting" > <!-- Replace with your image -->
-                            <h3>Sales Data Analysis Forecasting</h3>
-                            <p>Analyzes sales data and builds time-series models to forecast future trends.</p>
-                            <a href="https://github.com/SreejaBethu/Sales-Data-Analysis-Forecasting" target="_blank" class="btn btn-sm btn-outline-primary">Details</a>
-                            <a href="https://github.com/SreejaBethu/Sales-Data-Analysis-Forecasting" target="_blank" class="btn btn-sm btn-outline-dark mt-2">
-                            <i class="fab fa-github"></i> GitHub</a>
-                    </div>
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>About Me</h2>
+      </div>
+      <p>
+        Business Data Analyst specializing in automating insights and driving measurable growth across healthcare and tech.
+        I build robust data models, forecasting pipelines, and self-serve dashboards that improve decision velocity for senior stakeholders.
+      </p>
+    </div>
+  </section>
 
-                    <div class="project-item">
-                            <img src="images/project-cost-living.jpg" alt="Cost Of living index Globally" > <!-- Replace with your image -->
-                            <h3>Cost Of living index Globally</h3>
-                            <p>An interactive Streamlit application visualizing and comparing cost of living indices across various countries.</p> 
-                            <a href="https://github.com/SreejaBethu/Cost-Of-Living-Index-Globally" target="_blank" class="btn btn-sm btn-outline-primary">Details</a>
-                            <a href="https://github.com/SreejaBethu/Cost-Of-Living-Index-Globally" target="_blank" class="btn btn-sm btn-outline-dark mt-2">
-                            <i class="fab fa-github"></i> GitHub</a>
-                        </div>
+  <!-- Skills -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2>Skills</h2>
+      </div>
+      <ul class="text-left">
+        <li><strong>BI & Reporting:</strong> Power BI, Tableau, Excel, Google Sheets</li>
+        <li><strong>Data Analysis:</strong> SQL, Python (Pandas, NumPy), ETL pipelines, Data Modeling, Data Warehousing</li>
+        <li><strong>Project Management:</strong> Agile, Scrum, Stakeholder Management, Jira</li>
+        <li><strong>Cloud & AI/ML:</strong> AWS, Generative AI (Google Gemini SDK), NLP, RAG, Predictive Modeling</li>
+      </ul>
+      <a href="#projects" class="btn btn-primary btn-block">View Projects</a>
+    </div>
+  </section>
 
-                <div class="project-item">
-                        <img src="images/project-Paris-olympics-medallist.jpg" alt="Paris Olympics 2024 Medal List" > <!-- Replace with your image -->
-                        <h3>Paris Olympics 2024 Medal List</h3>
-                        <p> </p>
-                        <a href="https://github.com/SreejaBethu/Paris-Olympics-2024-Medals-List" target="_blank" class="btn btn-sm btn-outline-primary">Details</a>
-                        <a href="https://github.com/SreejaBethu/Paris-Olympics-2024-Medals-List" target="_blank" class="btn btn-sm btn-outline-dark mt-2">
-                        <i class="fab fa-github"></i> GitHub</a>
-                </div>
-            </div>
+  <!-- Projects -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2>Projects</h2>
+      </div>
+
+      <div class="project-grid">
+        <!-- Smart Report Analyzer -->
+        <div class="project-item">
+          <img src="images/project-smart-report-analyzer.png" alt="Smart Report Analyzer">
+          <h3>Smart Report Analyzer</h3>
+          <p>LLM/agent workflow to parse PDF/Excel/CSV and auto-generate summaries, charts, and exec insights.</p>
+          <div class="mt-auto pb-3 px-3">
+            <a href="https://github.com/SreejaBethu/Smart-Report-Analyzer" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary">Details</a>
+            <a href="https://github.com/SreejaBethu/Smart-Report-Analyzer" target="_blank" rel="noopener" class="btn btn-sm btn-outline-dark mt-2">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+              <a href="case-studies.html#smart-report-analyzer" class="btn btn-sm btn-outline-primary mt-2">
+                <i class="fas fa-file-alt"></i> Case Study
+              </a>
+            </button>
+          </div>
         </div>
-    </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:bethusreeja@gmail.com">bethusreeja@gmail.com</a></p>
-            <div class="social-icons">
-                <a href="linkedinc.om/in/sreejabethu" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="github.com/SreejaBethu" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-            <a href="#" class="btn btn-primary btn-block">View all Projects</a> <!-- Button -->
+        <!-- Sales Forecasting -->
+        <div class="project-item">
+          <img src="images/project-Forecast-Sales.jpeg" alt="Sales Data Analysis Forecasting">
+          <h3>Sales Data Analysis Forecasting</h3>
+          <p>Time-series forecasting pipeline with scenario planning and error bands for demand/inventory alignment.</p>
+          <div class="mt-auto pb-3 px-3">
+            <a href="https://github.com/SreejaBethu/Sales-Data-Analysis-Forecasting" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary">Details</a>
+            <a href="https://github.com/SreejaBethu/Sales-Data-Analysis-Forecasting" target="_blank" rel="noopener" class="btn btn-sm btn-outline-dark mt-2">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="case-studies.html#sales-data-analysis-forecasting" class="btn btn-sm btn-outline-primary mt-2">
+              <i class="fas fa-file-alt"></i> Case Study
+            </a>
+            </button>
+          </div>
         </div>
-    </section>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Cost Of Living Index Globally -->
+        <div class="project-item">
+          <img src="images/project-cost-living.jpg" alt="Cost Of Living Index Globally">
+          <h3>Cost Of Living Index Globally</h3>
+          <p>Interactive Streamlit tool to compare market affordability via composite cost indices and drilldowns.</p>
+          <div class="mt-auto pb-3 px-3">
+            <a href="https://github.com/SreejaBethu/Cost-Of-Living-Index-Globally" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary">Details</a>
+            <a href="https://github.com/SreejaBethu/Cost-Of-Living-Index-Globally" target="_blank" rel="noopener" class="btn btn-sm btn-outline-dark mt-2">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="case-studies.html#scost-of-living" class="btn btn-sm btn-outline-primary mt-2">
+              <i class="fas fa-file-alt"></i> Case Study
+            </a>
+            </button>
+          </div>
+        </div>
+
+        <!-- Paris Olympics 2024 Medals -->
+        <div class="project-item">
+          <img src="images/project-Paris-olympics-medallist.jpg" alt="Paris Olympics 2024 Medal List">
+          <h3>Paris Olympics 2024 Medal List</h3>
+          <p>Country & sport-level medal tracking with filters, aggregation, and shareable links.</p>
+          <div class="mt-auto pb-3 px-3">
+            <a href="https://github.com/SreejaBethu/Paris-Olympics-2024-Medals-List" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary">Details</a>
+            <a href="https://github.com/SreejaBethu/Paris-Olympics-2024-Medals-List" target="_blank" rel="noopener" class="btn btn-sm btn-outline-dark mt-2">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="case-studies.html#paris-olympics-2024-medal-list" class="btn btn-sm btn-outline-primary mt-2">
+              <i class="fas fa-file-alt"></i> Case Study
+            </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contact</h2>
+      </div>
+      <p>Email: <a href="mailto:bethusreeja@gmail.com">bethusreeja@gmail.com</a></p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/sreejabethu" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/SreejaBethu" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+      <a href="#projects" class="btn btn-primary btn-block">View All Projects</a>
+    </div>
+  </section>
+
+  <!-- Case Study Modals -->
+  <!-- Smart Report Analyzer -->
+  <div class="modal fade" id="cs-smart-report" tabindex="-1" role="dialog" aria-labelledby="csSmartReportLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="csSmartReportLabel" class="modal-title">Case Study — Smart Report Analyzer</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body text-left">
+          <h6>Problem</h6>
+          <p>Business teams spent excessive time manually reviewing reports (PDF, Excel, CSV), delaying insights for strategy and compliance.</p>
+          <h6>Approach</h6>
+          <ul>
+            <li>LLM-powered parsing of PDF/Excel/CSV with auto-summaries & charts.</li>
+            <li>STAR-aligned prompts for consistent outputs across datasets.</li>
+          </ul>
+          <h6>Tools</h6>
+          <p>Python, Pandas, LangChain/Agents, Power BI, AWS</p>
+          <h6>Impact</h6>
+          <ul>
+            <li>Reduced report review turnaround by ~60% (placeholder—adjust with your metric).</li>
+            <li>Delivered AI-driven insights to 20+ stakeholders via shareable summaries.</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <a href="case-studies.html#smart-report" class="btn btn-outline-primary">Read Full Case Study</a>
+          <a href="https://github.com/SreejaBethu/Smart-Report-Analyzer" target="_blank" rel="noopener" class="btn btn-outline-dark">GitHub</a>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sales Forecasting -->
+  <div class="modal fade" id="cs-forecasting" tabindex="-1" role="dialog" aria-labelledby="csForecastingLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="csForecastingLabel" class="modal-title">Case Study — Sales Data Analysis Forecasting</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body text-left">
+          <h6>Problem</h6>
+          <p>Leadership faced unpredictable demand, leading to inventory mismatches across multiple business units.</p>
+          <h6>Approach</h6>
+          <ul>
+            <li>Built time-series models (ARIMA, Prophet) with seasonality decomposition.</li>
+            <li>Power BI dashboards with scenario planning and error bands for quarterly reviews.</li>
+          </ul>
+          <h6>Tools</h6>
+          <p>SQL, Python (Pandas, statsmodels/Prophet), Power BI, Excel</p>
+          <h6>Impact</h6>
+          <ul>
+            <li>Improved forecast accuracy by ~20% (MAPE reduction) (placeholder—adjust with your metric).</li>
+            <li>Reduced stockouts/excess inventory; supported up to ~$500K savings.</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <a href="case-studies.html#forecasting" class="btn btn-outline-primary">Read Full Case Study</a>
+          <a href="https://github.com/SreejaBethu/Sales-Data-Analysis-Forecasting" target="_blank" rel="noopener" class="btn btn-outline-dark">GitHub</a>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cost Of Living -->
+  <div class="modal fade" id="cs-col" tabindex="-1" role="dialog" aria-labelledby="csColLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="csColLabel" class="modal-title">Case Study — Cost Of Living Index Globally</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body text-left">
+          <h6>Problem</h6>
+          <p>Global strategy teams needed standardized, comparable cost-of-living metrics to evaluate market entry feasibility.</p>
+          <h6>Approach</h6>
+          <ul>
+            <li>Streamlit app with filters, drilldowns, and CSV export.</li>
+            <li>Normalization across CPI, rent, and basket prices.</li>
+          </ul>
+          <h6>Tools</h6>
+          <p>Python, Streamlit, Plotly, Pandas</p>
+          <h6>Impact</h6>
+          <ul>
+            <li>Enabled faster market assessments; saved ~40+ analyst hours/month (placeholder—adjust).</li>
+            <li>Delivered real-time comparisons across 50+ countries.</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <a href="case-studies.html#cost-of-living" class="btn btn-outline-primary">Read Full Case Study</a>
+          <a href="https://github.com/SreejaBethu/Cost-Of-Living-Index-Globally" target="_blank" rel="noopener" class="btn btn-outline-dark">GitHub</a>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Paris Olympics -->
+  <div class="modal fade" id="cs-olympics" tabindex="-1" role="dialog" aria-labelledby="csOlympicsLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="csOlympicsLabel" class="modal-title">Case Study — Paris Olympics 2024 Medal List</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body text-left">
+          <h6>Problem</h6>
+          <p>Media teams needed up-to-date medal standings to support timely coverage during the Games.</p>
+          <h6>Approach</h6>
+          <ul>
+            <li>Ingested official feeds; built country/sport breakdowns.</li>
+            <li>Filters (country, sport, day) with shareable state.</li>
+          </ul>
+          <h6>Tools</h6>
+          <p>Python, APIs, Power BI / Plotly</p>
+          <h6>Impact</h6>
+          <ul>
+            <li>Delivered real-time medal data to 100+ stakeholders.</li>
+            <li>Increased dashboard engagement; reduced manual updates.</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <a href="case-studies.html#olympics" class="btn btn-outline-primary">Read Full Case Study</a>
+          <a href="https://github.com/SreejaBethu/Paris-Olympics-2024-Medals-List" target="_blank" rel="noopener" class="btn btn-outline-dark">GitHub</a>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts (order matters for Bootstrap 4 modals) -->
+  <!-- jQuery 3.5.1 (slim is fine) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+<!-- Popper 1.16.1 (Bootstrap 4 compatible) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha512-5oPf1jO2zCuxR7YkY4U6W4c9Z3iQh2wq1q0kzE1kVqF2hD1cQO1k0HnV3VwqgZb0Xl1q0m1b0hGv7KkN1iH6yw==" crossorigin="anonymous"></script>
+
+<!-- Bootstrap 4.5.2 JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B0UglyR+LyTjoob1zYx2nFQZ1K6Jr9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b" crossorigin="anonymous"></script>
 </body>
 </html>

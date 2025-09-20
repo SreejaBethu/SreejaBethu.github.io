@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Sreeja Bethu — Case Studies</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
+  <style>
+    /* Page-specific niceties (keeps core CSS in style.css) */
+    .cs-hero { padding: 56px 0; color:#fff; background: linear-gradient(135deg, var(--brand) 0%, var(--brand-accent) 100%); }
+    .cs-hero h1 { color:#fff; margin-bottom: 8px; }
+    .toc a{ display:block; padding:10px 12px; border:1px solid #e2e8f0; border-radius:12px; margin-bottom:10px; text-decoration:none; background:#fff; }
+    .cs-card h3 { color: var(--brand); } 
+    .toc a:hover{ background:#ebeef1; border-color:rgba(14,165,233,.35); }
+    .cs-card p { color: var(--ink-900); } /* Added: Make paragraphs inside case study cards dark */
+    .cs-card{ padding:24px; border-radius:12px; box-shadow:var(--shadow-sm); border:1px solid #e2e8f0; background:#fff; transition:transform .2s ease, box-shadow .2s ease; }
+    .cs-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow-md); }
+    .meta{ display:flex; flex-wrap:wrap; gap:10px; margin:12px 0 8px; }
+    .meta .badge{ font-size:12px; padding:.35rem .6rem; }
+    .cs-actions a{ margin-right:10px; margin-top:6px; }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Nav -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Sreeja Bethu</a>
+        <div class="navbar-nav">
+          <a class="nav-link" href="index.html#about">About</a>
+          <a class="nav-link" href="index.html#skills">Skills</a>
+          <a class="nav-link" href="index.html#projects">Projects</a>
+          <a class="nav-link" href="case-studies.html">Case Studies</a>
+          <a class="nav-link" href="index.html#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="cs-hero">
+    <div class="container">
+      <h1>Case Studies</h1>
+      <p class="sub mb-0">Detailed project narratives highlighting business impact, analytics approach, and technical execution.</p>
+    </div>
+  </section>
+
+  <!-- TOC (white on light gray band via alternating sections) -->
+  <section style="background: var(--bg-alt);">
+    <div class="container" style="background:transparent; box-shadow:none; padding:0;">
+      <div class="section-header"><h2 style="margin-bottom:12px;">Browse</h2></div>
+      <div class="toc">
+        <a href="#smart-report"><strong>Smart Report Analyzer</strong> — LLM/Agent pipeline for report parsing & executive summaries</a>
+        <a href="#forecasting"><strong>Sales Data Analysis Forecasting</strong> — Demand forecasting & scenario planning</a>
+        <a href="#cost-of-living"><strong>Cost of Living Index</strong> — Market affordability comparisons</a>
+        <a href="#olympics"><strong>Paris Olympics 2024 Medal Tracker</strong> — Real-time medal data</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Smart Report Analyzer (white section) -->
+  <section id="smart-report">
+    <div class="container">
+      <div class="section-header"><h2>Smart Report Analyzer</h2></div>
+      <div class="cs-card">
+        <div class="meta"><span class="badge badge-info">GenAI / LLM</span><span class="badge badge-secondary">Automation</span><span class="badge badge-success">Executive Insights</span></div>
+
+        <h3>Problem</h3>
+        <p>Business teams spent excessive time manually reviewing reports (PDF, Excel, CSV), delaying insights for strategy and compliance.</p>
+
+        <h3>Approach</h3>
+        <ul>
+          <li>LLM-powered parsing for structured/unstructured data; concise executive summaries.</li>
+          <li>Automated charting & anomaly surfacing; consistent outputs via STAR-style prompts.</li>
+        </ul>
+
+        <h3>Tools</h3><p>Python, Hugging Face, LangChain/Agents, Pandas, Power BI</p>
+
+        <h3>Impact</h3>
+        <ul>
+          <li>~60% faster report review (placeholder—replace with your metric).</li>
+          <li>Insights distributed to 20+ stakeholders via shareable summaries.</li>
+        </ul>
+
+        <div class="cs-actions">
+          <a class="btn btn-outline-primary" href="https://github.com/SreejaBethu/Smart-Report-Analyzer" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+          <a class="btn btn-case-study" href="index.html#projects"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sales Forecasting (alt gray section) -->
+  <section id="forecasting" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-header"><h2>Sales Data Analysis Forecasting</h2></div>
+      <div class="cs-card">
+        <div class="meta"><span class="badge badge-info">Forecasting</span><span class="badge badge-secondary">Time-Series</span><span class="badge badge-success">Planning</span></div>
+
+        <h3>Problem</h3><p>Leadership faced unpredictable demand, leading to inventory mismatches across business units.</p>
+
+        <h3>Approach</h3>
+        <ul>
+          <li>ARIMA/Prophet models with seasonality; validation vs. live pipeline data.</li>
+          <li>Power BI dashboards with scenario planning and error bands.</li>
+        </ul>
+
+        <h3>Tools</h3><p>SQL, Python (Pandas, statsmodels/Prophet), Power BI, Excel</p>
+
+        <h3>Impact</h3>
+        <ul>
+          <li>~20% MAPE improvement (placeholder—replace with your metric).</li>
+          <li>Reduced stockouts/excess; supported up to ~$500K savings.</li>
+        </ul>
+
+        <div class="cs-actions">
+          <a class="btn btn-outline-primary" href="https://github.com/SreejaBethu/Sales-Data-Analysis-Forecasting" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+          <a class="btn btn-case-study" href="index.html#projects"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cost of Living (white section) -->
+  <section id="cost-of-living">
+    <div class="container">
+      <div class="section-header"><h2>Cost of Living Index (Streamlit)</h2></div>
+      <div class="cs-card">
+        <div class="meta"><span class="badge badge-info">Streamlit</span><span class="badge badge-secondary">Pipelines</span><span class="badge badge-success">Decision Support</span></div>
+
+        <h3>Problem</h3><p>Teams needed standardized, comparable cost-of-living metrics to evaluate market entry feasibility.</p>
+
+        <h3>Approach</h3>
+        <ul>
+          <li>Interactive Streamlit app; normalization across CPI, rent, groceries.</li>
+          <li>Filters, comparisons, and downloadable reports.</li>
+        </ul>
+
+        <h3>Tools</h3><p>Python, Streamlit, Plotly, Pandas</p>
+
+        <h3>Impact</h3>
+        <ul>
+          <li>~40+ analyst hours/month saved (placeholder—replace with your metric).</li>
+          <li>Real-time comparisons for 50+ countries.</li>
+        </ul>
+
+        <div class="cs-actions">
+          <a class="btn btn-outline-primary" href="https://github.com/SreejaBethu/Cost-Of-Living-Index-Globally" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+          <a class="btn btn-case-study" href="index.html#projects"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Olympics (alt gray section) -->
+  <section id="olympics" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-header"><h2>Paris Olympics 2024 Medal Tracker</h2></div>
+      <div class="cs-card">
+        <div class="meta"><span class="badge badge-info">APIs</span><span class="badge badge-secondary">Dashboards</span><span class="badge badge-success">Real-time</span></div>
+
+        <h3>Problem</h3><p>Media teams needed up-to-date medal standings to support timely coverage.</p>
+
+        <h3>Approach</h3>
+        <ul>
+          <li>Ingested official feeds; country/sport breakdowns; filters for day/country/event.</li>
+          <li>Shareable, interactive views for editorial & marketing.</li>
+        </ul>
+
+        <h3>Tools</h3><p>Python, REST APIs, Power BI / Plotly</p>
+
+        <h3>Impact</h3>
+        <ul>
+          <li>Real-time medal data for 100+ stakeholders.</li>
+          <li>Higher dashboard engagement; fewer manual updates.</li>
+        </ul>
+
+        <div class="cs-actions">
+          <a class="btn btn-outline-primary" href="https://github.com/SreejaBethu/Paris-Olympics-2024-Medals-List" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+          <a class="btn btn-case-study" href="index.html#projects"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts (Bootstrap 4 requires Popper 1.x) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
