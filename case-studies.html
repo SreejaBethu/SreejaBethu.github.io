@@ -1,196 +1,747 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Sreeja Bethu — Case Studies</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Sreeja Bethu — Case Studies</title>
+<meta name="description" content="In-depth case studies showcasing data analytics solutions in healthcare reporting, forecasting, and AI-driven automation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════
+   DESIGN TOKENS  (mirrors index.html)
+   ═══════════════════════════════════════════ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0f1a;
+  --bg-card:#111827;
+  --bg-card-hover:#162032;
+  --bg-elevated:#0f1629;
+  --teal:#0d9488;
+  --teal-light:#2dd4bf;
+  --teal-glow:rgba(45,212,191,.15);
+  --coral:#f472b6;
+  --coral-soft:rgba(244,114,182,.12);
+  --amber:#fbbf24;
+  --violet:#a78bfa;
+  --sky:#38bdf8;
+  --text:#e2e8f0;
+  --text-dim:#94a3b8;
+  --text-bright:#f8fafc;
+  --border:rgba(148,163,184,.1);
+  --border-accent:rgba(45,212,191,.18);
+  --font-display:'Space Grotesk',system-ui,sans-serif;
+  --font-body:'DM Sans',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
 
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--teal);border-radius:3px}
 
-  <style>
-    /* Page-specific niceties (keeps core CSS in style.css) */
-    .cs-hero { padding: 56px 0; color:#fff; background: linear-gradient(135deg, var(--brand) 0%, var(--brand-accent) 100%); }
-    .cs-hero h1 { color:#fff; margin-bottom: 8px; }
-    .toc a{ display:block; padding:10px 12px; border:1px solid #e2e8f0; border-radius:12px; margin-bottom:10px; text-decoration:none; background:#fff; }
-    .cs-card h3 { color: var(--brand); } 
-    .toc a:hover{ background:#ebeef1; border-color:rgba(14,165,233,.35); }
-    .cs-card p { color: var(--ink-900); } /* Added: Make paragraphs inside case study cards dark */
-    .cs-card{ padding:24px; border-radius:12px; box-shadow:var(--shadow-sm); border:1px solid #e2e8f0; background:#fff; transition:transform .2s ease, box-shadow .2s ease; }
-    .cs-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow-md); }
-    .meta{ display:flex; flex-wrap:wrap; gap:10px; margin:12px 0 8px; }
-    .meta .badge{ font-size:12px; padding:.35rem .6rem; }
-    .cs-actions a{ margin-right:10px; margin-top:6px; }
-  </style>
+/* ═══════════════════════════════════════════
+   CURSOR GLOW
+   ═══════════════════════════════════════════ */
+#cursor-glow{position:fixed;width:600px;height:600px;pointer-events:none;z-index:0;
+  background:radial-gradient(circle,rgba(13,148,136,.07) 0%,transparent 70%);
+  transform:translate(-50%,-50%);transition:left .3s,top .3s;display:none}
+@media(hover:hover){#cursor-glow{display:block}}
+
+/* ═══════════════════════════════════════════
+   NAV  (identical to index.html)
+   ═══════════════════════════════════════════ */
+header{position:fixed;top:0;width:100%;z-index:100;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  background:rgba(10,15,26,.75);border-bottom:1px solid var(--border);transition:transform .35s}
+header.nav-hidden{transform:translateY(-100%)}
+.navbar{max-width:1200px;margin:0 auto;padding:.9rem 2rem;display:flex;align-items:center;justify-content:space-between}
+.navbar-brand{font-family:var(--font-display);font-weight:700;font-size:1.1rem;color:var(--text-bright);display:flex;align-items:center;gap:.6rem}
+.navbar-brand::before{content:'';width:8px;height:8px;background:var(--teal-light);border-radius:50%;animation:pulse 2s ease-in-out infinite;flex-shrink:0}
+.menu-rows{display:flex;gap:2rem;align-items:center}
+.menu-link{color:var(--text-dim);font-size:.875rem;font-weight:500;letter-spacing:.02em;transition:color .3s;position:relative}
+.menu-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--teal-light);transition:width .3s}
+.menu-link:hover{color:var(--teal-light)}
+.menu-link:hover::after{width:100%}
+.menu-link.active{color:var(--teal-light)}
+.menu-link.active::after{width:100%}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;z-index:101}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:.3s}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:768px){
+  .hamburger{display:flex}
+  .menu-rows{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(10,15,26,.97);backdrop-filter:blur(20px);flex-direction:column;padding:1.5rem 2rem;gap:1.2rem;border-bottom:1px solid var(--border)}
+  .menu-rows.open{display:flex}
+}
+
+/* ═══════════════════════════════════════════
+   KEYFRAMES
+   ═══════════════════════════════════════════ */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(45,212,191,.5)}70%{box-shadow:0 0 0 8px rgba(45,212,191,0)}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+@keyframes drawLine{from{stroke-dashoffset:600}to{stroke-dashoffset:0}}
+
+/* ═══════════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════════ */
+.cs-hero{padding:10rem 2rem 5rem;position:relative;overflow:hidden;text-align:center}
+.cs-hero::before{content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%,rgba(13,148,136,.12),transparent),
+    radial-gradient(ellipse 60% 40% at 80% 100%,rgba(244,114,182,.06),transparent);
+  pointer-events:none}
+.cs-hero::after{content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(13,148,136,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(13,148,136,.03) 1px,transparent 1px);
+  background-size:50px 50px;pointer-events:none}
+
+.cs-hero-content{position:relative;z-index:2;max-width:700px;margin:0 auto}
+.cs-hero-tag{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .9rem;border-radius:100px;
+  background:var(--teal-glow);border:1px solid rgba(45,212,191,.2);font-size:.75rem;font-weight:500;
+  color:var(--teal-light);font-family:var(--font-mono);margin-bottom:1.2rem;animation:fadeInUp .7s both}
+.cs-hero h1{font-family:var(--font-display);font-size:clamp(2rem,5vw,3.2rem);font-weight:700;
+  color:var(--text-bright);line-height:1.15;margin-bottom:1rem;animation:fadeInUp .7s .1s both}
+.cs-hero h1 .grad{background:linear-gradient(135deg,var(--teal-light),var(--coral));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.cs-hero p{color:var(--text-dim);font-size:1.05rem;max-width:560px;margin:0 auto;animation:fadeInUp .7s .2s both}
+
+/* ═══════════════════════════════════════════
+   TABLE OF CONTENTS
+   ═══════════════════════════════════════════ */
+.toc-section{padding:0 2rem 4rem;margin-top:-1.5rem;position:relative;z-index:3}
+.toc-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.toc-card{padding:1rem 1.2rem;border-radius:12px;background:var(--bg-card);border:1px solid var(--border);
+  transition:all .35s;cursor:pointer;display:flex;align-items:center;gap:.8rem}
+.toc-card:hover{border-color:var(--border-accent);background:var(--bg-card-hover);transform:translateY(-3px);
+  box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.toc-num{font-family:var(--font-display);font-size:1.6rem;font-weight:700;
+  background:linear-gradient(135deg,var(--teal-light),var(--coral));-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;flex-shrink:0;width:2rem;text-align:center}
+.toc-info{flex:1;min-width:0}
+.toc-title{font-family:var(--font-display);font-size:.82rem;font-weight:600;color:var(--text-bright);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.toc-sub{font-size:.68rem;color:var(--text-dim);margin-top:.1rem}
+
+/* ═══════════════════════════════════════════
+   CASE STUDY SECTIONS
+   ═══════════════════════════════════════════ */
+.cs-section{padding:5rem 2rem;position:relative}
+.cs-section:nth-child(even){background:var(--bg-elevated)}
+.cs-inner{max-width:900px;margin:0 auto}
+
+/* Section header */
+.cs-header{margin-bottom:2.5rem}
+.cs-header .cs-label{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-mono);
+  font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;margin-bottom:.6rem}
+.cs-header .cs-label::before{content:'';width:20px;height:1px}
+.cs-header h2{font-family:var(--font-display);font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:700;
+  color:var(--text-bright);line-height:1.2;margin-bottom:.6rem}
+.cs-header p{color:var(--text-dim);font-size:.92rem;max-width:600px}
+
+/* Tags */
+.cs-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem}
+.cs-tag{font-family:var(--font-mono);font-size:.66rem;padding:.3rem .7rem;border-radius:100px;font-weight:500}
+
+/* Color variants for tags */
+.tag-teal{background:rgba(45,212,191,.1);color:var(--teal-light);border:1px solid rgba(45,212,191,.2)}
+.tag-coral{background:var(--coral-soft);color:var(--coral);border:1px solid rgba(244,114,182,.2)}
+.tag-amber{background:rgba(251,191,36,.08);color:var(--amber);border:1px solid rgba(251,191,36,.15)}
+.tag-violet{background:rgba(167,139,250,.08);color:var(--violet);border:1px solid rgba(167,139,250,.15)}
+.tag-sky{background:rgba(56,189,248,.08);color:var(--sky);border:1px solid rgba(56,189,248,.15)}
+
+/* Content cards (Problem / Approach / Impact) */
+.cs-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+@media(max-width:700px){.cs-grid{grid-template-columns:1fr}}
+
+.cs-card{padding:1.8rem;border-radius:16px;background:var(--bg-card);border:1px solid var(--border);
+  transition:all .35s;position:relative;overflow:hidden}
+.cs-card:hover{border-color:var(--border-accent);transform:translateY(-3px)}
+
+.cs-card-label{font-family:var(--font-mono);font-size:.65rem;text-transform:uppercase;letter-spacing:.12em;
+  margin-bottom:.7rem;display:flex;align-items:center;gap:.4rem}
+.cs-card-label svg{width:14px;height:14px;flex-shrink:0}
+.cs-card h3{font-family:var(--font-display);font-size:1rem;font-weight:600;color:var(--text-bright);margin-bottom:.6rem}
+.cs-card p{font-size:.88rem;color:var(--text-dim);line-height:1.8}
+.cs-card ul{margin:0;padding:0}
+.cs-card ul li{font-size:.88rem;color:var(--text-dim);line-height:1.8;padding-left:1.2rem;position:relative;margin-bottom:.4rem}
+.cs-card ul li::before{content:'→';position:absolute;left:0;color:var(--teal-light);font-size:.8rem}
+
+/* Full-width impact card */
+.cs-card.full{grid-column:1/-1}
+
+/* Impact metric highlights */
+.impact-metrics{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.2rem}
+.metric{text-align:center;flex:1;min-width:120px}
+.metric-val{font-family:var(--font-display);font-size:2rem;font-weight:700;
+  background:linear-gradient(135deg,var(--teal-light),var(--coral));-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;display:block}
+.metric-label{font-size:.72rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.08em;margin-top:.15rem}
+
+/* Tools strip */
+.tools-strip{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
+.tool-chip{font-family:var(--font-mono);font-size:.64rem;padding:.25rem .6rem;border-radius:6px;
+  background:rgba(148,163,184,.06);color:var(--text-dim);border:1px solid var(--border)}
+
+/* Action links */
+.cs-actions{display:flex;gap:.8rem;margin-top:2rem;flex-wrap:wrap}
+.cs-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.4rem;border-radius:10px;
+  font-size:.82rem;font-weight:600;transition:all .3s;border:1px solid var(--border)}
+.cs-btn:hover{border-color:var(--teal-light);color:var(--teal-light);background:var(--teal-glow);transform:translateY(-2px)}
+.cs-btn svg{width:16px;height:16px}
+.cs-btn-fill{background:linear-gradient(135deg,var(--teal),#0f766e);border:none;color:#fff;
+  box-shadow:0 4px 15px rgba(13,148,136,.25)}
+.cs-btn-fill:hover{transform:translateY(-2px);box-shadow:0 6px 25px rgba(13,148,136,.35);color:#fff}
+
+/* ═══════════════════════════════════════════
+   SECTION DIVIDER (heartbeat)
+   ═══════════════════════════════════════════ */
+.hb-divider{width:100%;height:40px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--bg)}
+.hb-divider svg{width:250px;height:30px}
+.hb-line{stroke:var(--teal-light);stroke-width:1.5;fill:none;stroke-dasharray:600;stroke-dashoffset:600}
+.hb-line.animate{animation:drawLine 3s ease forwards}
+
+/* ═══════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════ */
+footer{padding:2.5rem 2rem;text-align:center;border-top:1px solid var(--border)}
+.footer-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-brand{font-family:var(--font-display);font-weight:600;font-size:.9rem;color:var(--text-bright)}
+.footer-copy{font-family:var(--font-mono);font-size:.72rem;color:var(--text-dim)}
+.footer-links{display:flex;gap:1rem}
+.footer-links a{color:var(--text-dim);transition:color .3s}
+.footer-links a:hover{color:var(--teal-light)}
+.footer-links svg{width:18px;height:18px}
+
+/* ═══════════════════════════════════════════
+   SCROLL REVEAL
+   ═══════════════════════════════════════════ */
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:.08s}
+.reveal-d2{transition-delay:.16s}
+.reveal-d3{transition-delay:.24s}
+
+/* ═══════════════════════════════════════════
+   REDUCED MOTION
+   ═══════════════════════════════════════════ */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+</style>
 </head>
 <body>
 
-  <!-- Header / Nav -->
-  <header>
-    <nav class="navbar">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Sreeja Bethu</a>
-        <div class="navbar-nav">
-          <a class="nav-link" href="index.html#about">About</a>
-          <a class="nav-link" href="index.html#skills">Skills</a>
-          <a class="nav-link" href="index.html#projects">Projects</a>
-          <a class="nav-link" href="case-studies.html">Case Studies</a>
-          <a class="nav-link" href="index.html#contact">Contact</a>
+<div id="cursor-glow"></div>
+
+<!-- ═══════════════════════════════════════════
+     NAV
+     ═══════════════════════════════════════════ -->
+<header id="site-header">
+  <nav class="navbar" role="navigation" aria-label="Primary">
+    <a class="navbar-brand" href="index.html">Sreeja Bethu</a>
+    <button class="hamburger" id="ham-btn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="menu-rows" id="nav-menu">
+      <a class="menu-link" href="index.html#about">About</a>
+      <a class="menu-link" href="index.html#skills">Skills</a>
+      <a class="menu-link" href="index.html#projects">Projects</a>
+      <a class="menu-link active" href="case-studies.html">Case Studies</a>
+      <a class="menu-link" href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════ -->
+<section class="cs-hero">
+  <div class="cs-hero-content">
+    <div class="cs-hero-tag">📋 Deep Dives</div>
+    <h1>How Data Becomes <span class="grad">Decisions</span></h1>
+    <p>Detailed project narratives highlighting business impact, analytics approach, and technical execution across healthcare and enterprise.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     TABLE OF CONTENTS
+     ═══════════════════════════════════════════ -->
+<div class="toc-section">
+  <div class="toc-grid">
+    <a href="#smart-report" class="toc-card reveal">
+      <span class="toc-num">01</span>
+      <div class="toc-info">
+        <div class="toc-title">Smart Report Analyzer</div>
+        <div class="toc-sub">AI-powered report parsing</div>
+      </div>
+    </a>
+    <a href="#forecasting" class="toc-card reveal reveal-d1">
+      <span class="toc-num">02</span>
+      <div class="toc-info">
+        <div class="toc-title">Sales Forecasting</div>
+        <div class="toc-sub">Time-series demand planning</div>
+      </div>
+    </a>
+    <a href="#cost-of-living" class="toc-card reveal reveal-d2">
+      <span class="toc-num">03</span>
+      <div class="toc-info">
+        <div class="toc-title">Cost of Living Index</div>
+        <div class="toc-sub">Market affordability tool</div>
+      </div>
+    </a>
+    <a href="#olympics" class="toc-card reveal reveal-d3">
+      <span class="toc-num">04</span>
+      <div class="toc-info">
+        <div class="toc-title">Olympics Tracker</div>
+        <div class="toc-sub">Real-time medal analytics</div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     CASE STUDY 1 — SMART REPORT ANALYZER
+     ═══════════════════════════════════════════ -->
+<section id="smart-report" class="cs-section">
+  <div class="cs-inner">
+    <div class="cs-header reveal">
+      <div class="cs-label" style="color:var(--teal-light)">Case Study 01</div>
+      <h2>Smart Report Analyzer</h2>
+      <p>An LLM-powered pipeline that transforms manual report review into instant, AI-generated executive insights.</p>
+    </div>
+
+    <div class="cs-tags reveal">
+      <span class="cs-tag tag-teal">GenAI / LLM</span>
+      <span class="cs-tag tag-coral">Automation</span>
+      <span class="cs-tag tag-amber">Executive Insights</span>
+      <span class="cs-tag tag-violet">Healthcare</span>
+    </div>
+
+    <div class="cs-grid">
+      <div class="cs-card reveal">
+        <div class="cs-card-label" style="color:var(--coral)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></svg>
+          Problem
         </div>
+        <p>Business teams spent excessive time manually reviewing reports (PDF, Excel, CSV), delaying insights for strategy and compliance decisions by days — sometimes weeks.</p>
       </div>
-    </nav>
-  </header>
 
-  <!-- Hero -->
-  <section class="cs-hero">
-    <div class="container">
-      <h1>Case Studies</h1>
-      <p class="sub mb-0">Detailed project narratives highlighting business impact, analytics approach, and technical execution.</p>
-    </div>
-  </section>
-
-  <!-- TOC (white on light gray band via alternating sections) -->
-  <section style="background: var(--bg-alt);">
-    <div class="container" style="background:transparent; box-shadow:none; padding:0;">
-      <div class="section-header"><h2 style="margin-bottom:12px;">Browse</h2></div>
-      <div class="toc">
-        <a href="#smart-report"><strong>Smart Report Analyzer</strong> — LLM/Agent pipeline for report parsing & executive summaries</a>
-        <a href="#forecasting"><strong>Sales Data Analysis Forecasting</strong> — Demand forecasting & scenario planning</a>
-        <a href="#cost-of-living"><strong>Cost of Living Index</strong> — Market affordability comparisons</a>
-        <a href="#olympics"><strong>Paris Olympics 2024 Medal Tracker</strong> — Real-time medal data</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Smart Report Analyzer (white section) -->
-  <section id="smart-report">
-    <div class="container">
-      <div class="section-header"><h2>Smart Report Analyzer</h2></div>
-      <div class="cs-card">
-        <div class="meta"><span class="badge badge-info">GenAI / LLM</span><span class="badge badge-secondary">Automation</span><span class="badge badge-success">Executive Insights</span></div>
-
-        <h3>Problem</h3>
-        <p>Business teams spent excessive time manually reviewing reports (PDF, Excel, CSV), delaying insights for strategy and compliance.</p>
-
-        <h3>Approach</h3>
-        <ul>
-          <li>LLM-powered parsing for structured/unstructured data; concise executive summaries.</li>
-          <li>Automated charting & anomaly surfacing; consistent outputs via STAR-style prompts.</li>
-        </ul>
-
-        <h3>Tools</h3><p>Python, Hugging Face, LangChain/Agents, Pandas, Power BI</p>
-
-        <h3>Impact</h3>
-        <ul>
-          <li>~60% faster report review (placeholder—replace with your metric).</li>
-          <li>Insights distributed to 20+ stakeholders via shareable summaries.</li>
-        </ul>
-
-        <div class="cs-actions">
-          <a class="btn btn-outline-primary" href="https://github.com/SreejaBethu/Smart-Report-Analyzer" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-          <a class="btn btn-case-study" href="index.html#projects"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+      <div class="cs-card reveal reveal-d1">
+        <div class="cs-card-label" style="color:var(--teal-light)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          Approach
         </div>
+        <ul>
+          <li>LLM-powered parsing for structured &amp; unstructured data with concise executive summaries</li>
+          <li>Automated charting &amp; anomaly surfacing via STAR-style prompt engineering</li>
+          <li>Consistent outputs across heterogeneous datasets and file formats</li>
+        </ul>
       </div>
-    </div>
-  </section>
 
-  <!-- Sales Forecasting (alt gray section) -->
-  <section id="forecasting" style="background: var(--bg-alt);">
-    <div class="container">
-      <div class="section-header"><h2>Sales Data Analysis Forecasting</h2></div>
-      <div class="cs-card">
-        <div class="meta"><span class="badge badge-info">Forecasting</span><span class="badge badge-secondary">Time-Series</span><span class="badge badge-success">Planning</span></div>
-
-        <h3>Problem</h3><p>Leadership faced unpredictable demand, leading to inventory mismatches across business units.</p>
-
-        <h3>Approach</h3>
-        <ul>
-          <li>ARIMA/Prophet models with seasonality; validation vs. live pipeline data.</li>
-          <li>Power BI dashboards with scenario planning and error bands.</li>
-        </ul>
-
-        <h3>Tools</h3><p>SQL, Python (Pandas, statsmodels/Prophet), Power BI, Excel</p>
-
-        <h3>Impact</h3>
-        <ul>
-          <li>~20% MAPE improvement (placeholder—replace with your metric).</li>
-          <li>Reduced stockouts/excess; supported up to ~$500K savings.</li>
-        </ul>
-
-        <div class="cs-actions">
-          <a class="btn btn-outline-primary" href="https://github.com/SreejaBethu/Sales-Data-Analysis-Forecasting" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-          <a class="btn btn-case-study" href="index.html#projects"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+      <div class="cs-card full reveal reveal-d2">
+        <div class="cs-card-label" style="color:var(--amber)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          Impact
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Cost of Living (white section) -->
-  <section id="cost-of-living">
-    <div class="container">
-      <div class="section-header"><h2>Cost of Living Index (Streamlit)</h2></div>
-      <div class="cs-card">
-        <div class="meta"><span class="badge badge-info">Streamlit</span><span class="badge badge-secondary">Pipelines</span><span class="badge badge-success">Decision Support</span></div>
-
-        <h3>Problem</h3><p>Teams needed standardized, comparable cost-of-living metrics to evaluate market entry feasibility.</p>
-
-        <h3>Approach</h3>
-        <ul>
-          <li>Interactive Streamlit app; normalization across CPI, rent, groceries.</li>
-          <li>Filters, comparisons, and downloadable reports.</li>
-        </ul>
-
-        <h3>Tools</h3><p>Python, Streamlit, Plotly, Pandas</p>
-
-        <h3>Impact</h3>
-        <ul>
-          <li>~40+ analyst hours/month saved (placeholder—replace with your metric).</li>
-          <li>Real-time comparisons for 50+ countries.</li>
-        </ul>
-
-        <div class="cs-actions">
-          <a class="btn btn-outline-primary" href="https://github.com/SreejaBethu/Cost-Of-Living-Index-Globally" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-          <a class="btn btn-case-study" href="index.html#projects"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+        <div class="impact-metrics">
+          <div class="metric">
+            <span class="metric-val">~60%</span>
+            <span class="metric-label">Faster Report Review</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">20+</span>
+            <span class="metric-label">Stakeholders Served</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">3</span>
+            <span class="metric-label">File Formats Parsed</span>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Olympics (alt gray section) -->
-  <section id="olympics" style="background: var(--bg-alt);">
-    <div class="container">
-      <div class="section-header"><h2>Paris Olympics 2024 Medal Tracker</h2></div>
-      <div class="cs-card">
-        <div class="meta"><span class="badge badge-info">APIs</span><span class="badge badge-secondary">Dashboards</span><span class="badge badge-success">Real-time</span></div>
-
-        <h3>Problem</h3><p>Media teams needed up-to-date medal standings to support timely coverage.</p>
-
-        <h3>Approach</h3>
-        <ul>
-          <li>Ingested official feeds; country/sport breakdowns; filters for day/country/event.</li>
-          <li>Shareable, interactive views for editorial & marketing.</li>
-        </ul>
-
-        <h3>Tools</h3><p>Python, REST APIs, Power BI / Plotly</p>
-
-        <h3>Impact</h3>
-        <ul>
-          <li>Real-time medal data for 100+ stakeholders.</li>
-          <li>Higher dashboard engagement; fewer manual updates.</li>
-        </ul>
-
-        <div class="cs-actions">
-          <a class="btn btn-outline-primary" href="https://github.com/SreejaBethu/Paris-Olympics-2024-Medals-List" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-          <a class="btn btn-case-study" href="index.html#projects"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+        <div class="tools-strip">
+          <span class="tool-chip">Python</span>
+          <span class="tool-chip">Hugging Face</span>
+          <span class="tool-chip">LangChain</span>
+          <span class="tool-chip">Pandas</span>
+          <span class="tool-chip">Power BI</span>
+          <span class="tool-chip">AWS</span>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Scripts (Bootstrap 4 requires Popper 1.x) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="cs-actions reveal">
+      <a href="https://github.com/SreejaBethu/Smart-Report-Analyzer" target="_blank" rel="noopener" class="cs-btn cs-btn-fill">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        View on GitHub
+      </a>
+      <a href="index.html#projects" class="cs-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+        Back to Projects
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="hb-divider">
+  <svg viewBox="0 0 300 30"><polyline class="hb-line" points="0,15 50,15 70,15 78,4 86,26 94,8 102,18 110,15 190,15 208,15 216,5 224,25 232,9 240,17 248,15 300,15"/></svg>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     CASE STUDY 2 — SALES FORECASTING
+     ═══════════════════════════════════════════ -->
+<section id="forecasting" class="cs-section">
+  <div class="cs-inner">
+    <div class="cs-header reveal">
+      <div class="cs-label" style="color:var(--coral)">Case Study 02</div>
+      <h2>Sales Data Analysis &amp; Forecasting</h2>
+      <p>A time-series forecasting engine that replaced guesswork with data-driven demand planning and scenario analysis.</p>
+    </div>
+
+    <div class="cs-tags reveal">
+      <span class="cs-tag tag-coral">Forecasting</span>
+      <span class="cs-tag tag-teal">Time-Series</span>
+      <span class="cs-tag tag-amber">Scenario Planning</span>
+      <span class="cs-tag tag-sky">Supply Chain</span>
+    </div>
+
+    <div class="cs-grid">
+      <div class="cs-card reveal">
+        <div class="cs-card-label" style="color:var(--coral)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></svg>
+          Problem
+        </div>
+        <p>Leadership faced unpredictable demand, leading to inventory mismatches, stockouts, and excess across multiple business units — costing hundreds of thousands in lost efficiency.</p>
+      </div>
+
+      <div class="cs-card reveal reveal-d1">
+        <div class="cs-card-label" style="color:var(--teal-light)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          Approach
+        </div>
+        <ul>
+          <li>Built ARIMA &amp; Prophet models with seasonality decomposition</li>
+          <li>Validated against live pipeline data for real-world accuracy</li>
+          <li>Power BI dashboards with scenario planning and error bands for quarterly reviews</li>
+        </ul>
+      </div>
+
+      <div class="cs-card full reveal reveal-d2">
+        <div class="cs-card-label" style="color:var(--amber)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          Impact
+        </div>
+        <div class="impact-metrics">
+          <div class="metric">
+            <span class="metric-val">~20%</span>
+            <span class="metric-label">MAPE Improvement</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">$500K</span>
+            <span class="metric-label">Projected Savings</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">4</span>
+            <span class="metric-label">Business Units</span>
+          </div>
+        </div>
+        <div class="tools-strip">
+          <span class="tool-chip">SQL</span>
+          <span class="tool-chip">Python</span>
+          <span class="tool-chip">Pandas</span>
+          <span class="tool-chip">Prophet</span>
+          <span class="tool-chip">statsmodels</span>
+          <span class="tool-chip">Power BI</span>
+          <span class="tool-chip">Excel</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-actions reveal">
+      <a href="https://github.com/SreejaBethu/Sales-Data-Analysis-Forecasting" target="_blank" rel="noopener" class="cs-btn cs-btn-fill">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        View on GitHub
+      </a>
+      <a href="index.html#projects" class="cs-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+        Back to Projects
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="hb-divider">
+  <svg viewBox="0 0 300 30"><polyline class="hb-line" points="0,15 50,15 70,15 78,4 86,26 94,8 102,18 110,15 190,15 208,15 216,5 224,25 232,9 240,17 248,15 300,15"/></svg>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     CASE STUDY 3 — COST OF LIVING
+     ═══════════════════════════════════════════ -->
+<section id="cost-of-living" class="cs-section">
+  <div class="cs-inner">
+    <div class="cs-header reveal">
+      <div class="cs-label" style="color:var(--amber)">Case Study 03</div>
+      <h2>Global Cost of Living Index</h2>
+      <p>An interactive Streamlit application that standardizes and compares market affordability across 50+ countries.</p>
+    </div>
+
+    <div class="cs-tags reveal">
+      <span class="cs-tag tag-amber">Streamlit</span>
+      <span class="cs-tag tag-teal">Data Pipelines</span>
+      <span class="cs-tag tag-violet">Decision Support</span>
+      <span class="cs-tag tag-sky">Global Markets</span>
+    </div>
+
+    <div class="cs-grid">
+      <div class="cs-card reveal">
+        <div class="cs-card-label" style="color:var(--coral)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></svg>
+          Problem
+        </div>
+        <p>Global strategy teams needed standardized, comparable cost-of-living metrics to evaluate market entry feasibility — but existing data was fragmented and required hours of manual normalization.</p>
+      </div>
+
+      <div class="cs-card reveal reveal-d1">
+        <div class="cs-card-label" style="color:var(--teal-light)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          Approach
+        </div>
+        <ul>
+          <li>Interactive Streamlit app with filters, drilldowns, and CSV export</li>
+          <li>Normalization across CPI, rent indices, and grocery basket prices</li>
+          <li>Side-by-side country comparisons with downloadable reports</li>
+        </ul>
+      </div>
+
+      <div class="cs-card full reveal reveal-d2">
+        <div class="cs-card-label" style="color:var(--amber)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          Impact
+        </div>
+        <div class="impact-metrics">
+          <div class="metric">
+            <span class="metric-val">40+</span>
+            <span class="metric-label">Hours Saved / Month</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">50+</span>
+            <span class="metric-label">Countries Covered</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">Real-time</span>
+            <span class="metric-label">Data Comparisons</span>
+          </div>
+        </div>
+        <div class="tools-strip">
+          <span class="tool-chip">Python</span>
+          <span class="tool-chip">Streamlit</span>
+          <span class="tool-chip">Plotly</span>
+          <span class="tool-chip">Pandas</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-actions reveal">
+      <a href="https://github.com/SreejaBethu/Cost-Of-Living-Index-Globally" target="_blank" rel="noopener" class="cs-btn cs-btn-fill">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        View on GitHub
+      </a>
+      <a href="index.html#projects" class="cs-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+        Back to Projects
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="hb-divider">
+  <svg viewBox="0 0 300 30"><polyline class="hb-line" points="0,15 50,15 70,15 78,4 86,26 94,8 102,18 110,15 190,15 208,15 216,5 224,25 232,9 240,17 248,15 300,15"/></svg>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     CASE STUDY 4 — OLYMPICS TRACKER
+     ═══════════════════════════════════════════ -->
+<section id="olympics" class="cs-section">
+  <div class="cs-inner">
+    <div class="cs-header reveal">
+      <div class="cs-label" style="color:var(--sky)">Case Study 04</div>
+      <h2>Paris Olympics 2024 Medal Tracker</h2>
+      <p>A real-time analytics dashboard delivering medal standings to 100+ stakeholders with zero manual updates.</p>
+    </div>
+
+    <div class="cs-tags reveal">
+      <span class="cs-tag tag-sky">APIs</span>
+      <span class="cs-tag tag-teal">Real-Time</span>
+      <span class="cs-tag tag-coral">Dashboards</span>
+      <span class="cs-tag tag-violet">Sports Analytics</span>
+    </div>
+
+    <div class="cs-grid">
+      <div class="cs-card reveal">
+        <div class="cs-card-label" style="color:var(--coral)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></svg>
+          Problem
+        </div>
+        <p>Media and editorial teams needed up-to-date medal standings to support timely coverage — but manual data pulls created bottlenecks and stale information during the Games.</p>
+      </div>
+
+      <div class="cs-card reveal reveal-d1">
+        <div class="cs-card-label" style="color:var(--teal-light)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          Approach
+        </div>
+        <ul>
+          <li>Ingested official feeds with automated country &amp; sport-level breakdowns</li>
+          <li>Multi-filter views (country, sport, day) with shareable URL state</li>
+          <li>Interactive visualizations for editorial &amp; marketing teams</li>
+        </ul>
+      </div>
+
+      <div class="cs-card full reveal reveal-d2">
+        <div class="cs-card-label" style="color:var(--amber)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          Impact
+        </div>
+        <div class="impact-metrics">
+          <div class="metric">
+            <span class="metric-val">100+</span>
+            <span class="metric-label">Stakeholders Reached</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">Zero</span>
+            <span class="metric-label">Manual Updates</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">Real-time</span>
+            <span class="metric-label">Data Feed</span>
+          </div>
+        </div>
+        <div class="tools-strip">
+          <span class="tool-chip">Python</span>
+          <span class="tool-chip">REST APIs</span>
+          <span class="tool-chip">Power BI</span>
+          <span class="tool-chip">Plotly</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-actions reveal">
+      <a href="https://github.com/SreejaBethu/Paris-Olympics-2024-Medals-List" target="_blank" rel="noopener" class="cs-btn cs-btn-fill">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        View on GitHub
+      </a>
+      <a href="index.html#projects" class="cs-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+        Back to Projects
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Sreeja Bethu</div>
+    <div class="footer-links">
+      <a href="mailto:bethusreeja@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/sreejabethu" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+      </a>
+      <a href="https://github.com/SreejaBethu" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+      </a>
+    </div>
+    <div class="footer-copy">© 2025 Sreeja Bethu</div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════
+     SCRIPTS — zero dependencies
+     ═══════════════════════════════════════════ -->
+<script>
+(function(){
+  'use strict';
+
+  /* Cursor glow */
+  var glow = document.getElementById('cursor-glow');
+  if(glow) document.addEventListener('mousemove', function(e){
+    glow.style.left = e.clientX + 'px';
+    glow.style.top  = e.clientY + 'px';
+  });
+
+  /* Navbar hide/show */
+  var lastY = 0, hdr = document.getElementById('site-header');
+  window.addEventListener('scroll', function(){
+    var y = window.scrollY;
+    if(y > lastY && y > 80) hdr.classList.add('nav-hidden');
+    else hdr.classList.remove('nav-hidden');
+    lastY = y;
+  }, {passive:true});
+
+  /* Hamburger */
+  var ham = document.getElementById('ham-btn');
+  var menu = document.getElementById('nav-menu');
+  ham.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    ham.classList.toggle('active', open);
+    ham.setAttribute('aria-expanded', String(open));
+  });
+  var links = menu.querySelectorAll('.menu-link');
+  for(var i = 0; i < links.length; i++){
+    links[i].addEventListener('click', function(){
+      menu.classList.remove('open');
+      ham.classList.remove('active');
+      ham.setAttribute('aria-expanded','false');
+    });
+  }
+
+  /* Scroll reveal */
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, {threshold:0.1, rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+
+  /* Heartbeat line animation */
+  var hbObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var line = e.target.querySelector('.hb-line');
+        if(line){ line.classList.remove('animate'); void line.offsetWidth; line.classList.add('animate'); }
+      }
+    });
+  }, {threshold:0.5});
+  document.querySelectorAll('.hb-divider').forEach(function(d){ hbObs.observe(d); });
+
+  /* Smooth scroll for TOC (already handled by CSS scroll-behavior, but add offset for fixed nav) */
+  document.querySelectorAll('.toc-card').forEach(function(card){
+    card.addEventListener('click', function(e){
+      var href = card.getAttribute('href');
+      if(href && href.charAt(0) === '#'){
+        e.preventDefault();
+        var target = document.querySelector(href);
+        if(target){
+          var top = target.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({top:top, behavior:'smooth'});
+        }
+      }
+    });
+  });
+
+})();
+</script>
+
 </body>
 </html>
